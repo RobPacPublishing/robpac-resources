@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RobPac Resources - Premium Digital Resources for Entrepreneurs</title>
+    <meta name="description" content="Multi-format business resources: Video courses, guides, templates, and more. Learn your way with RobPac Resources.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .discount-badge {
+            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+        }
+        .product-card {
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+        }
+        .countdown {
+            font-variant-numeric: tabular-nums;
+        }
+        .popup-overlay {
+            backdrop-filter: blur(4px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Newsletter Popup (appears after 5 seconds) -->
+    <div id="newsletterPopup" class="hidden fixed inset-0 z-50 popup-overlay bg-black/30 flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 relative">
+            <button onclick="closePopup()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <div class="text-center mb-6">
+                <div class="discount-badge text-white text-sm font-bold px-4 py-2 rounded-full inline-block mb-4 flex items-center gap-2 justify-center">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20 6h-2.18c.11-.31.18-.65.18-1a2.996 2.996 0 00-5.5-1.65l-.5.67-.5-.68C10.96 2.54 10.05 2 9 2 7.34 2 6 3.34 6 5c0 .35.07.69.18 1H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-5-2c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM9 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm11 15H4v-2h16v2zm0-5H4V8h5.08L7 10.83 8.62 12 11 8.76l1-1.36 1 1.36L15.38 12 17 10.83 14.92 8H20v6z"></path>
+                    </svg>
+                    WELCOME OFFER
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">Get 15% Off Your First Purchase</h3>
+                <p class="text-gray-600">Join 500+ entrepreneurs and get exclusive resources + discount code</p>
+            </div>
+            <form class="space-y-4">
+                <input type="email" placeholder="Enter your email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" required>
+                <button type="submit" class="w-full bg-blue-600 text-white font-semibold py-3 rounded-lg hover:bg-blue-700 transition">
+                    Get My 15% Discount Code
+                </button>
+            </form>
+            <p class="text-xs text-gray-500 text-center mt-4">We respect your privacy. Unsubscribe anytime.</p>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <img src="logo.png" alt="RobPac Resources" class="h-24 w-24">
+                    <div>
+                        <div class="text-xl font-bold text-gray-900">ROBPAC RESOURCES</div>
+                        <div class="text-xs text-gray-500 uppercase tracking-wide">Digital Products</div>
+                    </div>
+                </div>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#catalog" class="text-gray-700 hover:text-blue-600 font-medium">Browse</a>
+                    <a href="#bundles" class="text-gray-700 hover:text-blue-600 font-medium">Bundles</a>
+                    <a href="#faq" class="text-gray-700 hover:text-blue-600 font-medium">FAQ</a>
+                    <a href="https://robpacpublishing.com" class="text-gray-700 hover:text-blue-600 font-medium">Main Site</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-b from-white to-gray-50 py-16 sm:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="inline-block bg-blue-50 text-blue-700 text-sm font-semibold px-4 py-2 rounded-full mb-6 flex items-center gap-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+                New Resources Added Weekly
+            </div>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+                Premium Digital Resources<br>for Entrepreneurs
+            </h1>
+            <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                Video Courses • Guides • Templates • Audio Programs<br>
+                Learn your way with multi-format business resources
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                <a href="#catalog" class="bg-blue-600 text-white font-semibold px-8 py-4 rounded-lg hover:bg-blue-700 transition text-lg">
+                    Browse Catalog
+                </a>
+                <a href="#bundles" class="bg-white text-blue-600 border-2 border-blue-600 font-semibold px-8 py-4 rounded-lg hover:bg-blue-50 transition text-lg">
+                    View Bundles
+                </a>
+            </div>
+            
+            <!-- Trust Bar -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto pt-8 border-t border-gray-200">
+                <div class="text-center">
+                    <svg class="w-12 h-12 mx-auto mb-2 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <div class="font-semibold text-gray-900">Instant Access</div>
+                    <div class="text-sm text-gray-600">Download immediately</div>
+                </div>
+                <div class="text-center">
+                    <svg class="w-12 h-12 mx-auto mb-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
+                    </svg>
+                    <div class="font-semibold text-gray-900">Multi-Format</div>
+                    <div class="text-sm text-gray-600">Video, Audio, PDF</div>
+                </div>
+                <div class="text-center">
+                    <svg class="w-12 h-12 mx-auto mb-2 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
+                    <div class="font-semibold text-gray-900">Commercial Use</div>
+                    <div class="text-sm text-gray-600">Use in your business</div>
+                </div>
+                <div class="text-center">
+                    <svg class="w-12 h-12 mx-auto mb-2 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                    </svg>
+                    <div class="font-semibold text-gray-900">30-Day Guarantee</div>
+                    <div class="text-sm text-gray-600">Risk-free purchase</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Bundle Hero -->
+    <section id="bundles" class="py-16 bg-gradient-to-r from-blue-600 to-blue-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Left: Bundle Info -->
+                    <div class="p-8 lg:p-12">
+                        <div class="discount-badge text-white text-sm font-bold px-4 py-2 rounded-full inline-block mb-4 flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path>
+                            </svg>
+                            LIMITED TIME OFFER
+                        </div>
+                        <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                            Marketing Essentials Bundle
+                        </h2>
+                        <p class="text-gray-600 mb-6">
+                            Get started with the core resources you need to grow your business online.
+                        </p>
+                        
+                        <div class="space-y-3 mb-8">
+                            <div class="flex items-start">
+                                <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-700">2 Video Courses - <span class="font-semibold">$54 value</span></span>
+                            </div>
+                            <div class="flex items-start">
+                                <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-700">3 Complete Guides - <span class="font-semibold">$51 value</span></span>
+                            </div>
+                            <div class="flex items-start">
+                                <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-700">2 Workbooks & Templates - <span class="font-semibold">$24 value</span></span>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-50 rounded-xl p-6 mb-6">
+                            <div class="flex items-baseline justify-between mb-2">
+                                <span class="text-gray-600">Total Value:</span>
+                                <span class="text-2xl font-bold text-gray-400 line-through">$129</span>
+                            </div>
+                            <div class="flex items-baseline justify-between mb-2">
+                                <span class="text-gray-900 font-semibold text-lg">Bundle Price:</span>
+                                <span class="text-4xl font-bold text-blue-600">$47</span>
+                            </div>
+                            <div class="text-center mt-4 pt-4 border-t border-gray-200">
+                                <span class="text-green-600 font-bold text-xl">YOU SAVE $82 (64% OFF)</span>
+                            </div>
+                        </div>
+
+                        <button class="w-full bg-blue-600 text-white font-bold py-4 rounded-lg hover:bg-blue-700 transition text-lg mb-4">
+                            Get Bundle Now
+                        </button>
+                        
+                        <div class="text-center">
+                            <div class="text-sm text-gray-600 mb-2 flex items-center justify-center gap-2">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                Offer ends in:
+                            </div>
+                            <div class="countdown text-2xl font-bold text-gray-900">
+                                <span id="hours">23</span>:<span id="minutes">45</span>:<span id="seconds">12</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Visual -->
+                    <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-8 lg:p-12 flex items-center justify-center">
+                        <div class="text-center">
+                            <svg class="w-32 h-32 mx-auto mb-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+                            </svg>
+                            <div class="text-gray-700 font-semibold text-lg mb-2">Essential Bundle</div>
+                            <div class="text-gray-600">7 Core Resources</div>
+                            <div class="text-gray-600">Video + Guides + Templates</div>
+                            <div class="mt-6 space-y-2">
+                                <div class="inline-block bg-white px-4 py-2 rounded-full text-sm font-medium text-gray-700 mx-1">Videos</div>
+                                <div class="inline-block bg-white px-4 py-2 rounded-full text-sm font-medium text-gray-700 mx-1">Guides</div>
+                                <div class="inline-block bg-white px-4 py-2 rounded-full text-sm font-medium text-gray-700 mx-1">Templates</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Catalog Section -->
+    <section id="catalog" class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Browse Our Catalog</h2>
+                <p class="text-xl text-gray-600">Choose individual resources or save with bundles</p>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-8">
+                <!-- Sidebar Filters -->
+                <aside class="lg:w-64 flex-shrink-0">
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 sticky top-24">
+                        <h3 class="font-bold text-gray-900 mb-4">Filter by Format</h3>
+                        <div class="space-y-3">
+                            <label class="flex items-center cursor-pointer">
+                                <input type="checkbox" class="w-4 h-4 text-blue-600 rounded" checked>
+                                <span class="ml-3 text-gray-700">All Formats</span>
+                            </label>
+                            <label class="flex items-center cursor-pointer">
+                                <input type="checkbox" class="w-4 h-4 text-blue-600 rounded">
+                                <span class="ml-3 text-gray-700">📹 Video Training</span>
+                            </label>
+                            <label class="flex items-center cursor-pointer">
+                                <input type="checkbox" class="w-4 h-4 text-blue-600 rounded">
+                                <span class="ml-3 text-gray-700">📚 Guides & Books</span>
+                            </label>
+                            <label class="flex items-center cursor-pointer">
+                                <input type="checkbox" class="w-4 h-4 text-blue-600 rounded">
+                                <span class="ml-3 text-gray-700">🎧 Audio Programs</span>
+                            </label>
+                            <label class="flex items-center cursor-pointer">
+                                <input type="checkbox" class="w-4 h-4 text-blue-600 rounded">
+                                <span class="ml-3 text-gray-700">📝 Workbooks & Templates</span>
+                            </label>
+                            <label class="flex items-center cursor-pointer">
+                                <input type="checkbox" class="w-4 h-4 text-blue-600 rounded">
+                                <span class="ml-3 text-gray-700">✅ Quick Wins</span>
+                            </label>
+                            <label class="flex items-center cursor-pointer">
+                                <input type="checkbox" class="w-4 h-4 text-blue-600 rounded">
+                                <span class="ml-3 text-gray-700">🎁 Bundles</span>
+                            </label>
+                        </div>
+
+                        <div class="mt-8 pt-8 border-t border-gray-200">
+                            <h3 class="font-bold text-gray-900 mb-4">Price Range</h3>
+                            <div class="space-y-2">
+                                <label class="flex items-center cursor-pointer">
+                                    <input type="radio" name="price" class="w-4 h-4 text-blue-600" checked>
+                                    <span class="ml-3 text-gray-700">All Prices</span>
+                                </label>
+                                <label class="flex items-center cursor-pointer">
+                                    <input type="radio" name="price" class="w-4 h-4 text-blue-600">
+                                    <span class="ml-3 text-gray-700">Under $15</span>
+                                </label>
+                                <label class="flex items-center cursor-pointer">
+                                    <input type="radio" name="price" class="w-4 h-4 text-blue-600">
+                                    <span class="ml-3 text-gray-700">$15 - $30</span>
+                                </label>
+                                <label class="flex items-center cursor-pointer">
+                                    <input type="radio" name="price" class="w-4 h-4 text-blue-600">
+                                    <span class="ml-3 text-gray-700">$30+</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Product Grid -->
+                <div class="flex-1">
+                    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        
+                        <!-- Product Card 1 -->
+                        <div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                            <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
+                                <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                                </svg>
+                            </div>
+                            <div class="p-6">
+                                <div class="text-xs font-semibold text-blue-600 mb-2">VIDEO TRAINING</div>
+                                <h3 class="text-lg font-bold text-gray-900 mb-2">Instagram Marketing Mastery</h3>
+                                <p class="text-sm text-gray-600 mb-4">Complete video course on growing your Instagram business presence</p>
+                                <div class="text-xs text-gray-500 mb-4">45 min • Beginner-Friendly</div>
+                                <div class="flex items-baseline mb-4">
+                                    <span class="text-2xl font-bold text-gray-900">$27</span>
+                                    <span class="text-lg text-gray-400 line-through ml-2">$37</span>
+                                    <span class="ml-auto discount-badge text-white text-xs font-bold px-2 py-1 rounded">SAVE $10</span>
+                                </div>
+                                <button class="w-full bg-blue-600 text-white font-semibold py-3 rounded-lg hover:bg-blue-700 transition">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 2 -->
+                        <div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                            <div class="bg-gradient-to-br from-purple-500 to-purple-600 h-48 flex items-center justify-center">
+                                <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                                </svg>
+                            </div>
+                            <div class="p-6">
+                                <div class="text-xs font-semibold text-purple-600 mb-2">COMPLETE GUIDE</div>
+                                <h3 class="text-lg font-bold text-gray-900 mb-2">Email Marketing Blueprint</h3>
+                                <p class="text-sm text-gray-600 mb-4">Build and monetize your email list from scratch</p>
+                                <div class="text-xs text-gray-500 mb-4">68 pages • PDF Format</div>
+                                <div class="flex items-baseline mb-4">
+                                    <span class="text-2xl font-bold text-gray-900">$17</span>
+                                    <span class="text-lg text-gray-400 line-through ml-2">$27</span>
+                                    <span class="ml-auto discount-badge text-white text-xs font-bold px-2 py-1 rounded">SAVE $10</span>
+                                </div>
+                                <button class="w-full bg-purple-600 text-white font-semibold py-3 rounded-lg hover:bg-purple-700 transition">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 3 -->
+                        <div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                            <div class="bg-gradient-to-br from-green-500 to-green-600 h-48 flex items-center justify-center">
+                                <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path>
+                                </svg>
+                            </div>
+                            <div class="p-6">
+                                <div class="text-xs font-semibold text-green-600 mb-2">AUDIO PROGRAM</div>
+                                <h3 class="text-lg font-bold text-gray-900 mb-2">Productivity Mastery</h3>
+                                <p class="text-sm text-gray-600 mb-4">Audio lessons you can listen to anywhere</p>
+                                <div class="text-xs text-gray-500 mb-4">2 hours • MP3 Format</div>
+                                <div class="flex items-baseline mb-4">
+                                    <span class="text-2xl font-bold text-gray-900">$27</span>
+                                    <span class="text-lg text-gray-400 line-through ml-2">$37</span>
+                                    <span class="ml-auto discount-badge text-white text-xs font-bold px-2 py-1 rounded">SAVE $10</span>
+                                </div>
+                                <button class="w-full bg-green-600 text-white font-semibold py-3 rounded-lg hover:bg-green-700 transition">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 4 -->
+                        <div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                            <div class="bg-gradient-to-br from-orange-500 to-orange-600 h-48 flex items-center justify-center">
+                                <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                </svg>
+                            </div>
+                            <div class="p-6">
+                                <div class="text-xs font-semibold text-orange-600 mb-2">WORKBOOK</div>
+                                <h3 class="text-lg font-bold text-gray-900 mb-2">Content Calendar Templates</h3>
+                                <p class="text-sm text-gray-600 mb-4">12-month planning system with fillable templates</p>
+                                <div class="text-xs text-gray-500 mb-4">32 pages • Editable PDF</div>
+                                <div class="flex items-baseline mb-4">
+                                    <span class="text-2xl font-bold text-gray-900">$12</span>
+                                    <span class="text-lg text-gray-400 line-through ml-2">$17</span>
+                                    <span class="ml-auto discount-badge text-white text-xs font-bold px-2 py-1 rounded">SAVE $5</span>
+                                </div>
+                                <button class="w-full bg-orange-600 text-white font-semibold py-3 rounded-lg hover:bg-orange-700 transition">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 5 -->
+                        <div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                            <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
+                                <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <div class="p-6">
+                                <div class="text-xs font-semibold text-blue-600 mb-2">VIDEO COURSE</div>
+                                <h3 class="text-lg font-bold text-gray-900 mb-2">Facebook Ads Fundamentals</h3>
+                                <p class="text-sm text-gray-600 mb-4">Master Facebook advertising from beginner to advanced</p>
+                                <div class="text-xs text-gray-500 mb-4">90 min • Multi-module</div>
+                                <div class="flex items-baseline mb-4">
+                                    <span class="text-2xl font-bold text-gray-900">$37</span>
+                                    <span class="text-lg text-gray-400 line-through ml-2">$47</span>
+                                    <span class="ml-auto discount-badge text-white text-xs font-bold px-2 py-1 rounded">SAVE $10</span>
+                                </div>
+                                <button class="w-full bg-blue-600 text-white font-semibold py-3 rounded-lg hover:bg-blue-700 transition">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 6 -->
+                        <div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                            <div class="bg-gradient-to-br from-purple-500 to-purple-600 h-48 flex items-center justify-center">
+                                <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                                </svg>
+                            </div>
+                            <div class="p-6">
+                                <div class="text-xs font-semibold text-purple-600 mb-2">GUIDE</div>
+                                <h3 class="text-lg font-bold text-gray-900 mb-2">SEO Essentials for Beginners</h3>
+                                <p class="text-sm text-gray-600 mb-4">Rank higher on Google with proven strategies</p>
+                                <div class="text-xs text-gray-500 mb-4">42 pages • PDF Format</div>
+                                <div class="flex items-baseline mb-4">
+                                    <span class="text-2xl font-bold text-gray-900">$17</span>
+                                    <span class="text-lg text-gray-400 line-through ml-2">$27</span>
+                                    <span class="ml-auto discount-badge text-white text-xs font-bold px-2 py-1 rounded">SAVE $10</span>
+                                </div>
+                                <button class="w-full bg-purple-600 text-white font-semibold py-3 rounded-lg hover:bg-purple-700 transition">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 7 -->
+                        <div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                            <div class="bg-gradient-to-br from-pink-500 to-pink-600 h-48 flex items-center justify-center">
+                                <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                                </svg>
+                            </div>
+                            <div class="p-6">
+                                <div class="text-xs font-semibold text-pink-600 mb-2">PROMPT PACK</div>
+                                <h3 class="text-lg font-bold text-gray-900 mb-2">ChatGPT Business Prompts</h3>
+                                <p class="text-sm text-gray-600 mb-4">50+ tested prompts for marketing, sales, and content</p>
+                                <div class="text-xs text-gray-500 mb-4">Copy-paste ready</div>
+                                <div class="flex items-baseline mb-4">
+                                    <span class="text-2xl font-bold text-gray-900">$12</span>
+                                    <span class="text-lg text-gray-400 line-through ml-2">$17</span>
+                                    <span class="ml-auto discount-badge text-white text-xs font-bold px-2 py-1 rounded">SAVE $5</span>
+                                </div>
+                                <button class="w-full bg-pink-600 text-white font-semibold py-3 rounded-lg hover:bg-pink-700 transition">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 8 -->
+                        <div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                            <div class="bg-gradient-to-br from-green-500 to-green-600 h-48 flex items-center justify-center">
+                                <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
+                                </svg>
+                            </div>
+                            <div class="p-6">
+                                <div class="text-xs font-semibold text-green-600 mb-2">CHECKLIST</div>
+                                <h3 class="text-lg font-bold text-gray-900 mb-2">Product Launch Checklist</h3>
+                                <p class="text-sm text-gray-600 mb-4">Step-by-step launch plan with 100+ action items</p>
+                                <div class="text-xs text-gray-500 mb-4">Printable PDF</div>
+                                <div class="flex items-baseline mb-4">
+                                    <span class="text-2xl font-bold text-gray-900">$7</span>
+                                    <span class="text-lg text-gray-400 line-through ml-2">$12</span>
+                                    <span class="ml-auto discount-badge text-white text-xs font-bold px-2 py-1 rounded">SAVE $5</span>
+                                </div>
+                                <button class="w-full bg-green-600 text-white font-semibold py-3 rounded-lg hover:bg-green-700 transition">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 9 -->
+                        <div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                            <div class="bg-gradient-to-br from-indigo-500 to-indigo-600 h-48 flex items-center justify-center">
+                                <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path>
+                                </svg>
+                            </div>
+                            <div class="p-6">
+                                <div class="text-xs font-semibold text-indigo-600 mb-2">TEMPLATE PACK</div>
+                                <h3 class="text-lg font-bold text-gray-900 mb-2">Social Media Templates</h3>
+                                <p class="text-sm text-gray-600 mb-4">30 Canva templates for posts, stories, and ads</p>
+                                <div class="text-xs text-gray-500 mb-4">Fully customizable</div>
+                                <div class="flex items-baseline mb-4">
+                                    <span class="text-2xl font-bold text-gray-900">$17</span>
+                                    <span class="text-lg text-gray-400 line-through ml-2">$27</span>
+                                    <span class="ml-auto discount-badge text-white text-xs font-bold px-2 py-1 rounded">SAVE $10</span>
+                                </div>
+                                <button class="w-full bg-indigo-600 text-white font-semibold py-3 rounded-lg hover:bg-indigo-700 transition">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 10 -->
+                        <div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                            <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
+                                <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                                </svg>
+                            </div>
+                            <div class="p-6">
+                                <div class="text-xs font-semibold text-blue-600 mb-2">VIDEO TRAINING</div>
+                                <h3 class="text-lg font-bold text-gray-900 mb-2">LinkedIn Lead Generation</h3>
+                                <p class="text-sm text-gray-600 mb-4">Generate consistent B2B leads on LinkedIn</p>
+                                <div class="text-xs text-gray-500 mb-4">60 min • Advanced</div>
+                                <div class="flex items-baseline mb-4">
+                                    <span class="text-2xl font-bold text-gray-900">$27</span>
+                                    <span class="text-lg text-gray-400 line-through ml-2">$37</span>
+                                    <span class="ml-auto discount-badge text-white text-xs font-bold px-2 py-1 rounded">SAVE $10</span>
+                                </div>
+                                <button class="w-full bg-blue-600 text-white font-semibold py-3 rounded-lg hover:bg-blue-700 transition">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 11 -->
+                        <div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                            <div class="bg-gradient-to-br from-purple-500 to-purple-600 h-48 flex items-center justify-center">
+                                <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                                </svg>
+                            </div>
+                            <div class="p-6">
+                                <div class="text-xs font-semibold text-purple-600 mb-2">COMPLETE BOOK</div>
+                                <h3 class="text-lg font-bold text-gray-900 mb-2">Sales Funnel Blueprint</h3>
+                                <p class="text-sm text-gray-600 mb-4">Build high-converting funnels step-by-step</p>
+                                <div class="text-xs text-gray-500 mb-4">120 pages • Case studies</div>
+                                <div class="flex items-baseline mb-4">
+                                    <span class="text-2xl font-bold text-gray-900">$27</span>
+                                    <span class="text-lg text-gray-400 line-through ml-2">$37</span>
+                                    <span class="ml-auto discount-badge text-white text-xs font-bold px-2 py-1 rounded">SAVE $10</span>
+                                </div>
+                                <button class="w-full bg-purple-600 text-white font-semibold py-3 rounded-lg hover:bg-purple-700 transition">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 12 -->
+                        <div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                            <div class="bg-gradient-to-br from-orange-500 to-orange-600 h-48 flex items-center justify-center">
+                                <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                                </svg>
+                            </div>
+                            <div class="p-6">
+                                <div class="text-xs font-semibold text-orange-600 mb-2">WORKBOOK</div>
+                                <h3 class="text-lg font-bold text-gray-900 mb-2">90-Day Business Planner</h3>
+                                <p class="text-sm text-gray-600 mb-4">Quarterly planning system with goal tracking</p>
+                                <div class="text-xs text-gray-500 mb-4">50 pages • Fillable</div>
+                                <div class="flex items-baseline mb-4">
+                                    <span class="text-2xl font-bold text-gray-900">$12</span>
+                                    <span class="text-lg text-gray-400 line-through ml-2">$17</span>
+                                    <span class="ml-auto discount-badge text-white text-xs font-bold px-2 py-1 rounded">SAVE $5</span>
+                                </div>
+                                <button class="w-full bg-orange-600 text-white font-semibold py-3 rounded-lg hover:bg-orange-700 transition">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Load More -->
+                    <div class="text-center mt-12">
+                        <button class="bg-white text-blue-600 border-2 border-blue-600 font-semibold px-8 py-3 rounded-lg hover:bg-blue-50 transition">
+                            Load More Resources
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">What Entrepreneurs Are Saying</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 rounded-xl p-6">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                    </div>
+                    <p class="text-gray-700 mb-4">"These resources 10x'd my marketing knowledge. The video courses are incredibly practical and the templates saved me hours of work."</p>
+                    <div class="font-semibold text-gray-900">Sarah M.</div>
+                    <div class="text-sm text-gray-600">Digital Marketer</div>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-6">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                    </div>
+                    <p class="text-gray-700 mb-4">"Better than $500 courses I've taken. The content is up-to-date, actionable, and I can learn in my preferred format."</p>
+                    <div class="font-semibold text-gray-900">Mike R.</div>
+                    <div class="text-sm text-gray-600">Entrepreneur</div>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-6">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                        <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                    </div>
+                    <p class="text-gray-700 mb-4">"The templates alone saved me 20+ hours. Everything is well-organized and professional. Worth every penny."</p>
+                    <div class="font-semibold text-gray-900">Lisa K.</div>
+                    <div class="text-sm text-gray-600">Content Creator</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-16 bg-gray-50">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Frequently Asked Questions</h2>
+            <div class="space-y-6">
+                <div class="bg-white rounded-xl p-6 shadow-sm">
+                    <h3 class="font-bold text-gray-900 mb-2">What format are the resources?</h3>
+                    <p class="text-gray-700">Resources come in multiple formats: video (MP4), audio (MP3), PDF, and editable templates. All are compatible with any device.</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 shadow-sm">
+                    <h3 class="font-bold text-gray-900 mb-2">Can I get a refund?</h3>
+                    <p class="text-gray-700">Yes! We offer a 30-day money-back guarantee. If you're not satisfied for any reason, just contact us for a full refund.</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 shadow-sm">
+                    <h3 class="font-bold text-gray-900 mb-2">Do I need special software?</h3>
+                    <p class="text-gray-700">No special software needed. PDFs work with any PDF reader (free on every device), videos play in any media player, and templates work with standard tools.</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 shadow-sm">
+                    <h3 class="font-bold text-gray-900 mb-2">Is this a subscription?</h3>
+                    <p class="text-gray-700">No. All products are one-time purchases. Pay once, keep forever. Download and access your files anytime.</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 shadow-sm">
+                    <h3 class="font-bold text-gray-900 mb-2">Can I use these for my business?</h3>
+                    <p class="text-gray-700">Yes! All resources include personal and commercial use rights. Use them to grow your business, train your team, or implement strategies. Resale rights are not included unless specified.</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 shadow-sm">
+                    <h3 class="font-bold text-gray-900 mb-2">How quickly can I access my purchase?</h3>
+                    <p class="text-gray-700">Instantly! After completing your purchase, you'll receive immediate download links via email. No waiting, no shipping.</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 shadow-sm">
+                    <h3 class="font-bold text-gray-900 mb-2">Do you add new resources?</h3>
+                    <p class="text-gray-700">Yes! We add new resources weekly. Sign up for our newsletter to get notified about new releases and exclusive discounts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-16 bg-blue-600">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl lg:text-4xl font-bold text-white mb-4">Ready to Accelerate Your Business Growth?</h2>
+            <p class="text-xl text-blue-100 mb-8">Join 500+ entrepreneurs who are learning faster and growing smarter</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#catalog" class="bg-white text-blue-600 font-bold px-8 py-4 rounded-lg hover:bg-gray-100 transition text-lg">
+                    Browse Catalog
+                </a>
+                <a href="#bundles" class="bg-blue-700 text-white border-2 border-white font-bold px-8 py-4 rounded-lg hover:bg-blue-800 transition text-lg">
+                    View Bundles
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <img src="logo.png" alt="RobPac Resources" class="h-10 w-10">
+                        <div class="text-white font-bold">ROBPAC RESOURCES</div>
+                    </div>
+                    <p class="text-sm">Premium digital resources for modern entrepreneurs</p>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#catalog" class="hover:text-white">Browse Catalog</a></li>
+                        <li><a href="#bundles" class="hover:text-white">Bundles</a></li>
+                        <li><a href="#faq" class="hover:text-white">FAQ</a></li>
+                        <li><a href="https://robpacpublishing.com" class="hover:text-white">Main Site</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Categories</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white">Video Training</a></li>
+                        <li><a href="#" class="hover:text-white">Guides & Books</a></li>
+                        <li><a href="#" class="hover:text-white">Audio Programs</a></li>
+                        <li><a href="#" class="hover:text-white">Templates</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Support</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-white">Refund Policy</a></li>
+                        <li><a href="#" class="hover:text-white">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-sm">
+                <p>© 2025 RobPac Resources - A Division of <a href="https://robpacpublishing.com" class="text-blue-400 hover:text-blue-300">RobPac Publishing</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Newsletter Popup (appears after 5 seconds)
+        setTimeout(() => {
+            document.getElementById('newsletterPopup').classList.remove('hidden');
+        }, 5000);
+
+        function closePopup() {
+            document.getElementById('newsletterPopup').classList.add('hidden');
+        }
+
+        // Countdown Timer
+        function updateCountdown() {
+            const hours = document.getElementById('hours');
+            const minutes = document.getElementById('minutes');
+            const seconds = document.getElementById('seconds');
+            
+            let h = parseInt(hours.textContent);
+            let m = parseInt(minutes.textContent);
+            let s = parseInt(seconds.textContent);
+            
+            s--;
+            if (s < 0) {
+                s = 59;
+                m--;
+                if (m < 0) {
+                    m = 59;
+                    h--;
+                    if (h < 0) {
+                        h = 23;
+                    }
+                }
+            }
+            
+            hours.textContent = h.toString().padStart(2, '0');
+            minutes.textContent = m.toString().padStart(2, '0');
+            seconds.textContent = s.toString().padStart(2, '0');
+        }
+        
+        setInterval(updateCountdown, 1000);
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
