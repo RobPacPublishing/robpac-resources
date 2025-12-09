@@ -22,7 +22,7 @@
         }
         .product-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+            box-shadow: 0 16px 30px -10px rgb(15 23 42 / 0.25);
         }
         .product-image-wrapper {
             background-color: #f9fafb;
@@ -34,16 +34,9 @@
         }
         .product-image {
             width: 100%;
-            height: 100%;
-            max-height: 240px;
+            height: auto;
+            max-height: 220px;
             object-fit: contain;
-        }
-        .category-card {
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .category-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 18px 30px -12px rgb(15 23 42 / 0.25);
         }
         .countdown {
             font-variant-numeric: tabular-nums;
@@ -164,267 +157,459 @@
     </section>
 
     <!-- Featured Bundle Hero -->
-    
-    <!-- Limited-Time Offers / Bundles -->
-    <section id="bundles" class="py-16 bg-gradient-to-r from-blue-600 to-blue-700">
+    <section id="bundles" class="py-10 bg-gradient-to-r from-blue-600 to-blue-700">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 mb-10">
-                <div>
-                    <div class="discount-badge text-white text-sm font-bold px-4 py-2 rounded-full inline-flex items-center gap-2 mb-4">
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path>
-                        </svg>
-                        LIMITED TIME OFFERS
+            <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Left: Bundle Info -->
+                    <div class="p-6 lg:p-8">
+                        <div class="discount-badge text-white text-sm font-bold px-4 py-2 rounded-full inline-block mb-4 flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path>
+                            </svg>
+                            LIMITED TIME OFFER
+                        </div>
+                        <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                            Marketing Essentials Bundle
+                        </h2>
+                        <p class="text-gray-600 mb-6">
+                            Get started with the core resources you need to grow your business online.
+                        </p>
+                        
+                        <div class="space-y-3 mb-8">
+                            <div class="flex items-start">
+                                <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-700">2 Video Courses - <span class="font-semibold">$54 value</span></span>
+                            </div>
+                            <div class="flex items-start">
+                                <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-700">3 Complete Guides - <span class="font-semibold">$51 value</span></span>
+                            </div>
+                            <div class="flex items-start">
+                                <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-700">2 Workbooks & Templates - <span class="font-semibold">$24 value</span></span>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-50 rounded-xl p-6 mb-6">
+                            <div class="flex items-baseline justify-between mb-2">
+                                <span class="text-gray-600">Total Value:</span>
+                                <span class="text-2xl font-bold text-gray-400 line-through">$129</span>
+                            </div>
+                            <div class="flex items-baseline justify-between mb-2">
+                                <span class="text-gray-900 font-semibold text-lg">Bundle Price:</span>
+                                <span class="text-4xl font-bold text-blue-600">$47</span>
+                            </div>
+                            <div class="text-center mt-4 pt-4 border-t border-gray-200">
+                                <span class="text-green-600 font-bold text-xl">YOU SAVE $82 (64% OFF)</span>
+                            </div>
+                        </div>
+
+                        <button class="w-full bg-blue-600 text-white font-bold py-4 rounded-lg hover:bg-blue-700 transition text-lg mb-4">
+                            Get Bundle Now
+                        </button>
+                        
+                        <div class="text-center">
+                            <div class="text-sm text-gray-600 mb-2 flex items-center justify-center gap-2">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                Offer ends in:
+                            </div>
+                            <div class="countdown text-2xl font-bold text-gray-900">
+                                <span id="hours">23</span>:<span id="minutes">45</span>:<span id="seconds">12</span>
+                            </div>
+                        </div>
                     </div>
-                    <h2 class="text-3xl lg:text-4xl font-bold text-white mb-2">
-                        Save on Curated Digital Resources
-                    </h2>
-                    <p class="text-blue-100 text-lg max-w-xl">
-                        Short-term deals on high-impact prompt packs and resources for entrepreneurs.
-                    </p>
-                </div>
-                <div class="bg-blue-700/50 rounded-2xl px-6 py-4 text-blue-100 flex items-center gap-3">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                    </svg>
-                    <div>
-                        <div class="text-sm uppercase tracking-wide text-blue-100/80">Next refresh in</div>
-                        <div class="countdown text-2xl font-bold" id="offersCountdown">
-                            <span id="hours">12</span><span class="mx-1">h</span>
-                            <span id="minutes">00</span><span class="mx-1">m</span>
-                            <span id="seconds">00</span><span class="mx-1">s</span>
+
+                    <!-- Right: Visual -->
+                    <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-8 lg:p-12 flex items-center justify-center">
+                        <div class="text-center">
+                            <svg class="w-24 h-24 mx-auto mb-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+                            </svg>
+                            <div class="text-gray-700 font-semibold text-lg mb-2">Essential Bundle</div>
+                            <div class="text-gray-600">7 Core Resources</div>
+                            <div class="text-gray-600">Video + Guides + Templates</div>
+                            <div class="mt-6 space-y-2">
+                                <div class="inline-block bg-white px-4 py-2 rounded-full text-sm font-medium text-gray-700 mx-1">Videos</div>
+                                <div class="inline-block bg-white px-4 py-2 rounded-full text-sm font-medium text-gray-700 mx-1">Guides</div>
+                                <div class="inline-block bg-white px-4 py-2 rounded-full text-sm font-medium text-gray-700 mx-1">Templates</div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div id="limitedOffersGrid" class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                <!-- Limited offer cards injected by JavaScript -->
-            </div>
-
-            <p class="mt-6 text-sm text-blue-100 text-center">
-                All purchases are processed securely via Payhip with instant access after checkout.
-            </p>
         </div>
     </section>
 
-
-    
     <!-- Main Catalog Section -->
     <section id="catalog" class="py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Browse Our Catalog</h2>
-                <p class="text-xl text-gray-600">Explore digital resources by category or scroll through all products.</p>
+                <p class="text-xl text-gray-600">Choose individual resources or save with bundles</p>
             </div>
 
-            <!-- Category Hubs -->
-            <div class="mb-16">
-                <h3 class="text-lg font-semibold text-gray-900 mb-4 text-center lg:text-left">Browse by Category</h3>
-                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                    <button type="button" class="category-card bg-white rounded-xl border border-gray-200 p-5 text-left flex items-start gap-3" data-category="Marketing">
-                        <div class="mt-1">
-                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm0 7a1 1 0 011-1h10a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1v-2zm0 7a1 1 0 011-1h6a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1v-2z" />
-                            </svg>
+            <div class="flex flex-col lg:flex-row gap-8">
+                <!-- Sidebar Filters -->
+                <aside class="lg:w-64 flex-shrink-0">
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 sticky top-24">
+                        <h3 class="font-bold text-gray-900 mb-4">Filter by Format</h3>
+                        <div class="space-y-3">
+                            <label class="flex items-center cursor-pointer">
+                                <input type="checkbox" class="w-4 h-4 text-blue-600 rounded" checked>
+                                <span class="ml-3 text-gray-700">All Formats</span>
+                            </label>
+                            <label class="flex items-center cursor-pointer">
+                                <input type="checkbox" class="w-4 h-4 text-blue-600 rounded">
+                                <span class="ml-3 text-gray-700">📹 Video Training</span>
+                            </label>
+                            <label class="flex items-center cursor-pointer">
+                                <input type="checkbox" class="w-4 h-4 text-blue-600 rounded">
+                                <span class="ml-3 text-gray-700">📚 Guides & Books</span>
+                            </label>
+                            <label class="flex items-center cursor-pointer">
+                                <input type="checkbox" class="w-4 h-4 text-blue-600 rounded">
+                                <span class="ml-3 text-gray-700">🎧 Audio Programs</span>
+                            </label>
+                            <label class="flex items-center cursor-pointer">
+                                <input type="checkbox" class="w-4 h-4 text-blue-600 rounded">
+                                <span class="ml-3 text-gray-700">📝 Workbooks & Templates</span>
+                            </label>
+                            <label class="flex items-center cursor-pointer">
+                                <input type="checkbox" class="w-4 h-4 text-blue-600 rounded">
+                                <span class="ml-3 text-gray-700">✅ Quick Wins</span>
+                            </label>
+                            <label class="flex items-center cursor-pointer">
+                                <input type="checkbox" class="w-4 h-4 text-blue-600 rounded">
+                                <span class="ml-3 text-gray-700">🎁 Bundles</span>
+                            </label>
                         </div>
-                        <div>
-                            <div class="font-semibold text-gray-900">Marketing</div>
-                            <div class="text-sm text-gray-600">Digital & content marketing, email, SEO, social.</div>
-                        </div>
-                    </button>
 
-                    <button type="button" class="category-card bg-white rounded-xl border border-gray-200 p-5 text-left flex items-start gap-3" data-category="Sales & Conversion">
-                        <div class="mt-1">
-                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h18M5 7h14l-1 13H6L5 7zm4 4v6m6-6v6" />
-                            </svg>
+                        <div class="mt-8 pt-8 border-t border-gray-200">
+                            <h3 class="font-bold text-gray-900 mb-4">Price Range</h3>
+                            <div class="space-y-2">
+                                <label class="flex items-center cursor-pointer">
+                                    <input type="radio" name="price" class="w-4 h-4 text-blue-600" checked>
+                                    <span class="ml-3 text-gray-700">All Prices</span>
+                                </label>
+                                <label class="flex items-center cursor-pointer">
+                                    <input type="radio" name="price" class="w-4 h-4 text-blue-600">
+                                    <span class="ml-3 text-gray-700">Under $15</span>
+                                </label>
+                                <label class="flex items-center cursor-pointer">
+                                    <input type="radio" name="price" class="w-4 h-4 text-blue-600">
+                                    <span class="ml-3 text-gray-700">$15 - $30</span>
+                                </label>
+                                <label class="flex items-center cursor-pointer">
+                                    <input type="radio" name="price" class="w-4 h-4 text-blue-600">
+                                    <span class="ml-3 text-gray-700">$30+</span>
+                                </label>
+                            </div>
                         </div>
-                        <div>
-                            <div class="font-semibold text-gray-900">Sales & Conversion</div>
-                            <div class="text-sm text-gray-600">Funnels, offers, copy, and lead generation.</div>
-                        </div>
-                    </button>
+                    </div>
+                </aside>
 
-                    <button type="button" class="category-card bg-white rounded-xl border border-gray-200 p-5 text-left flex items-start gap-3" data-category="Business & Growth">
-                        <div class="mt-1">
-                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 13h4l3 8 4-16 3 8h4" />
-                            </svg>
+                <!-- Product Grid -->
+                <div class="flex-1">
+                    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        
+                        <!-- Product Card 1 -->
+                        <div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                            <div class="product-image-wrapper bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
+                                <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                                </svg>
+                            </div>
+                            <div class="p-6">
+                                <div class="text-xs font-semibold text-blue-600 mb-2">VIDEO TRAINING</div>
+                                <h3 class="text-lg font-bold text-gray-900 mb-2">Instagram Marketing Mastery</h3>
+                                <p class="text-sm text-gray-600 mb-4">Complete video course on growing your Instagram business presence</p>
+                                <div class="text-xs text-gray-500 mb-4">45 min • Beginner-Friendly</div>
+                                <div class="flex items-baseline mb-4">
+                                    <span class="text-2xl font-bold text-gray-900">$27</span>
+                                    <span class="text-lg text-gray-400 line-through ml-2">$37</span>
+                                    <span class="ml-auto discount-badge text-white text-xs font-bold px-2 py-1 rounded">SAVE $10</span>
+                                </div>
+                                <button class="w-full bg-blue-600 text-white font-semibold py-3 rounded-lg hover:bg-blue-700 transition">
+                                    Add to Cart
+                                </button>
+                            </div>
                         </div>
-                        <div>
-                            <div class="font-semibold text-gray-900">Business & Growth</div>
-                            <div class="text-sm text-gray-600">Strategy, startups, online business models.</div>
-                        </div>
-                    </button>
 
-                    <button type="button" class="category-card bg-white rounded-xl border border-gray-200 p-5 text-left flex items-start gap-3" data-category="Creator & Media">
-                        <div class="mt-1">
-                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14m-2 0H5a2 2 0 01-2-2V8a2 2 0 012-2h8a2 2 0 012 2v4z" />
-                            </svg>
+                        <!-- Product Card 2 -->
+                        <div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                            <div class="product-image-wrapper bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center">
+                                <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                                </svg>
+                            </div>
+                            <div class="p-6">
+                                <div class="text-xs font-semibold text-purple-600 mb-2">COMPLETE GUIDE</div>
+                                <h3 class="text-lg font-bold text-gray-900 mb-2">Email Marketing Blueprint</h3>
+                                <p class="text-sm text-gray-600 mb-4">Build and monetize your email list from scratch</p>
+                                <div class="text-xs text-gray-500 mb-4">68 pages • PDF Format</div>
+                                <div class="flex items-baseline mb-4">
+                                    <span class="text-2xl font-bold text-gray-900">$17</span>
+                                    <span class="text-lg text-gray-400 line-through ml-2">$27</span>
+                                    <span class="ml-auto discount-badge text-white text-xs font-bold px-2 py-1 rounded">SAVE $10</span>
+                                </div>
+                                <button class="w-full bg-purple-600 text-white font-semibold py-3 rounded-lg hover:bg-purple-700 transition">
+                                    Add to Cart
+                                </button>
+                            </div>
                         </div>
-                        <div>
-                            <div class="font-semibold text-gray-900">Creator & Media</div>
-                            <div class="text-sm text-gray-600">Content creation, video, and podcasting.</div>
-                        </div>
-                    </button>
 
-                    <button type="button" class="category-card bg-white rounded-xl border border-gray-200 p-5 text-left flex items-start gap-3" data-category="Productivity & Systems">
-                        <div class="mt-1">
-                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 16v-2m8-6h-2M6 12H4m13.657-5.657L17.243 7.1M7.1 17.243l-1.414 1.414m0-11.314L7.1 7.1m10.143 10.143l1.414 1.414" />
-                            </svg>
+                        <!-- Product Card 3 -->
+                        <div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                            <div class="product-image-wrapper bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center">
+                                <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path>
+                                </svg>
+                            </div>
+                            <div class="p-6">
+                                <div class="text-xs font-semibold text-green-600 mb-2">AUDIO PROGRAM</div>
+                                <h3 class="text-lg font-bold text-gray-900 mb-2">Productivity Mastery</h3>
+                                <p class="text-sm text-gray-600 mb-4">Audio lessons you can listen to anywhere</p>
+                                <div class="text-xs text-gray-500 mb-4">2 hours • MP3 Format</div>
+                                <div class="flex items-baseline mb-4">
+                                    <span class="text-2xl font-bold text-gray-900">$27</span>
+                                    <span class="text-lg text-gray-400 line-through ml-2">$37</span>
+                                    <span class="ml-auto discount-badge text-white text-xs font-bold px-2 py-1 rounded">SAVE $10</span>
+                                </div>
+                                <button class="w-full bg-green-600 text-white font-semibold py-3 rounded-lg hover:bg-green-700 transition">
+                                    Add to Cart
+                                </button>
+                            </div>
                         </div>
-                        <div>
-                            <div class="font-semibold text-gray-900">Productivity & Systems</div>
-                            <div class="text-sm text-gray-600">Automation, workflows, and tech tools.</div>
-                        </div>
-                    </button>
 
-                    <button type="button" class="category-card bg-white rounded-xl border border-gray-200 p-5 text-left flex items-start gap-3" data-category="Mindset & Personal Growth">
-                        <div class="mt-1">
-                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7a4 4 0 00-8 0c0 1.657 1.5 3 3.5 3.5V13h5V7zM9 21v-2a4 4 0 014-4h3a4 4 0 014 4v2" />
-                            </svg>
+                        <!-- Product Card 4 -->
+                        <div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                            <div class="product-image-wrapper bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center">
+                                <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                </svg>
+                            </div>
+                            <div class="p-6">
+                                <div class="text-xs font-semibold text-orange-600 mb-2">WORKBOOK</div>
+                                <h3 class="text-lg font-bold text-gray-900 mb-2">Content Calendar Templates</h3>
+                                <p class="text-sm text-gray-600 mb-4">12-month planning system with fillable templates</p>
+                                <div class="text-xs text-gray-500 mb-4">32 pages • Editable PDF</div>
+                                <div class="flex items-baseline mb-4">
+                                    <span class="text-2xl font-bold text-gray-900">$12</span>
+                                    <span class="text-lg text-gray-400 line-through ml-2">$17</span>
+                                    <span class="ml-auto discount-badge text-white text-xs font-bold px-2 py-1 rounded">SAVE $5</span>
+                                </div>
+                                <button class="w-full bg-orange-600 text-white font-semibold py-3 rounded-lg hover:bg-orange-700 transition">
+                                    Add to Cart
+                                </button>
+                            </div>
                         </div>
-                        <div>
-                            <div class="font-semibold text-gray-900">Mindset & Personal Growth</div>
-                            <div class="text-sm text-gray-600">Habits, resilience, and leadership skills.</div>
-                        </div>
-                    </button>
 
-                    <button type="button" class="category-card bg-white rounded-xl border border-gray-200 p-5 text-left flex items-start gap-3" data-category="Career & Freelancing">
-                        <div class="mt-1">
-                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-7 8h8a2 2 0 002-2v-5a2 2 0 00-2-2H8a2 2 0 00-2 2v5a2 2 0 002 2zm7-14V4a2 2 0 00-2-2H10a2 2 0 00-2 2v2" />
-                            </svg>
+                        <!-- Product Card 5 -->
+                        <div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                            <div class="product-image-wrapper bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
+                                <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <div class="p-6">
+                                <div class="text-xs font-semibold text-blue-600 mb-2">VIDEO COURSE</div>
+                                <h3 class="text-lg font-bold text-gray-900 mb-2">Facebook Ads Fundamentals</h3>
+                                <p class="text-sm text-gray-600 mb-4">Master Facebook advertising from beginner to advanced</p>
+                                <div class="text-xs text-gray-500 mb-4">90 min • Multi-module</div>
+                                <div class="flex items-baseline mb-4">
+                                    <span class="text-2xl font-bold text-gray-900">$37</span>
+                                    <span class="text-lg text-gray-400 line-through ml-2">$47</span>
+                                    <span class="ml-auto discount-badge text-white text-xs font-bold px-2 py-1 rounded">SAVE $10</span>
+                                </div>
+                                <button class="w-full bg-blue-600 text-white font-semibold py-3 rounded-lg hover:bg-blue-700 transition">
+                                    Add to Cart
+                                </button>
+                            </div>
                         </div>
-                        <div>
-                            <div class="font-semibold text-gray-900">Career & Freelancing</div>
-                            <div class="text-sm text-gray-600">Client work, positioning, and solopreneurship.</div>
-                        </div>
-                    </button>
 
-                    <button type="button" class="category-card bg-white rounded-xl border border-gray-200 p-5 text-left flex items-start gap-3" data-category="Health & Wellness">
-                        <div class="mt-1">
-                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318A4.5 4.5 0 0112 5.25a4.5 4.5 0 017.682 1.068A4.5 4.5 0 0119.5 15L12 21l-7.5-6a4.5 4.5 0 01-.182-8.682z" />
-                            </svg>
+                        <!-- Product Card 6 -->
+                        <div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                            <div class="product-image-wrapper bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center">
+                                <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                                </svg>
+                            </div>
+                            <div class="p-6">
+                                <div class="text-xs font-semibold text-purple-600 mb-2">GUIDE</div>
+                                <h3 class="text-lg font-bold text-gray-900 mb-2">SEO Essentials for Beginners</h3>
+                                <p class="text-sm text-gray-600 mb-4">Rank higher on Google with proven strategies</p>
+                                <div class="text-xs text-gray-500 mb-4">42 pages • PDF Format</div>
+                                <div class="flex items-baseline mb-4">
+                                    <span class="text-2xl font-bold text-gray-900">$17</span>
+                                    <span class="text-lg text-gray-400 line-through ml-2">$27</span>
+                                    <span class="ml-auto discount-badge text-white text-xs font-bold px-2 py-1 rounded">SAVE $10</span>
+                                </div>
+                                <button class="w-full bg-purple-600 text-white font-semibold py-3 rounded-lg hover:bg-purple-700 transition">
+                                    Add to Cart
+                                </button>
+                            </div>
                         </div>
-                        <div>
-                            <div class="font-semibold text-gray-900">Health & Wellness</div>
-                            <div class="text-sm text-gray-600">Energy, lifestyle, and sustainable performance.</div>
-                        </div>
-                    </button>
 
-                    <button type="button" class="category-card bg-white rounded-xl border border-gray-200 p-5 text-left flex items-start gap-3" data-category="Technology & Security">
-                        <div class="mt-1">
-                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0-1.657-1.343-3-3-3S6 9.343 6 11v2H5a2 2 0 00-2 2v3h18v-3a2 2 0 00-2-2h-1v-2c0-1.657-1.343-3-3-3s-3 1.343-3 3z" />
-                            </svg>
+                        <!-- Product Card 7 -->
+                        <div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                            <div class="product-image-wrapper bg-gray-100 flex items-center justify-center">
+                                <img src="covers/content-multiplier.png" alt="Content Multiplier - Prompt Pack" class="product-image w-full h-full object-contain p-4">
+                            </div>
+                            <div class="p-6">
+                                <div class="text-xs font-semibold text-pink-600 mb-2">PROMPT PACK</div>
+                                <h3 class="text-lg font-bold text-gray-900 mb-2">Content Multiplier - Prompt Pack</h3>
+                                <p class="text-sm text-gray-600 mb-4">Turn one piece of content into multiple formats with AI prompts</p>
+                                <div class="text-xs text-gray-500 mb-4">Ready-to-use prompts</div>
+                                <div class="flex items-baseline mb-4">
+                                    <span class="text-2xl font-bold text-gray-900">$15</span>
+                                    <span class="text-lg text-gray-400 line-through ml-2">$25</span>
+                                    <span class="ml-auto discount-badge text-white text-xs font-bold px-2 py-1 rounded">SAVE $10</span>
+                                </div>
+                                <a href="https://payhip.com/b/rQWRZ" class="payhip-buy-button block w-full bg-pink-600 text-white font-semibold py-3 rounded-lg hover:bg-pink-700 transition text-center" data-theme="blue" data-product="rQWRZ">
+                                    Add to Cart
+                                </a>
+                            </div>
                         </div>
-                        <div>
-                            <div class="font-semibold text-gray-900">Technology & Security</div>
-                            <div class="text-sm text-gray-600">AI, tools, and digital protection.</div>
-                        </div>
-                    </button>
 
-                    <button type="button" class="category-card bg-white rounded-xl border border-gray-200 p-5 text-left flex items-start gap-3" data-category="Special Topics">
-                        <div class="mt-1">
-                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 1.343-3 3 0 1.105.597 2.067 1.5 2.598V16h3v-2.402A2.999 2.999 0 0015 11c0-1.657-1.343-3-3-3z" />
-                            </svg>
+                        <!-- Product Card 8 -->
+                        <div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                            <div class="product-image-wrapper bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center">
+                                <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
+                                </svg>
+                            </div>
+                            <div class="p-6">
+                                <div class="text-xs font-semibold text-green-600 mb-2">CHECKLIST</div>
+                                <h3 class="text-lg font-bold text-gray-900 mb-2">Product Launch Checklist</h3>
+                                <p class="text-sm text-gray-600 mb-4">Step-by-step launch plan with 100+ action items</p>
+                                <div class="text-xs text-gray-500 mb-4">Printable PDF</div>
+                                <div class="flex items-baseline mb-4">
+                                    <span class="text-2xl font-bold text-gray-900">$7</span>
+                                    <span class="text-lg text-gray-400 line-through ml-2">$12</span>
+                                    <span class="ml-auto discount-badge text-white text-xs font-bold px-2 py-1 rounded">SAVE $5</span>
+                                </div>
+                                <button class="w-full bg-green-600 text-white font-semibold py-3 rounded-lg hover:bg-green-700 transition">
+                                    Add to Cart
+                                </button>
+                            </div>
                         </div>
-                        <div>
-                            <div class="font-semibold text-gray-900">Special Topics</div>
-                            <div class="text-sm text-gray-600">Personal finance, experiments, niche ideas.</div>
+
+                        <!-- Product Card 9 -->
+                        <div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                            <div class="product-image-wrapper bg-gradient-to-br from-indigo-500 to-indigo-600 flex items-center justify-center">
+                                <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path>
+                                </svg>
+                            </div>
+                            <div class="p-6">
+                                <div class="text-xs font-semibold text-indigo-600 mb-2">TEMPLATE PACK</div>
+                                <h3 class="text-lg font-bold text-gray-900 mb-2">Social Media Templates</h3>
+                                <p class="text-sm text-gray-600 mb-4">30 Canva templates for posts, stories, and ads</p>
+                                <div class="text-xs text-gray-500 mb-4">Fully customizable</div>
+                                <div class="flex items-baseline mb-4">
+                                    <span class="text-2xl font-bold text-gray-900">$17</span>
+                                    <span class="text-lg text-gray-400 line-through ml-2">$27</span>
+                                    <span class="ml-auto discount-badge text-white text-xs font-bold px-2 py-1 rounded">SAVE $10</span>
+                                </div>
+                                <button class="w-full bg-indigo-600 text-white font-semibold py-3 rounded-lg hover:bg-indigo-700 transition">
+                                    Add to Cart
+                                </button>
+                            </div>
                         </div>
-                    </button>
-                </div>
-            </div>
 
-            <!-- Featured Resources Carousel -->
-            <div class="mb-16">
-                <div class="flex items-center justify-between mb-4 gap-4">
-                    <h3 class="text-lg font-semibold text-gray-900">Featured Resources</h3>
-                    <button type="button" class="text-sm text-blue-600 hover:text-blue-800 font-medium" onclick="resetFiltersToAll()">
-                        View all products
-                    </button>
-                </div>
-                <div id="featuredRow" class="flex gap-4 overflow-x-auto pb-2">
-                    <!-- Featured product cards injected by JavaScript -->
-                </div>
-            </div>
+                        <!-- Product Card 10 -->
+                        <div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                            <div class="product-image-wrapper bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
+                                <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                                </svg>
+                            </div>
+                            <div class="p-6">
+                                <div class="text-xs font-semibold text-blue-600 mb-2">VIDEO TRAINING</div>
+                                <h3 class="text-lg font-bold text-gray-900 mb-2">LinkedIn Lead Generation</h3>
+                                <p class="text-sm text-gray-600 mb-4">Generate consistent B2B leads on LinkedIn</p>
+                                <div class="text-xs text-gray-500 mb-4">60 min • Advanced</div>
+                                <div class="flex items-baseline mb-4">
+                                    <span class="text-2xl font-bold text-gray-900">$27</span>
+                                    <span class="text-lg text-gray-400 line-through ml-2">$37</span>
+                                    <span class="ml-auto discount-badge text-white text-xs font-bold px-2 py-1 rounded">SAVE $10</span>
+                                </div>
+                                <button class="w-full bg-blue-600 text-white font-semibold py-3 rounded-lg hover:bg-blue-700 transition">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
 
-            <!-- Filters + Product Grid -->
-            <div id="catalogProducts">
-                <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 mb-6">
-                    <div class="flex flex-wrap gap-2" id="categoryFilterPills">
-                        <button type="button" class="px-4 py-2 rounded-full text-sm font-medium border border-blue-600 text-white bg-blue-600" data-category="all">
-                            All categories
-                        </button>
-                        <button type="button" class="px-4 py-2 rounded-full text-sm font-medium border border-gray-300 text-gray-700 hover:border-blue-600 hover:text-blue-700" data-category="Marketing">
-                            Marketing
-                        </button>
-                        <button type="button" class="px-4 py-2 rounded-full text-sm font-medium border border-gray-300 text-gray-700 hover:border-blue-600 hover:text-blue-700" data-category="Sales & Conversion">
-                            Sales & Conversion
-                        </button>
-                        <button type="button" class="hidden sm:inline-flex px-4 py-2 rounded-full text-sm font-medium border border-gray-300 text-gray-700 hover:border-blue-600 hover:text-blue-700" data-category="Business & Growth">
-                            Business & Growth
-                        </button>
-                        <button type="button" class="hidden sm:inline-flex px-4 py-2 rounded-full text-sm font-medium border border-gray-300 text-gray-700 hover:border-blue-600 hover:text-blue-700" data-category="Creator & Media">
-                            Creator & Media
+                        <!-- Product Card 11 -->
+                        <div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                            <div class="product-image-wrapper bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center">
+                                <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                                </svg>
+                            </div>
+                            <div class="p-6">
+                                <div class="text-xs font-semibold text-purple-600 mb-2">COMPLETE BOOK</div>
+                                <h3 class="text-lg font-bold text-gray-900 mb-2">Sales Funnel Blueprint</h3>
+                                <p class="text-sm text-gray-600 mb-4">Build high-converting funnels step-by-step</p>
+                                <div class="text-xs text-gray-500 mb-4">120 pages • Case studies</div>
+                                <div class="flex items-baseline mb-4">
+                                    <span class="text-2xl font-bold text-gray-900">$27</span>
+                                    <span class="text-lg text-gray-400 line-through ml-2">$37</span>
+                                    <span class="ml-auto discount-badge text-white text-xs font-bold px-2 py-1 rounded">SAVE $10</span>
+                                </div>
+                                <button class="w-full bg-purple-600 text-white font-semibold py-3 rounded-lg hover:bg-purple-700 transition">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 12 -->
+                        <div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                            <div class="product-image-wrapper bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center">
+                                <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                                </svg>
+                            </div>
+                            <div class="p-6">
+                                <div class="text-xs font-semibold text-orange-600 mb-2">WORKBOOK</div>
+                                <h3 class="text-lg font-bold text-gray-900 mb-2">90-Day Business Planner</h3>
+                                <p class="text-sm text-gray-600 mb-4">Quarterly planning system with goal tracking</p>
+                                <div class="text-xs text-gray-500 mb-4">50 pages • Fillable</div>
+                                <div class="flex items-baseline mb-4">
+                                    <span class="text-2xl font-bold text-gray-900">$12</span>
+                                    <span class="text-lg text-gray-400 line-through ml-2">$17</span>
+                                    <span class="ml-auto discount-badge text-white text-xs font-bold px-2 py-1 rounded">SAVE $5</span>
+                                </div>
+                                <button class="w-full bg-orange-600 text-white font-semibold py-3 rounded-lg hover:bg-orange-700 transition">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Load More -->
+                    <div class="text-center mt-12">
+                        <button class="bg-white text-blue-600 border-2 border-blue-600 font-semibold px-8 py-3 rounded-lg hover:bg-blue-50 transition">
+                            Load More Resources
                         </button>
                     </div>
-                    <div class="flex flex-wrap gap-2" id="formatFilterPills">
-                        <button type="button" class="px-3 py-1.5 rounded-full text-xs font-medium border border-gray-300 text-gray-700" data-format="all">
-                            All formats
-                        </button>
-                        <button type="button" class="px-3 py-1.5 rounded-full text-xs font-medium border border-gray-300 text-gray-700" data-format="Prompt Pack">
-                            Prompt packs
-                        </button>
-                        <button type="button" class="px-3 py-1.5 rounded-full text-xs font-medium border border-gray-300 text-gray-700" data-format="Guide">
-                            Guides
-                        </button>
-                        <button type="button" class="px-3 py-1.5 rounded-full text-xs font-medium border border-gray-300 text-gray-700" data-format="Template">
-                            Templates
-                        </button>
-                    </div>
-                </div>
-
-                <div id="productGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- Product cards injected by JavaScript -->
-                </div>
-
-                <div id="emptyState" class="hidden border border-dashed border-gray-300 rounded-2xl p-10 text-center mt-8">
-                    <h4 class="text-lg font-semibold text-gray-900 mb-2">No products match these filters yet</h4>
-                    <p class="text-gray-600 mb-4">Try switching category or format, or browse all products.</p>
-                    <button type="button" class="inline-flex items-center px-4 py-2 rounded-lg bg-blue-600 text-white text-sm font-semibold hover:bg-blue-700" onclick="resetFiltersToAll()">
-                        Reset filters
-                    </button>
                 </div>
             </div>
         </div>
     </section>
 
-
-    
-    <!-- Product Detail Modal -->
-    <div id="productModal" class="hidden fixed inset-0 z-50 bg-black/40 flex items-center justify-center p-4">
-        <div class="bg-white rounded-2xl shadow-2xl max-w-3xl w-full relative">
-            <button type="button" onclick="closeProductModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                </svg>
-            </button>
-            <div id="productModalContent" class="p-6 md:p-8 max-h-[80vh] overflow-y-auto">
-                <!-- Product content will be injected here -->
-            </div>
-        </div>
-    </div>
-
-<!-- Testimonials -->
+    <!-- Testimonials -->
     <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">What Entrepreneurs Are Saying</h2>
@@ -522,6 +707,22 @@
         </div>
     </section>
 
+    
+    <!-- Product Detail Modal -->
+    <div id="productModal" class="hidden fixed inset-0 z-50 bg-black/40 flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl shadow-2xl max-w-xl w-full relative">
+            <button type="button" onclick="closeProductModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <div id="productModalContent" class="p-6 space-y-4 max-h-[75vh] overflow-y-auto">
+                <!-- Product content injected here -->
+            </div>
+        </div>
+    </div>
+
+
     <!-- Footer -->
     <footer class="bg-gray-900 text-gray-300 py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -568,303 +769,6 @@
     </footer>
 
     <script>
-
-        // Product data (can be extended as you add more Payhip products)
-        const products = [
-            {
-                id: 'content-multiplier',
-                title: 'Content Multiplier – Prompt Pack',
-                category: 'Marketing',
-                subcategory: 'Content Marketing',
-                type: 'Prompt Pack',
-                price: 15,
-                originalPrice: 25,
-                badgeText: 'SAVE $10',
-                cover: 'covers/content-multiplier.png',
-                formatInfo: 'Ready-to-use AI prompts for repurposing content.',
-                description: 'Turn one idea into a full content system with prompts for blogs, emails, socials, and more.',
-                payhipId: 'rQWRZ',
-                featured: true,
-                limitedOffer: true
-            },
-            {
-                id: 'content-funnel-builder',
-                title: 'Content Funnel Builder – Prompt Pack',
-                category: 'Marketing',
-                subcategory: 'Funnels',
-                type: 'Prompt Pack',
-                price: 19,
-                originalPrice: 29,
-                badgeText: 'LAUNCH PRICE',
-                cover: 'covers/content-funnel.png',
-                formatInfo: 'Prompt workflows for top, middle, and bottom-of-funnel content.',
-                description: 'Design complete content funnels around one offer, from awareness to conversion.',
-                payhipId: null,
-                featured: true,
-                limitedOffer: false
-            },
-            {
-                id: 'cold-email-marketing',
-                title: 'Cold Email Marketing – Prompt Pack',
-                category: 'Sales & Conversion',
-                subcategory: 'Cold Outreach',
-                type: 'Prompt Pack',
-                price: 17,
-                originalPrice: 27,
-                badgeText: 'OUTREACH READY',
-                cover: 'covers/cold-email.png',
-                formatInfo: 'AI prompts for compliant, targeted cold email campaigns.',
-                description: 'Write compliant, high-response outreach emails, follow-ups, and reply handling.',
-                payhipId: null,
-                featured: true,
-                limitedOffer: false
-            },
-            {
-                id: 'b2b-lead-generation',
-                title: 'B2B Lead Generation – Prompt Pack',
-                category: 'Sales & Conversion',
-                subcategory: 'Lead Generation',
-                type: 'Prompt Pack',
-                price: 19,
-                originalPrice: 29,
-                badgeText: 'B2B FOCUSED',
-                cover: 'covers/b2b-lead-gen.png',
-                formatInfo: 'Prompts for LinkedIn, outbound, and qualification.',
-                description: 'Generate qualified B2B leads using LinkedIn, outbound campaigns, and nurturing sequences.',
-                payhipId: null,
-                featured: false,
-                limitedOffer: false
-            },
-            {
-                id: 'micro-audience-monetization',
-                title: 'Micro-Audience Monetization – Prompt Pack',
-                category: 'Business & Growth',
-                subcategory: 'Monetization',
-                type: 'Prompt Pack',
-                price: 21,
-                originalPrice: 37,
-                badgeText: 'NEW',
-                cover: 'covers/micro-audience.png',
-                formatInfo: 'Prompts for high-engagement small audiences.',
-                description: 'Monetize small but engaged email lists, communities, and social followings.',
-                payhipId: null,
-                featured: true,
-                limitedOffer: false
-            }
-        ];
-
-        let activeCategory = 'all';
-        let activeFormat = 'all';
-
-        function createProductCardHTML(product) {
-            const hasDiscount = product.originalPrice && product.originalPrice > product.price;
-            const hasPayhip = !!product.payhipId;
-            const price = `$${product.price}`;
-            const original = hasDiscount ? `$${product.originalPrice}` : '';
-            const badge = product.badgeText || (hasDiscount ? `SAVE $${product.originalPrice - product.price}` : '');
-            const formatLabel = product.type || 'Digital Product';
-
-            const titleEscaped = product.title;
-            const descriptionEscaped = product.description;
-
-            const payhipButton = hasPayhip
-                ? `<a href="https://payhip.com/b/${product.payhipId}" class="payhip-buy-button w-full inline-flex justify-center items-center bg-blue-600 text-white font-semibold py-3 rounded-lg hover:bg-blue-700 transition" data-theme="blue" data-product="${product.payhipId}">
-                        Add to Cart
-                   </a>`
-                : `<button type="button" class="w-full bg-gray-900 text-white font-semibold py-3 rounded-lg hover:bg-gray-800 transition">
-                        View Details
-                   </button>`;
-
-            return `
-                <div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden" data-category="${product.category}" data-format="${formatLabel}">
-                    <div class="product-image-wrapper">
-                        <img src="${product.cover}" alt="${titleEscaped}" class="product-image" loading="lazy">
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="text-xs font-semibold uppercase tracking-wide text-blue-600">${formatLabel}</span>
-                            ${badge ? `<span class="discount-badge text-white text-[11px] font-semibold px-2 py-1 rounded-full">${badge}</span>` : ''}
-                        </div>
-                        <h4 class="font-semibold text-gray-900 mb-1">${titleEscaped}</h4>
-                        <p class="text-sm text-gray-600 mb-3">${descriptionEscaped}</p>
-                        <div class="text-xs text-gray-500 mb-4">${product.formatInfo || ''}</div>
-                        <div class="flex items-baseline mb-4">
-                            <span class="text-2xl font-bold text-gray-900">${price}</span>
-                            ${original ? `<span class="text-lg text-gray-400 line-through ml-2">${original}</span>` : ''}
-                        </div>
-                        ${payhipButton}
-                    </div>
-                </div>
-            `;
-        }
-
-        function renderProductGrid() {
-            const grid = document.getElementById('productGrid');
-            const emptyState = document.getElementById('emptyState');
-            if (!grid) return;
-
-            const filtered = products.filter(p => {
-                const categoryMatch = activeCategory === 'all' || p.category === activeCategory;
-                const formatMatch = activeFormat === 'all' || p.type === activeFormat;
-                return categoryMatch && formatMatch;
-            });
-
-            grid.innerHTML = '';
-            if (!filtered.length) {
-                if (emptyState) emptyState.classList.remove('hidden');
-                return;
-            }
-            if (emptyState) emptyState.classList.add('hidden');
-
-            filtered.forEach(p => {
-                grid.insertAdjacentHTML('beforeend', createProductCardHTML(p));
-            });
-
-            attachProductCardHandlers();
-        }
-
-        function renderFeaturedRow() {
-            const row = document.getElementById('featuredRow');
-            if (!row) return;
-            row.innerHTML = '';
-            const featured = products.filter(p => p.featured);
-            featured.forEach(p => {
-                const html = createProductCardHTML(p);
-                row.insertAdjacentHTML('beforeend', html);
-            });
-            attachProductCardHandlers();
-        }
-
-        function renderLimitedOffers() {
-            const container = document.getElementById('limitedOffersGrid');
-            if (!container) return;
-            container.innerHTML = '';
-            const offers = products.filter(p => p.limitedOffer);
-            if (!offers.length) return;
-            offers.forEach(p => {
-                const html = createProductCardHTML(p);
-                container.insertAdjacentHTML('beforeend', html);
-            });
-            attachProductCardHandlers();
-        }
-
-        function setActiveCategory(category) {
-            activeCategory = category;
-            updateCategoryPills();
-            renderProductGrid();
-            const catalogSection = document.getElementById('catalogProducts');
-            if (catalogSection) {
-                catalogSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        }
-
-        function setActiveFormat(format) {
-            activeFormat = format;
-            updateFormatPills();
-            renderProductGrid();
-        }
-
-        function resetFiltersToAll() {
-            activeCategory = 'all';
-            activeFormat = 'all';
-            updateCategoryPills();
-            updateFormatPills();
-            renderProductGrid();
-        }
-
-        function updateCategoryPills() {
-            const pills = document.querySelectorAll('#categoryFilterPills button');
-            pills.forEach(pill => {
-                const cat = pill.getAttribute('data-category');
-                if ((activeCategory === 'all' && cat === 'all') || cat === activeCategory) {
-                    pill.classList.add('bg-blue-600', 'text-white', 'border-blue-600');
-                    pill.classList.remove('bg-white', 'text-gray-700');
-                } else if (cat !== 'all') {
-                    pill.classList.remove('bg-blue-600', 'text-white', 'border-blue-600');
-                    pill.classList.add('bg-white', 'text-gray-700');
-                }
-            });
-        }
-
-        function updateFormatPills() {
-            const pills = document.querySelectorAll('#formatFilterPills button');
-            pills.forEach(pill => {
-                const format = pill.getAttribute('data-format');
-                if ((activeFormat === 'all' && format === 'all') || format === activeFormat) {
-                    pill.classList.add('bg-gray-900', 'text-white', 'border-gray-900');
-                } else {
-                    pill.classList.remove('bg-gray-900', 'text-white', 'border-gray-900');
-                }
-            });
-        }
-
-        // Product detail modal
-        function openProductModalFromCard(card) {
-            const modal = document.getElementById('productModal');
-            const content = document.getElementById('productModalContent');
-            if (!modal || !content || !card) return;
-
-            const cloned = card.cloneNode(true);
-            cloned.classList.remove('product-card');
-            cloned.classList.add('border-0', 'shadow-none');
-
-            content.innerHTML = '';
-            content.appendChild(cloned);
-            modal.classList.remove('hidden');
-        }
-
-        function closeProductModal() {
-            const modal = document.getElementById('productModal');
-            if (!modal) return;
-            modal.classList.add('hidden');
-        }
-
-        function attachProductCardHandlers() {
-            const cards = document.querySelectorAll('.product-card');
-            cards.forEach(card => {
-                card.addEventListener('click', function (event) {
-                    const isPayhipLink = event.target.closest('a.payhip-buy-button');
-                    if (isPayhipLink) {
-                        return;
-                    }
-                    openProductModalFromCard(card);
-                });
-            });
-
-            const categoryCards = document.querySelectorAll('.category-card');
-            categoryCards.forEach(btn => {
-                btn.addEventListener('click', function () {
-                    const category = btn.getAttribute('data-category');
-                    if (category) setActiveCategory(category);
-                });
-            });
-
-            const categoryPills = document.querySelectorAll('#categoryFilterPills button');
-            categoryPills.forEach(pill => {
-                pill.addEventListener('click', function () {
-                    const category = pill.getAttribute('data-category');
-                    if (category) setActiveCategory(category === 'all' ? 'all' : category);
-                });
-            });
-
-            const formatPills = document.querySelectorAll('#formatFilterPills button');
-            formatPills.forEach(pill => {
-                pill.addEventListener('click', function () {
-                    const format = pill.getAttribute('data-format');
-                    if (format) setActiveFormat(format === 'all' ? 'all' : format);
-                });
-            });
-        }
-
-        document.addEventListener('DOMContentLoaded', function () {
-            renderFeaturedRow();
-            renderLimitedOffers();
-            renderProductGrid();
-            updateCategoryPills();
-            updateFormatPills();
-            attachProductCardHandlers();
-        });
-
         // Newsletter Popup (appears after 5 seconds)
         setTimeout(() => {
             document.getElementById('newsletterPopup').classList.remove('hidden');
@@ -904,6 +808,49 @@
         
         setInterval(updateCountdown, 1000);
 
+        
+        // Product detail modal (compact)
+        function openProductModal(card) {
+            var modal = document.getElementById('productModal');
+            var content = document.getElementById('productModalContent');
+            if (!modal || !content || !card) return;
+
+            var clone = card.cloneNode(true);
+            // Remove any existing width constraints from clone
+            clone.classList.remove('lg:col-span-2');
+
+            content.innerHTML = '';
+            content.appendChild(clone);
+            modal.classList.remove('hidden');
+        }
+
+        function closeProductModal() {
+            var modal = document.getElementById('productModal');
+            if (!modal) return;
+            modal.classList.add('hidden');
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('.product-card').forEach(function (card) {
+                card.addEventListener('click', function (event) {
+                    if (event.target.closest('a') || event.target.closest('button')) {
+                        return;
+                    }
+                    openProductModal(card);
+                });
+            });
+
+            // Close modal on overlay click
+            var modal = document.getElementById('productModal');
+            if (modal) {
+                modal.addEventListener('click', function (event) {
+                    if (event.target === modal) {
+                        closeProductModal();
+                    }
+                });
+            }
+        });
+
         // Smooth Scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -915,6 +862,8 @@
             });
         });
     </script>
+
+</body>script>
 
 </body>
 </html>
