@@ -18,25 +18,10 @@
         }
         .product-card {
             transition: transform 0.2s, box-shadow 0.2s;
-            cursor: pointer;
         }
         .product-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 16px 30px -10px rgb(15 23 42 / 0.25);
-        }
-        .product-image-wrapper {
-            background-color: #f9fafb;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0.75rem;
-            aspect-ratio: 4 / 5;
-        }
-        .product-image {
-            width: 100%;
-            height: auto;
-            max-height: 220px;
-            object-fit: contain;
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
         }
         .countdown {
             font-variant-numeric: tabular-nums;
@@ -162,7 +147,7 @@
             <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
                 <div class="grid md:grid-cols-2 gap-8">
                     <!-- Left: Bundle Info -->
-                    <div class="p-6 lg:p-8">
+                    <div class="p-8 lg:p-12">
                         <div class="discount-badge text-white text-sm font-bold px-4 py-2 rounded-full inline-block mb-4 flex items-center gap-2">
                             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path>
@@ -231,7 +216,7 @@
                     <!-- Right: Visual -->
                     <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-8 lg:p-12 flex items-center justify-center">
                         <div class="text-center">
-                            <svg class="w-24 h-24 mx-auto mb-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-32 h-32 mx-auto mb-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
                             </svg>
                             <div class="text-gray-700 font-semibold text-lg mb-2">Essential Bundle</div>
@@ -323,12 +308,12 @@
                         
                         <!-- Product Card 1 -->
                         <div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
-                            <div class="product-image-wrapper bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
+                            <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                                 <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
                                 </svg>
                             </div>
-                            <div class="p-6">
+                            <div class="p-4">
                                 <div class="text-xs font-semibold text-blue-600 mb-2">VIDEO TRAINING</div>
                                 <h3 class="text-lg font-bold text-gray-900 mb-2">Instagram Marketing Mastery</h3>
                                 <p class="text-sm text-gray-600 mb-4">Complete video course on growing your Instagram business presence</p>
@@ -346,12 +331,12 @@
 
                         <!-- Product Card 2 -->
                         <div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
-                            <div class="product-image-wrapper bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center">
+                            <div class="bg-gradient-to-br from-purple-500 to-purple-600 h-48 flex items-center justify-center">
                                 <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
                                 </svg>
                             </div>
-                            <div class="p-6">
+                            <div class="p-4">
                                 <div class="text-xs font-semibold text-purple-600 mb-2">COMPLETE GUIDE</div>
                                 <h3 class="text-lg font-bold text-gray-900 mb-2">Email Marketing Blueprint</h3>
                                 <p class="text-sm text-gray-600 mb-4">Build and monetize your email list from scratch</p>
@@ -369,12 +354,12 @@
 
                         <!-- Product Card 3 -->
                         <div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
-                            <div class="product-image-wrapper bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center">
+                            <div class="bg-gradient-to-br from-green-500 to-green-600 h-48 flex items-center justify-center">
                                 <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path>
                                 </svg>
                             </div>
-                            <div class="p-6">
+                            <div class="p-4">
                                 <div class="text-xs font-semibold text-green-600 mb-2">AUDIO PROGRAM</div>
                                 <h3 class="text-lg font-bold text-gray-900 mb-2">Productivity Mastery</h3>
                                 <p class="text-sm text-gray-600 mb-4">Audio lessons you can listen to anywhere</p>
@@ -392,12 +377,12 @@
 
                         <!-- Product Card 4 -->
                         <div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
-                            <div class="product-image-wrapper bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center">
+                            <div class="bg-gradient-to-br from-orange-500 to-orange-600 h-48 flex items-center justify-center">
                                 <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
                                 </svg>
                             </div>
-                            <div class="p-6">
+                            <div class="p-4">
                                 <div class="text-xs font-semibold text-orange-600 mb-2">WORKBOOK</div>
                                 <h3 class="text-lg font-bold text-gray-900 mb-2">Content Calendar Templates</h3>
                                 <p class="text-sm text-gray-600 mb-4">12-month planning system with fillable templates</p>
@@ -415,13 +400,13 @@
 
                         <!-- Product Card 5 -->
                         <div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
-                            <div class="product-image-wrapper bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
+                            <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                                 <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                 </svg>
                             </div>
-                            <div class="p-6">
+                            <div class="p-4">
                                 <div class="text-xs font-semibold text-blue-600 mb-2">VIDEO COURSE</div>
                                 <h3 class="text-lg font-bold text-gray-900 mb-2">Facebook Ads Fundamentals</h3>
                                 <p class="text-sm text-gray-600 mb-4">Master Facebook advertising from beginner to advanced</p>
@@ -439,12 +424,12 @@
 
                         <!-- Product Card 6 -->
                         <div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
-                            <div class="product-image-wrapper bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center">
+                            <div class="bg-gradient-to-br from-purple-500 to-purple-600 h-48 flex items-center justify-center">
                                 <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
                                 </svg>
                             </div>
-                            <div class="p-6">
+                            <div class="p-4">
                                 <div class="text-xs font-semibold text-purple-600 mb-2">GUIDE</div>
                                 <h3 class="text-lg font-bold text-gray-900 mb-2">SEO Essentials for Beginners</h3>
                                 <p class="text-sm text-gray-600 mb-4">Rank higher on Google with proven strategies</p>
@@ -462,10 +447,10 @@
 
                         <!-- Product Card 7 -->
                         <div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
-                            <div class="product-image-wrapper bg-gray-100 flex items-center justify-center">
-                                <img src="covers/content-multiplier.png" alt="Content Multiplier - Prompt Pack" class="product-image w-full h-full object-contain p-4">
+                            <div class="h-48 overflow-hidden bg-gray-100 flex items-center justify-center">
+                                <img src="covers/content-multiplier.png" alt="Content Multiplier - Prompt Pack" class="w-full h-full object-contain p-4">
                             </div>
-                            <div class="p-6">
+                            <div class="p-4">
                                 <div class="text-xs font-semibold text-pink-600 mb-2">PROMPT PACK</div>
                                 <h3 class="text-lg font-bold text-gray-900 mb-2">Content Multiplier - Prompt Pack</h3>
                                 <p class="text-sm text-gray-600 mb-4">Turn one piece of content into multiple formats with AI prompts</p>
@@ -483,12 +468,12 @@
 
                         <!-- Product Card 8 -->
                         <div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
-                            <div class="product-image-wrapper bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center">
+                            <div class="bg-gradient-to-br from-green-500 to-green-600 h-48 flex items-center justify-center">
                                 <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
                                 </svg>
                             </div>
-                            <div class="p-6">
+                            <div class="p-4">
                                 <div class="text-xs font-semibold text-green-600 mb-2">CHECKLIST</div>
                                 <h3 class="text-lg font-bold text-gray-900 mb-2">Product Launch Checklist</h3>
                                 <p class="text-sm text-gray-600 mb-4">Step-by-step launch plan with 100+ action items</p>
@@ -506,12 +491,12 @@
 
                         <!-- Product Card 9 -->
                         <div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
-                            <div class="product-image-wrapper bg-gradient-to-br from-indigo-500 to-indigo-600 flex items-center justify-center">
+                            <div class="bg-gradient-to-br from-indigo-500 to-indigo-600 h-48 flex items-center justify-center">
                                 <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path>
                                 </svg>
                             </div>
-                            <div class="p-6">
+                            <div class="p-4">
                                 <div class="text-xs font-semibold text-indigo-600 mb-2">TEMPLATE PACK</div>
                                 <h3 class="text-lg font-bold text-gray-900 mb-2">Social Media Templates</h3>
                                 <p class="text-sm text-gray-600 mb-4">30 Canva templates for posts, stories, and ads</p>
@@ -529,12 +514,12 @@
 
                         <!-- Product Card 10 -->
                         <div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
-                            <div class="product-image-wrapper bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
+                            <div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                                 <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
                                 </svg>
                             </div>
-                            <div class="p-6">
+                            <div class="p-4">
                                 <div class="text-xs font-semibold text-blue-600 mb-2">VIDEO TRAINING</div>
                                 <h3 class="text-lg font-bold text-gray-900 mb-2">LinkedIn Lead Generation</h3>
                                 <p class="text-sm text-gray-600 mb-4">Generate consistent B2B leads on LinkedIn</p>
@@ -552,12 +537,12 @@
 
                         <!-- Product Card 11 -->
                         <div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
-                            <div class="product-image-wrapper bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center">
+                            <div class="bg-gradient-to-br from-purple-500 to-purple-600 h-48 flex items-center justify-center">
                                 <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
                                 </svg>
                             </div>
-                            <div class="p-6">
+                            <div class="p-4">
                                 <div class="text-xs font-semibold text-purple-600 mb-2">COMPLETE BOOK</div>
                                 <h3 class="text-lg font-bold text-gray-900 mb-2">Sales Funnel Blueprint</h3>
                                 <p class="text-sm text-gray-600 mb-4">Build high-converting funnels step-by-step</p>
@@ -575,12 +560,12 @@
 
                         <!-- Product Card 12 -->
                         <div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
-                            <div class="product-image-wrapper bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center">
+                            <div class="bg-gradient-to-br from-orange-500 to-orange-600 h-48 flex items-center justify-center">
                                 <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
                                 </svg>
                             </div>
-                            <div class="p-6">
+                            <div class="p-4">
                                 <div class="text-xs font-semibold text-orange-600 mb-2">WORKBOOK</div>
                                 <h3 class="text-lg font-bold text-gray-900 mb-2">90-Day Business Planner</h3>
                                 <p class="text-sm text-gray-600 mb-4">Quarterly planning system with goal tracking</p>
@@ -707,22 +692,6 @@
         </div>
     </section>
 
-    
-    <!-- Product Detail Modal -->
-    <div id="productModal" class="hidden fixed inset-0 z-50 bg-black/40 flex items-center justify-center p-4">
-        <div class="bg-white rounded-2xl shadow-2xl max-w-xl w-full relative">
-            <button type="button" onclick="closeProductModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                </svg>
-            </button>
-            <div id="productModalContent" class="p-6 space-y-4 max-h-[75vh] overflow-y-auto">
-                <!-- Product content injected here -->
-            </div>
-        </div>
-    </div>
-
-
     <!-- Footer -->
     <footer class="bg-gray-900 text-gray-300 py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -808,49 +777,6 @@
         
         setInterval(updateCountdown, 1000);
 
-        
-        // Product detail modal (compact)
-        function openProductModal(card) {
-            var modal = document.getElementById('productModal');
-            var content = document.getElementById('productModalContent');
-            if (!modal || !content || !card) return;
-
-            var clone = card.cloneNode(true);
-            // Remove any existing width constraints from clone
-            clone.classList.remove('lg:col-span-2');
-
-            content.innerHTML = '';
-            content.appendChild(clone);
-            modal.classList.remove('hidden');
-        }
-
-        function closeProductModal() {
-            var modal = document.getElementById('productModal');
-            if (!modal) return;
-            modal.classList.add('hidden');
-        }
-
-        document.addEventListener('DOMContentLoaded', function () {
-            document.querySelectorAll('.product-card').forEach(function (card) {
-                card.addEventListener('click', function (event) {
-                    if (event.target.closest('a') || event.target.closest('button')) {
-                        return;
-                    }
-                    openProductModal(card);
-                });
-            });
-
-            // Close modal on overlay click
-            var modal = document.getElementById('productModal');
-            if (modal) {
-                modal.addEventListener('click', function (event) {
-                    if (event.target === modal) {
-                        closeProductModal();
-                    }
-                });
-            }
-        });
-
         // Smooth Scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -862,8 +788,6 @@
             });
         });
     </script>
-
-</body>script>
 
 </body>
 </html>
