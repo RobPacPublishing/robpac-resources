@@ -22,7 +22,7 @@
             cursor: pointer;
         }
         .product-card:hover {
-            transform: translateY(-4px);
+            transform: translateY(-2px);
             box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
         }
         .product-image-wrapper {
@@ -45,14 +45,10 @@
         .popup-overlay {
             backdrop-filter: blur(4px);
         }
-    
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
 </head>
 <body class="bg-gray-50">
-<!-- ROBPAC_RESOURCES_BUILD: HOME_STRATEGY_V1 -->
-
+<!-- ROBPAC_RESOURCES_BUILD: CARDS_MODAL_COMPACT_V1 -->
 <!-- Header -->
 <header class="bg-white border-b border-gray-200 sticky top-0 z-40">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
@@ -85,7 +81,7 @@
 <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
                 Premium Digital Resources<br/>for Entrepreneurs
             </h1>
-<p class="text-xl text-gray-600 mb-8 max-w-xl mx-auto">
+<p class="text-xl text-gray-600 mb-8 max-w-lg mx-auto">
                 Video Courses • Guides • Templates • Audio Programs<br/>
                 Learn your way with multi-format business resources
             </p>
@@ -184,108 +180,18 @@
 </div>
 </div>
 </section>
-
-<!-- Home Featured Carousel (auto: 1 featured resource per main category) -->
-<section class="py-10 bg-gray-50 border-t border-gray-100" id="home-featured">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-end justify-between gap-6 mb-5">
-      <div>
-        <h2 class="text-2xl font-bold text-gray-900">Featured Resources</h2>
-        <p class="text-gray-600 mt-1">A quick selection across categories (one per category when available).</p>
-      </div>
-      <a href="#catalog" class="text-blue-600 hover:text-blue-700 font-semibold text-sm">Browse all</a>
-    </div>
-
-    <div id="homeFeaturedCarousel" class="flex gap-4 overflow-x-auto no-scrollbar pb-2"></div>
-  </div>
-</section>
-
 <!-- Featured Bundle Hero -->
-<section class="py-8 bg-gradient-to-r from-blue-600 to-blue-700" id="bundles">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
-<div class="grid md:grid-cols-2 gap-5">
-<!-- Left: Bundle Info -->
-<div class="p-5 lg:p-5">
-<div class="discount-badge text-white text-sm font-bold px-4 py-2 rounded-full inline-block mb-4 flex items-center gap-2">
-<svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24">
-<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path>
-</svg>
-                            LIMITED TIME OFFER
-                        </div>
-<h2 class="text-xl lg:text-3xl font-bold text-gray-900 mb-4">
-                            Marketing Essentials Bundle
-                        </h2>
-<p class="text-gray-600 mb-6">
-                            Get started with the core resources you need to grow your business online.
-                        </p>
-<div class="space-y-3 mb-8">
-<div class="flex items-start">
-<svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-<path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-</svg>
-<span class="text-gray-700">2 Video Courses - <span class="font-semibold">$54 value</span></span>
-</div>
-<div class="flex items-start">
-<svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-<path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-</svg>
-<span class="text-gray-700">3 Complete Guides - <span class="font-semibold">$51 value</span></span>
-</div>
-<div class="flex items-start">
-<svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-<path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-</svg>
-<span class="text-gray-700">2 Workbooks &amp; Templates - <span class="font-semibold">$24 value</span></span>
-</div>
-</div>
-<div class="bg-gray-50 rounded-xl p-4 mb-6">
-<div class="flex items-baseline justify-between mb-2">
-<span class="text-gray-600">Total Value:</span>
-<span class="text-xl font-bold text-gray-400 line-through">$129</span>
-</div>
-<div class="flex items-baseline justify-between mb-2">
-<span class="text-gray-900 font-semibold text-lg">Bundle Price:</span>
-<span class="text-4xl font-bold text-blue-600">$47</span>
-</div>
-<div class="text-center mt-4 pt-4 border-t border-gray-200">
-<span class="text-green-600 font-bold text-xl">YOU SAVE $82 (64% OFF)</span>
-</div>
-</div>
-<button class="w-full bg-blue-600 text-white font-bold py-4 rounded-lg hover:bg-blue-700 transition text-lg mb-4">
-                            Get Bundle Now
-                        </button>
-<div class="text-center">
-<div class="text-sm text-gray-600 mb-2 flex items-center justify-center gap-2">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-<path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-</svg>
-                                Offer ends in:
-                            </div>
-<div class="countdown text-xl font-bold text-gray-900">
-<span id="hours">23</span>:<span id="minutes">45</span>:<span id="seconds">12</span>
-</div>
-</div>
-</div>
-<!-- Right: Visual -->
-<div class="bg-gradient-to-br from-blue-50 to-blue-100 p-5 lg:p-5 flex items-center justify-center">
-<div class="text-center">
-<svg class="w-32 h-32 mx-auto mb-6 text-blue-600" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-<path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
-</svg>
-<div class="text-gray-700 font-semibold text-lg mb-2">Essential Bundle</div>
-<div class="text-gray-600">7 Core Resources</div>
-<div class="text-gray-600">Video + Guides + Templates</div>
-<div class="mt-6 space-y-2">
-<div class="inline-block bg-white px-4 py-2 rounded-full text-sm font-medium text-gray-700 mx-1">Videos</div>
-<div class="inline-block bg-white px-4 py-2 rounded-full text-sm font-medium text-gray-700 mx-1">Guides</div>
-<div class="inline-block bg-white px-4 py-2 rounded-full text-sm font-medium text-gray-700 mx-1">Templates</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+<section class="py-10 bg-gradient-to-r from-blue-600 to-blue-700" id="bundles">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto">
+      <h2 class="text-3xl lg:text-4xl font-bold text-white">Bundles</h2>
+      <p class="text-blue-100 mt-3">Bundles will return soon in a new format.</p>
+      <div class="mt-7 flex flex-col sm:flex-row gap-3 justify-center">
+        <a href="#catalog" class="bg-white text-blue-700 font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition">Browse Catalog</a>
+        <a href="#categories" class="bg-blue-700 text-white border border-white/40 font-semibold px-6 py-3 rounded-lg hover:bg-blue-800 transition">Browse Categories</a>
+      </div>
+    </div>
+  </div>
 </section>
 <!-- Main Catalog Section -->
 <section class="py-16" id="catalog">
@@ -372,44 +278,44 @@
 </aside>
 <!-- Product Grid -->
 <div class="flex-1">
-<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
 <!-- Product Card 1 -->
 <div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden" data-format="" data-maincategory="Marketing" data-price="27">
-<div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
-<svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<div class="bg-gradient-to-br from-blue-500 to-blue-600 h-32 flex items-center justify-center">
+<svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
 <path d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
 </svg>
 </div>
-<div class="p-4">
+<div class="p-3">
 <div class="text-xs font-semibold text-blue-600 mb-2">VIDEO TRAINING</div>
-<h3 class="text-lg font-bold text-gray-900 mb-2">Instagram Marketing Mastery</h3>
-<p class="text-sm text-gray-600 mb-4">Complete video course on growing your Instagram business presence</p>
-<div class="text-xs text-gray-500 mb-4">45 min • Beginner-Friendly</div>
-<div class="flex items-baseline mb-4">
-<span class="text-2xl font-bold text-gray-900">$27</span>
-<span class="text-lg text-gray-400 line-through ml-2">$37</span>
+<h3 class="text-base font-bold text-gray-900 mb-1">Instagram Marketing Mastery</h3>
+<p class="text-xs text-gray-600 mb-3">Complete video course on growing your Instagram business presence</p>
+<div class="text-xs text-gray-500 mb-3">45 min • Beginner-Friendly</div>
+<div class="flex items-baseline mb-3">
+<span class="text-xl font-extrabold text-gray-900">$27</span>
+<span class="text-sm text-gray-400 line-through ml-2">$37</span>
 <span class="ml-auto discount-badge text-white text-xs font-bold px-2 py-1 rounded">SAVE $10</span>
 </div>
-<button class="w-full bg-blue-600 text-white font-semibold py-3 rounded-lg hover:bg-blue-700 transition">
+<button class="w-full bg-blue-600 text-white font-semibold py-2 rounded-lg hover:bg-blue-700 transition text-sm">
                                     Add to Cart
                                 </button>
 </div>
 </div>
 <!-- Product Card 2 -->
 <div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden" data-format="" data-maincategory="Marketing" data-price="17">
-<div class="bg-gradient-to-br from-purple-500 to-purple-600 h-48 flex items-center justify-center">
-<svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<div class="bg-gradient-to-br from-purple-500 to-purple-600 h-32 flex items-center justify-center">
+<svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
 <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
 </svg>
 </div>
-<div class="p-4">
+<div class="p-3">
 <div class="text-xs font-semibold text-purple-600 mb-2">COMPLETE GUIDE</div>
-<h3 class="text-lg font-bold text-gray-900 mb-2">Email Marketing Blueprint</h3>
-<p class="text-sm text-gray-600 mb-4">Build and monetize your email list from scratch</p>
-<div class="text-xs text-gray-500 mb-4">68 pages • PDF Format</div>
-<div class="flex items-baseline mb-4">
-<span class="text-2xl font-bold text-gray-900">$17</span>
-<span class="text-lg text-gray-400 line-through ml-2">$27</span>
+<h3 class="text-base font-bold text-gray-900 mb-1">Email Marketing Blueprint</h3>
+<p class="text-xs text-gray-600 mb-3">Build and monetize your email list from scratch</p>
+<div class="text-xs text-gray-500 mb-3">68 pages • PDF Format</div>
+<div class="flex items-baseline mb-3">
+<span class="text-xl font-extrabold text-gray-900">$17</span>
+<span class="text-sm text-gray-400 line-through ml-2">$27</span>
 <span class="ml-auto discount-badge text-white text-xs font-bold px-2 py-1 rounded">SAVE $10</span>
 </div>
 <button class="w-full bg-purple-600 text-white font-semibold py-3 rounded-lg hover:bg-purple-700 transition">
@@ -419,19 +325,19 @@
 </div>
 <!-- Product Card 3 -->
 <div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden" data-format="" data-maincategory="Special Topics" data-price="27">
-<div class="bg-gradient-to-br from-green-500 to-green-600 h-48 flex items-center justify-center">
-<svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<div class="bg-gradient-to-br from-green-500 to-green-600 h-32 flex items-center justify-center">
+<svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
 <path d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
 </svg>
 </div>
-<div class="p-4">
+<div class="p-3">
 <div class="text-xs font-semibold text-green-600 mb-2">AUDIO PROGRAM</div>
-<h3 class="text-lg font-bold text-gray-900 mb-2">Productivity Mastery</h3>
-<p class="text-sm text-gray-600 mb-4">Audio lessons you can listen to anywhere</p>
-<div class="text-xs text-gray-500 mb-4">2 hours • MP3 Format</div>
-<div class="flex items-baseline mb-4">
-<span class="text-2xl font-bold text-gray-900">$27</span>
-<span class="text-lg text-gray-400 line-through ml-2">$37</span>
+<h3 class="text-base font-bold text-gray-900 mb-1">Productivity Mastery</h3>
+<p class="text-xs text-gray-600 mb-3">Audio lessons you can listen to anywhere</p>
+<div class="text-xs text-gray-500 mb-3">2 hours • MP3 Format</div>
+<div class="flex items-baseline mb-3">
+<span class="text-xl font-extrabold text-gray-900">$27</span>
+<span class="text-sm text-gray-400 line-through ml-2">$37</span>
 <span class="ml-auto discount-badge text-white text-xs font-bold px-2 py-1 rounded">SAVE $10</span>
 </div>
 <button class="w-full bg-green-600 text-white font-semibold py-3 rounded-lg hover:bg-green-700 transition">
@@ -441,19 +347,19 @@
 </div>
 <!-- Product Card 4 -->
 <div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden" data-format="" data-maincategory="Marketing" data-price="12">
-<div class="bg-gradient-to-br from-orange-500 to-orange-600 h-48 flex items-center justify-center">
-<svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<div class="bg-gradient-to-br from-orange-500 to-orange-600 h-32 flex items-center justify-center">
+<svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
 <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
 </svg>
 </div>
-<div class="p-4">
+<div class="p-3">
 <div class="text-xs font-semibold text-orange-600 mb-2">WORKBOOK</div>
-<h3 class="text-lg font-bold text-gray-900 mb-2">Content Calendar Templates</h3>
-<p class="text-sm text-gray-600 mb-4">12-month planning system with fillable templates</p>
-<div class="text-xs text-gray-500 mb-4">32 pages • Editable PDF</div>
-<div class="flex items-baseline mb-4">
-<span class="text-2xl font-bold text-gray-900">$12</span>
-<span class="text-lg text-gray-400 line-through ml-2">$17</span>
+<h3 class="text-base font-bold text-gray-900 mb-1">Content Calendar Templates</h3>
+<p class="text-xs text-gray-600 mb-3">12-month planning system with fillable templates</p>
+<div class="text-xs text-gray-500 mb-3">32 pages • Editable PDF</div>
+<div class="flex items-baseline mb-3">
+<span class="text-xl font-extrabold text-gray-900">$12</span>
+<span class="text-sm text-gray-400 line-through ml-2">$17</span>
 <span class="ml-auto discount-badge text-white text-xs font-bold px-2 py-1 rounded">SAVE $5</span>
 </div>
 <button class="w-full bg-orange-600 text-white font-semibold py-3 rounded-lg hover:bg-orange-700 transition">
@@ -463,42 +369,42 @@
 </div>
 <!-- Product Card 5 -->
 <div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden" data-format="" data-maincategory="Marketing" data-price="37">
-<div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
-<svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<div class="bg-gradient-to-br from-blue-500 to-blue-600 h-32 flex items-center justify-center">
+<svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
 <path d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
 <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
 </svg>
 </div>
-<div class="p-4">
+<div class="p-3">
 <div class="text-xs font-semibold text-blue-600 mb-2">VIDEO COURSE</div>
-<h3 class="text-lg font-bold text-gray-900 mb-2">Facebook Ads Fundamentals</h3>
-<p class="text-sm text-gray-600 mb-4">Master Facebook advertising from beginner to advanced</p>
-<div class="text-xs text-gray-500 mb-4">90 min • Multi-module</div>
-<div class="flex items-baseline mb-4">
-<span class="text-2xl font-bold text-gray-900">$37</span>
-<span class="text-lg text-gray-400 line-through ml-2">$47</span>
+<h3 class="text-base font-bold text-gray-900 mb-1">Facebook Ads Fundamentals</h3>
+<p class="text-xs text-gray-600 mb-3">Master Facebook advertising from beginner to advanced</p>
+<div class="text-xs text-gray-500 mb-3">90 min • Multi-module</div>
+<div class="flex items-baseline mb-3">
+<span class="text-xl font-extrabold text-gray-900">$37</span>
+<span class="text-sm text-gray-400 line-through ml-2">$47</span>
 <span class="ml-auto discount-badge text-white text-xs font-bold px-2 py-1 rounded">SAVE $10</span>
 </div>
-<button class="w-full bg-blue-600 text-white font-semibold py-3 rounded-lg hover:bg-blue-700 transition">
+<button class="w-full bg-blue-600 text-white font-semibold py-2 rounded-lg hover:bg-blue-700 transition text-sm">
                                     Add to Cart
                                 </button>
 </div>
 </div>
 <!-- Product Card 6 -->
 <div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden" data-format="" data-maincategory="Marketing" data-price="17">
-<div class="bg-gradient-to-br from-purple-500 to-purple-600 h-48 flex items-center justify-center">
-<svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<div class="bg-gradient-to-br from-purple-500 to-purple-600 h-32 flex items-center justify-center">
+<svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
 <path d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
 </svg>
 </div>
-<div class="p-4">
+<div class="p-3">
 <div class="text-xs font-semibold text-purple-600 mb-2">GUIDE</div>
-<h3 class="text-lg font-bold text-gray-900 mb-2">SEO Essentials for Beginners</h3>
-<p class="text-sm text-gray-600 mb-4">Rank higher on Google with proven strategies</p>
-<div class="text-xs text-gray-500 mb-4">42 pages • PDF Format</div>
-<div class="flex items-baseline mb-4">
-<span class="text-2xl font-bold text-gray-900">$17</span>
-<span class="text-lg text-gray-400 line-through ml-2">$27</span>
+<h3 class="text-base font-bold text-gray-900 mb-1">SEO Essentials for Beginners</h3>
+<p class="text-xs text-gray-600 mb-3">Rank higher on Google with proven strategies</p>
+<div class="text-xs text-gray-500 mb-3">42 pages • PDF Format</div>
+<div class="flex items-baseline mb-3">
+<span class="text-xl font-extrabold text-gray-900">$17</span>
+<span class="text-sm text-gray-400 line-through ml-2">$27</span>
 <span class="ml-auto discount-badge text-white text-xs font-bold px-2 py-1 rounded">SAVE $10</span>
 </div>
 <button class="w-full bg-purple-600 text-white font-semibold py-3 rounded-lg hover:bg-purple-700 transition">
@@ -511,14 +417,14 @@
 <div class="product-image-wrapper">
 <img alt="Content Multiplier - Prompt Pack" class="product-image" loading="lazy" src="covers/content-multiplier.png"/>
 </div>
-<div class="p-4">
+<div class="p-3">
 <div class="text-xs font-semibold text-pink-600 mb-2">PROMPT PACK</div>
-<h3 class="text-lg font-bold text-gray-900 mb-2">Content Multiplier - Prompt Pack</h3>
-<p class="text-sm text-gray-600 mb-4">Turn one piece of content into multiple formats with AI prompts</p>
-<div class="text-xs text-gray-500 mb-4">Ready-to-use prompts</div>
-<div class="flex items-baseline mb-4">
-<span class="text-2xl font-bold text-gray-900">$15</span>
-<span class="text-lg text-gray-400 line-through ml-2">$25</span>
+<h3 class="text-base font-bold text-gray-900 mb-1">Content Multiplier - Prompt Pack</h3>
+<p class="text-xs text-gray-600 mb-3">Turn one piece of content into multiple formats with AI prompts</p>
+<div class="text-xs text-gray-500 mb-3">Ready-to-use prompts</div>
+<div class="flex items-baseline mb-3">
+<span class="text-xl font-extrabold text-gray-900">$15</span>
+<span class="text-sm text-gray-400 line-through ml-2">$25</span>
 <span class="ml-auto discount-badge text-white text-xs font-bold px-2 py-1 rounded">SAVE $10</span>
 </div>
 <a class="payhip-buy-button block w-full bg-pink-600 text-white font-semibold py-3 rounded-lg hover:bg-pink-700 transition text-center" data-product="rQWRZ" data-theme="blue" href="https://payhip.com/b/rQWRZ">
@@ -528,19 +434,19 @@
 </div>
 <!-- Product Card 8 -->
 <div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden" data-format="" data-maincategory="Special Topics" data-price="7">
-<div class="bg-gradient-to-br from-green-500 to-green-600 h-48 flex items-center justify-center">
-<svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<div class="bg-gradient-to-br from-green-500 to-green-600 h-32 flex items-center justify-center">
+<svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
 <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
 </svg>
 </div>
-<div class="p-4">
+<div class="p-3">
 <div class="text-xs font-semibold text-green-600 mb-2">CHECKLIST</div>
-<h3 class="text-lg font-bold text-gray-900 mb-2">Product Launch Checklist</h3>
-<p class="text-sm text-gray-600 mb-4">Step-by-step launch plan with 100+ action items</p>
-<div class="text-xs text-gray-500 mb-4">Printable PDF</div>
-<div class="flex items-baseline mb-4">
-<span class="text-2xl font-bold text-gray-900">$7</span>
-<span class="text-lg text-gray-400 line-through ml-2">$12</span>
+<h3 class="text-base font-bold text-gray-900 mb-1">Product Launch Checklist</h3>
+<p class="text-xs text-gray-600 mb-3">Step-by-step launch plan with 100+ action items</p>
+<div class="text-xs text-gray-500 mb-3">Printable PDF</div>
+<div class="flex items-baseline mb-3">
+<span class="text-xl font-extrabold text-gray-900">$7</span>
+<span class="text-sm text-gray-400 line-through ml-2">$12</span>
 <span class="ml-auto discount-badge text-white text-xs font-bold px-2 py-1 rounded">SAVE $5</span>
 </div>
 <button class="w-full bg-green-600 text-white font-semibold py-3 rounded-lg hover:bg-green-700 transition">
@@ -550,19 +456,19 @@
 </div>
 <!-- Product Card 9 -->
 <div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden" data-format="" data-maincategory="Special Topics" data-price="17">
-<div class="bg-gradient-to-br from-indigo-500 to-indigo-600 h-48 flex items-center justify-center">
-<svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<div class="bg-gradient-to-br from-indigo-500 to-indigo-600 h-32 flex items-center justify-center">
+<svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
 <path d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
 </svg>
 </div>
-<div class="p-4">
+<div class="p-3">
 <div class="text-xs font-semibold text-indigo-600 mb-2">TEMPLATE PACK</div>
-<h3 class="text-lg font-bold text-gray-900 mb-2">Social Media Templates</h3>
-<p class="text-sm text-gray-600 mb-4">30 Canva templates for posts, stories, and ads</p>
-<div class="text-xs text-gray-500 mb-4">Fully customizable</div>
-<div class="flex items-baseline mb-4">
-<span class="text-2xl font-bold text-gray-900">$17</span>
-<span class="text-lg text-gray-400 line-through ml-2">$27</span>
+<h3 class="text-base font-bold text-gray-900 mb-1">Social Media Templates</h3>
+<p class="text-xs text-gray-600 mb-3">30 Canva templates for posts, stories, and ads</p>
+<div class="text-xs text-gray-500 mb-3">Fully customizable</div>
+<div class="flex items-baseline mb-3">
+<span class="text-xl font-extrabold text-gray-900">$17</span>
+<span class="text-sm text-gray-400 line-through ml-2">$27</span>
 <span class="ml-auto discount-badge text-white text-xs font-bold px-2 py-1 rounded">SAVE $10</span>
 </div>
 <button class="w-full bg-indigo-600 text-white font-semibold py-3 rounded-lg hover:bg-indigo-700 transition">
@@ -572,41 +478,41 @@
 </div>
 <!-- Product Card 10 -->
 <div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden" data-format="" data-maincategory="Special Topics" data-price="27">
-<div class="bg-gradient-to-br from-blue-500 to-blue-600 h-48 flex items-center justify-center">
-<svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<div class="bg-gradient-to-br from-blue-500 to-blue-600 h-32 flex items-center justify-center">
+<svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
 <path d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
 </svg>
 </div>
-<div class="p-4">
+<div class="p-3">
 <div class="text-xs font-semibold text-blue-600 mb-2">VIDEO TRAINING</div>
-<h3 class="text-lg font-bold text-gray-900 mb-2">LinkedIn Lead Generation</h3>
-<p class="text-sm text-gray-600 mb-4">Generate consistent B2B leads on LinkedIn</p>
-<div class="text-xs text-gray-500 mb-4">60 min • Advanced</div>
-<div class="flex items-baseline mb-4">
-<span class="text-2xl font-bold text-gray-900">$27</span>
-<span class="text-lg text-gray-400 line-through ml-2">$37</span>
+<h3 class="text-base font-bold text-gray-900 mb-1">LinkedIn Lead Generation</h3>
+<p class="text-xs text-gray-600 mb-3">Generate consistent B2B leads on LinkedIn</p>
+<div class="text-xs text-gray-500 mb-3">60 min • Advanced</div>
+<div class="flex items-baseline mb-3">
+<span class="text-xl font-extrabold text-gray-900">$27</span>
+<span class="text-sm text-gray-400 line-through ml-2">$37</span>
 <span class="ml-auto discount-badge text-white text-xs font-bold px-2 py-1 rounded">SAVE $10</span>
 </div>
-<button class="w-full bg-blue-600 text-white font-semibold py-3 rounded-lg hover:bg-blue-700 transition">
+<button class="w-full bg-blue-600 text-white font-semibold py-2 rounded-lg hover:bg-blue-700 transition text-sm">
                                     Add to Cart
                                 </button>
 </div>
 </div>
 <!-- Product Card 11 -->
 <div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden" data-format="" data-maincategory="Special Topics" data-price="27">
-<div class="bg-gradient-to-br from-purple-500 to-purple-600 h-48 flex items-center justify-center">
-<svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<div class="bg-gradient-to-br from-purple-500 to-purple-600 h-32 flex items-center justify-center">
+<svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
 <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
 </svg>
 </div>
-<div class="p-4">
+<div class="p-3">
 <div class="text-xs font-semibold text-purple-600 mb-2">COMPLETE BOOK</div>
-<h3 class="text-lg font-bold text-gray-900 mb-2">Sales Funnel Blueprint</h3>
-<p class="text-sm text-gray-600 mb-4">Build high-converting funnels step-by-step</p>
-<div class="text-xs text-gray-500 mb-4">120 pages • Case studies</div>
-<div class="flex items-baseline mb-4">
-<span class="text-2xl font-bold text-gray-900">$27</span>
-<span class="text-lg text-gray-400 line-through ml-2">$37</span>
+<h3 class="text-base font-bold text-gray-900 mb-1">Sales Funnel Blueprint</h3>
+<p class="text-xs text-gray-600 mb-3">Build high-converting funnels step-by-step</p>
+<div class="text-xs text-gray-500 mb-3">120 pages • Case studies</div>
+<div class="flex items-baseline mb-3">
+<span class="text-xl font-extrabold text-gray-900">$27</span>
+<span class="text-sm text-gray-400 line-through ml-2">$37</span>
 <span class="ml-auto discount-badge text-white text-xs font-bold px-2 py-1 rounded">SAVE $10</span>
 </div>
 <button class="w-full bg-purple-600 text-white font-semibold py-3 rounded-lg hover:bg-purple-700 transition">
@@ -616,19 +522,19 @@
 </div>
 <!-- Product Card 12 -->
 <div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden" data-format="" data-maincategory="Special Topics" data-price="12">
-<div class="bg-gradient-to-br from-orange-500 to-orange-600 h-48 flex items-center justify-center">
-<svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<div class="bg-gradient-to-br from-orange-500 to-orange-600 h-32 flex items-center justify-center">
+<svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
 <path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
 </svg>
 </div>
-<div class="p-4">
+<div class="p-3">
 <div class="text-xs font-semibold text-orange-600 mb-2">WORKBOOK</div>
-<h3 class="text-lg font-bold text-gray-900 mb-2">90-Day Business Planner</h3>
-<p class="text-sm text-gray-600 mb-4">Quarterly planning system with goal tracking</p>
-<div class="text-xs text-gray-500 mb-4">50 pages • Fillable</div>
-<div class="flex items-baseline mb-4">
-<span class="text-2xl font-bold text-gray-900">$12</span>
-<span class="text-lg text-gray-400 line-through ml-2">$17</span>
+<h3 class="text-base font-bold text-gray-900 mb-1">90-Day Business Planner</h3>
+<p class="text-xs text-gray-600 mb-3">Quarterly planning system with goal tracking</p>
+<div class="text-xs text-gray-500 mb-3">50 pages • Fillable</div>
+<div class="flex items-baseline mb-3">
+<span class="text-xl font-extrabold text-gray-900">$12</span>
+<span class="text-sm text-gray-400 line-through ml-2">$17</span>
 <span class="ml-auto discount-badge text-white text-xs font-bold px-2 py-1 rounded">SAVE $5</span>
 </div>
 <button class="w-full bg-orange-600 text-white font-semibold py-3 rounded-lg hover:bg-orange-700 transition">
@@ -693,7 +599,7 @@
 </section>
 <!-- FAQ Section -->
 <section class="py-16 bg-gray-50" id="faq">
-<div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="max-w-lg mx-auto px-4 sm:px-6 lg:px-8">
 <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Frequently Asked Questions</h2>
 <div class="space-y-6">
 <div class="bg-white rounded-xl p-6 shadow-sm">
@@ -744,13 +650,13 @@
 </section>
 <!-- Product Detail Modal -->
 <div class="hidden fixed inset-0 z-50 bg-black/40 flex items-center justify-center p-4" id="productModal">
-<div class="bg-white rounded-2xl shadow-2xl max-w-xl w-full relative">
+<div class="bg-white rounded-2xl shadow-2xl max-w-lg w-full relative">
 <button class="absolute top-4 right-4 text-gray-400 hover:text-gray-600" onclick="closeProductModal()" type="button">
 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
 <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
 </svg>
 </button>
-<div class="p-4 md:p-5 max-h-[70vh] overflow-y-auto" id="productModalContent">
+<div class="p-4 max-h-[68vh] overflow-y-auto" id="productModalContent">
 <!-- Product content will be injected here -->
 </div>
 </div>
@@ -800,38 +706,7 @@
 </div>
 </footer>
 <script>
-        // Countdown Timer
-        function updateCountdown() {
-            const hours = document.getElementById('hours');
-            const minutes = document.getElementById('minutes');
-            const seconds = document.getElementById('seconds');
-            
-            let h = parseInt(hours.textContent);
-            let m = parseInt(minutes.textContent);
-            let s = parseInt(seconds.textContent);
-            
-            s--;
-            if (s < 0) {
-                s = 59;
-                m--;
-                if (m < 0) {
-                    m = 59;
-                    h--;
-                    if (h < 0) {
-                        h = 23;
-                    }
-                }
-            }
-            
-            hours.textContent = h.toString().padStart(2, '0');
-            minutes.textContent = m.toString().padStart(2, '0');
-            seconds.textContent = s.toString().padStart(2, '0');
-        }
-        
-        setInterval(updateCountdown, 1000);
-
-        
-        // Product detail modal
+// Product detail modal
         
         function openProductModal(card) {
             var modal = document.getElementById('productModal');
@@ -870,18 +745,18 @@
             }
 
             content.innerHTML =
-                '<div class="grid md:grid-cols-[160px,1fr] gap-4 md:gap-5 items-start">' +
-                    '<div class="bg-gray-50 border border-gray-200 rounded-xl p-3 flex items-center justify-center aspect-[4/5]">' +
+                '<div class="grid sm:grid-cols-[140px,1fr] gap-4 md:gap-5 items-start">' +
+                    '<div class="bg-gray-50 border border-gray-200 rounded-xl p-2 flex items-center justify-center aspect-[4/5]">' +
                         (coverSrc ? ('<img src="' + coverSrc + '" alt="' + coverAlt.replace(/"/g, '&quot;') + '" class="w-full h-full object-contain" />') : '') +
                     '</div>' +
                     '<div>' +
                         (formatLabel ? ('<div class="text-xs font-semibold text-blue-700 mb-2">' + escapeHtml(formatLabel) + '</div>') : '') +
-                        (title ? ('<div class="text-xl font-bold text-gray-900 leading-snug">' + escapeHtml(title) + '</div>') : '') +
+                        (title ? ('<div class="text-lg font-bold text-gray-900 leading-snug">' + escapeHtml(title) + '</div>') : '') +
                         (cat ? ('<div class="text-sm text-gray-500 mt-1">Category: <span class="font-semibold text-gray-700">' + escapeHtml(cat) + '</span></div>') : '') +
-                        (desc ? ('<div class="text-gray-700 mt-3">' + escapeHtml(desc) + '</div>') : '') +
+                        (desc ? ('<div class="text-sm text-gray-700 mt-2 leading-relaxed">' + escapeHtml(desc) + '</div>') : '') +
                         (info ? ('<div class="text-sm text-gray-500 mt-2">' + escapeHtml(info) + '</div>') : '') +
                         '<div class="mt-4 flex items-baseline gap-2">' +
-                            (price ? ('<div class="text-2xl font-extrabold text-gray-900">' + escapeHtml(price) + '</div>') : '') +
+                            (price ? ('<div class="text-xl font-extrabold text-gray-900">' + escapeHtml(price) + '</div>') : '') +
                             (oldPrice ? ('<div class="text-sm text-gray-500 line-through">' + escapeHtml(oldPrice) + '</div>') : '') +
                         '</div>' +
                         '<div class="mt-4">' +
@@ -1035,51 +910,6 @@ function closeProductModal() {
 
             // initial apply
             applyFilters();
-        });
-
-
-        function renderHomeFeaturedCarousel() {
-            var mount = document.getElementById('homeFeaturedCarousel');
-            if (!mount) return;
-
-            mount.innerHTML = '';
-
-            var categories = Array.from(document.querySelectorAll('#categories .category-card'))
-                .map(function (b) { return b.getAttribute('data-category'); })
-                .filter(Boolean);
-
-            var allCards = Array.from(document.querySelectorAll('#catalog .product-card'));
-            var picked = [];
-
-            categories.forEach(function (cat) {
-                var card = allCards.find(function (c) { return c.getAttribute('data-maincategory') === cat; });
-                if (card) picked.push(card);
-            });
-
-            if (picked.length === 0) {
-                picked = allCards.slice(0, 10);
-            }
-
-            picked.forEach(function (card) {
-                var clone = card.cloneNode(true);
-
-                clone.classList.add('min-w-[230px]', 'max-w-[230px]', 'flex-shrink-0');
-
-                var buyBtn = clone.querySelector('.payhip-buy-button');
-                if (buyBtn) buyBtn.remove();
-
-                clone.addEventListener('click', function (event) {
-                    if (event.target.closest('a') || event.target.closest('button')) return;
-                    openProductModal(card);
-                });
-
-                mount.appendChild(clone);
-            });
-        }
-
-
-        document.addEventListener('DOMContentLoaded', function () {
-            try { renderHomeFeaturedCarousel(); } catch (e) {}
         });
 
 </script>
