@@ -50,7 +50,7 @@
 </head>
 
 <body class="bg-gray-50">
-<!-- ROBPAC_RESOURCES_BUILD: ROBPAC_RESOURCES_BUILD_FIX_V1 -->
+<!-- ROBPAC_RESOURCES_BUILD: FIX_IMAGES_PAYHIP_V1 -->
 
 <header class="bg-white border-b border-gray-200 sticky top-0 z-40">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
@@ -352,7 +352,45 @@
     return "$" + v.toFixed(0);
   }
 
-  function initPayhip() {
+  
+
+  function coverUrl(raw) {
+    const s = String(raw ?? "").trim();
+    if (!s) return "";
+    if (s.startsWith("http://") || s.startsWith("https://") || s.startsWith("data:") || s.startsWith("/")) return s;
+    if (s.startsWith("covers/")) return "/" + s;
+    return "/covers/" + s.replace(/^\.?\//, "");
+  }
+
+  // Tries alternate extensions (png/jpg/jpeg/webp). If all fail, uses an inline SVG placeholder.
+  function imgFallback(img) {
+    try {
+      if (!img) return;
+      const raw = img.getAttribute("data-raw") || img.getAttribute("src") || "";
+      const normalized = coverUrl(raw) || "";
+      const current = img.getAttribute("src") || normalized;
+      const base = normalized.replace(/\.(png|jpg|jpeg|webp)$/i, "");
+      const exts = ["png", "jpg", "jpeg", "webp"];
+
+      const tried = new Set((img.dataset.tried || "").split("|").filter(Boolean));
+      if (current) tried.add(current);
+
+      for (const ext of exts) {
+        const candidate = base + "." + ext;
+        if (!tried.has(candidate)) {
+          img.dataset.tried = Array.from(tried).concat([candidate]).join("|");
+          img.src = candidate;
+          return;
+        }
+      }
+
+      img.removeAttribute("onerror");
+      img.src = "data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22400%22%20height%3D%22400%22%20viewBox%3D%220%200%20400%20400%22%3E%0A%20%20%3Crect%20width%3D%22400%22%20height%3D%22400%22%20fill%3D%22%23f3f4f6%22/%3E%0A%20%20%3Cg%20fill%3D%22%239ca3af%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M120%20260h160v18H120z%22/%3E%0A%20%20%20%20%3Cpath%20d%3D%22M140%20120h120a20%2020%200%200%201%2020%2020v80a20%2020%200%200%201-20%2020H140a20%2020%200%200%201-20-20v-80a20%2020%200%200%201%2020-20zm0%2020v80h120v-80H140z%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22175%22%20cy%3D%22175%22%20r%3D%2212%22/%3E%0A%20%20%20%20%3Cpath%20d%3D%22M150%20220l40-35%2025%2022%2035-30%2020%2018v25H150z%22/%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E";
+    } catch (e) {
+      try { img.removeAttribute("onerror"); img.src = "data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22400%22%20height%3D%22400%22%20viewBox%3D%220%200%20400%20400%22%3E%0A%20%20%3Crect%20width%3D%22400%22%20height%3D%22400%22%20fill%3D%22%23f3f4f6%22/%3E%0A%20%20%3Cg%20fill%3D%22%239ca3af%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M120%20260h160v18H120z%22/%3E%0A%20%20%20%20%3Cpath%20d%3D%22M140%20120h120a20%2020%200%200%201%2020%2020v80a20%2020%200%200%201-20%2020H140a20%2020%200%200%201-20-20v-80a20%2020%200%200%201%2020-20zm0%2020v80h120v-80H140z%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22175%22%20cy%3D%22175%22%20r%3D%2212%22/%3E%0A%20%20%20%20%3Cpath%20d%3D%22M150%20220l40-35%2025%2022%2035-30%2020%2018v25H150z%22/%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E"; } catch (e2) {}
+    }
+  }
+function initPayhip() {
     try {
       if (window.Payhip && window.Payhip.Button && typeof window.Payhip.Button.init === "function") {
         window.Payhip.Button.init();
@@ -553,7 +591,7 @@
 
     card.innerHTML = `
       <div class="imgwrap">
-        ${p.cover ? `<img src="${escapeHtml(p.cover)}" alt="${escapeHtml(p.title)}" loading="lazy" />` : ""}
+        ${p.cover ? `<img src="${escapeHtml(coverUrl(p.cover))}" data-raw="${escapeHtml(p.cover)}" onerror="imgFallback(this)" alt="${escapeHtml(p.title)}" loading="lazy" />` : ""}
       </div>
       <div class="p-3">
         ${badge}
@@ -609,7 +647,7 @@
     content.innerHTML = `
       <div class="grid sm:grid-cols-[140px,1fr] gap-4 items-start">
         <div class="bg-gray-50 border border-gray-200 rounded-xl p-3 flex items-center justify-center aspect-[4/5]">
-          ${p.cover ? `<img src="${escapeHtml(p.cover)}" alt="${escapeHtml(p.title)}" class="w-full h-full object-contain" loading="lazy" />` : ""}
+          ${p.cover ? `<img src="${escapeHtml(coverUrl(p.cover))}" data-raw="${escapeHtml(p.cover)}" onerror="imgFallback(this)" alt="${escapeHtml(p.title)}" class="w-full h-full object-contain" loading="lazy" />` : ""}
         </div>
         <div>
           ${p.format ? `<div class="text-xs font-extrabold text-blue-700 mb-2">${escapeHtml(p.format)}</div>` : ""}
