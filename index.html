@@ -1,917 +1,778 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>RobPac Resources - Premium Digital Resources for Entrepreneurs</title>
-<meta content="Multi-format business resources: Video courses, guides, templates, and more. Learn your way with RobPac Resources." name="description"/>
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<!-- Payhip Integration -->
-<script src="https://payhip.com/payhip.js" type="text/javascript"></script>
-<style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        .discount-badge {
-            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
-        }
-        .product-card {
-            transition: transform 0.2s, box-shadow 0.2s;
-            cursor: pointer;
-        }
-        .product-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
-        }
-        .product-image-wrapper {
-            background-color: #f9fafb;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0.5rem;
-            aspect-ratio: 4 / 5;
-        }
-        .product-image {
-            width: 100%;
-            height: 100%;
-            max-height: 210px;
-            object-fit: contain;
-        }
-        .countdown {
-            font-variant-numeric: tabular-nums;
-        }
-        .popup-overlay {
-            backdrop-filter: blur(4px);
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RobPac Resources - Premium Digital Resources</title>
+  <meta name="description" content="Premium digital resources for entrepreneurs: courses, guides, templates, and more." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://payhip.com/payhip.js" type="text/javascript"></script>
+
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+    /* Cards: compact, no cropping */
+    .product-card { cursor: pointer; transition: transform .18s, box-shadow .18s; }
+    .product-card:hover { transform: translateY(-2px); box-shadow: 0 16px 22px -10px rgb(0 0 0 / 0.18); }
+    .product-image-wrapper {
+      background: #f9fafb;
+      display: flex; align-items: center; justify-content: center;
+      padding: .5rem;
+      aspect-ratio: 1 / 1; /* supports 1:1 covers + book covers without crop */
+    }
+    .product-image { width: 100%; height: 100%; object-fit: contain; }
+
+    .line-clamp-2 {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .line-clamp-3 {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .popup-overlay { backdrop-filter: blur(4px); }
+  </style>
 </head>
+
 <body class="bg-gray-50">
-<!-- ROBPAC_RESOURCES_BUILD: CARDS_MODAL_COMPACT_V1 -->
-<!-- Header -->
+<!-- ROBPAC_RESOURCES_BUILD: CATS_FILTERS_SCALE_V1 -->
+
 <header class="bg-white border-b border-gray-200 sticky top-0 z-40">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-<div class="flex items-center justify-between">
-<div class="flex items-center space-x-3">
-<img alt="RobPac Resources" class="h-24 w-24" src="logo.png"/>
-<div>
-<div class="text-xl font-bold text-gray-900">ROBPAC RESOURCES</div>
-<div class="text-xs text-gray-500 uppercase tracking-wide">Digital Products</div>
-</div>
-</div>
-<nav class="hidden md:flex items-center space-x-8">
-<a class="text-gray-700 hover:text-blue-600 font-medium" href="#catalog">Browse</a>
-<a class="text-gray-700 hover:text-blue-600 font-medium" href="#bundles">Bundles</a>
-<a class="text-gray-700 hover:text-blue-600 font-medium" href="#faq">FAQ</a>
-<a class="text-gray-700 hover:text-blue-600 font-medium" href="https://robpacpublishing.com">Main Site</a>
-</nav>
-</div>
-</div>
-</header>
-<!-- Hero Section -->
-<section class="bg-gradient-to-b from-white to-gray-50 py-16 sm:py-24">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-<div class="inline-block bg-blue-50 text-blue-700 text-sm font-semibold px-4 py-2 rounded-full mb-6 flex items-center gap-2">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-<path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-</svg>
-                New Resources Added Weekly
-            </div>
-<h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-                Premium Digital Resources<br/>for Entrepreneurs
-            </h1>
-<p class="text-xl text-gray-600 mb-8 max-w-lg mx-auto">
-                Video Courses • Guides • Templates • Audio Programs<br/>
-                Learn your way with multi-format business resources
-            </p>
-<div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-<a class="bg-blue-600 text-white font-semibold px-8 py-4 rounded-lg hover:bg-blue-700 transition text-lg" href="#catalog">
-                    Browse Catalog
-                </a>
-<a class="bg-white text-blue-600 border-2 border-blue-600 font-semibold px-8 py-4 rounded-lg hover:bg-blue-50 transition text-lg" href="#bundles">
-                    View Bundles
-                </a>
-</div>
-<!-- Trust Bar -->
-<div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto pt-8 border-t border-gray-200">
-<div class="text-center">
-<svg class="w-12 h-12 mx-auto mb-2 text-green-600" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-<path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-</svg>
-<div class="font-semibold text-gray-900">Instant Access</div>
-<div class="text-sm text-gray-600">Download immediately</div>
-</div>
-<div class="text-center">
-<svg class="w-12 h-12 mx-auto mb-2 text-blue-600" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-<path d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-</svg>
-<div class="font-semibold text-gray-900">Multi-Format</div>
-<div class="text-sm text-gray-600">Video, Audio, PDF</div>
-</div>
-<div class="text-center">
-<svg class="w-12 h-12 mx-auto mb-2 text-purple-600" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-<path d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-</svg>
-<div class="font-semibold text-gray-900">Commercial Use</div>
-<div class="text-sm text-gray-600">Use in your business</div>
-</div>
-<div class="text-center">
-<svg class="w-12 h-12 mx-auto mb-2 text-orange-600" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-<path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-</svg>
-<div class="font-semibold text-gray-900">30-Day Guarantee</div>
-<div class="text-sm text-gray-600">Risk-free purchase</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Browse by Category (Main categories; subcategories ready later) -->
-<section class="py-10 bg-white" id="categories">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="flex items-end justify-between gap-6 mb-6">
-<div>
-<h2 class="text-2xl font-bold text-gray-900">Browse by Category</h2>
-<p class="text-gray-600 mt-1">Pick a category to jump into the catalog.</p>
-</div>
-<a class="text-sm font-semibold text-blue-600 hover:text-blue-700" href="#catalog">Go to catalog</a>
-</div>
-<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
-<button class="category-card text-left bg-white border border-gray-200 rounded-xl p-4 hover:border-blue-200 hover:shadow-sm" data-category="Marketing">
-<div class="text-xs font-semibold text-gray-500">CATEGORY</div>
-<div class="mt-1 font-bold text-gray-900">Marketing</div>
-</button>
-<button class="category-card text-left bg-white border border-gray-200 rounded-xl p-4 hover:border-blue-200 hover:shadow-sm" data-category="Sales &amp; Conversion">
-<div class="text-xs font-semibold text-gray-500">CATEGORY</div>
-<div class="mt-1 font-bold text-gray-900">Sales &amp; Conversion</div>
-</button>
-<button class="category-card text-left bg-white border border-gray-200 rounded-xl p-4 hover:border-blue-200 hover:shadow-sm" data-category="Business &amp; Growth">
-<div class="text-xs font-semibold text-gray-500">CATEGORY</div>
-<div class="mt-1 font-bold text-gray-900">Business &amp; Growth</div>
-</button>
-<button class="category-card text-left bg-white border border-gray-200 rounded-xl p-4 hover:border-blue-200 hover:shadow-sm" data-category="Creator &amp; Media">
-<div class="text-xs font-semibold text-gray-500">CATEGORY</div>
-<div class="mt-1 font-bold text-gray-900">Creator &amp; Media</div>
-</button>
-<button class="category-card text-left bg-white border border-gray-200 rounded-xl p-4 hover:border-blue-200 hover:shadow-sm" data-category="Productivity &amp; Systems">
-<div class="text-xs font-semibold text-gray-500">CATEGORY</div>
-<div class="mt-1 font-bold text-gray-900">Productivity &amp; Systems</div>
-</button>
-<button class="category-card text-left bg-white border border-gray-200 rounded-xl p-4 hover:border-blue-200 hover:shadow-sm" data-category="Mindset &amp; Personal Growth">
-<div class="text-xs font-semibold text-gray-500">CATEGORY</div>
-<div class="mt-1 font-bold text-gray-900">Mindset &amp; Personal Growth</div>
-</button>
-<button class="category-card text-left bg-white border border-gray-200 rounded-xl p-4 hover:border-blue-200 hover:shadow-sm" data-category="Career &amp; Freelancing">
-<div class="text-xs font-semibold text-gray-500">CATEGORY</div>
-<div class="mt-1 font-bold text-gray-900">Career &amp; Freelancing</div>
-</button>
-<button class="category-card text-left bg-white border border-gray-200 rounded-xl p-4 hover:border-blue-200 hover:shadow-sm" data-category="Health &amp; Wellness">
-<div class="text-xs font-semibold text-gray-500">CATEGORY</div>
-<div class="mt-1 font-bold text-gray-900">Health &amp; Wellness</div>
-</button>
-<button class="category-card text-left bg-white border border-gray-200 rounded-xl p-4 hover:border-blue-200 hover:shadow-sm" data-category="Technology &amp; Security">
-<div class="text-xs font-semibold text-gray-500">CATEGORY</div>
-<div class="mt-1 font-bold text-gray-900">Technology &amp; Security</div>
-</button>
-<button class="category-card text-left bg-white border border-gray-200 rounded-xl p-4 hover:border-blue-200 hover:shadow-sm" data-category="Special Topics">
-<div class="text-xs font-semibold text-gray-500">CATEGORY</div>
-<div class="mt-1 font-bold text-gray-900">Special Topics</div>
-</button>
-</div>
-</div>
-</section>
-<!-- Featured Bundle Hero -->
-<section class="py-10 bg-gradient-to-r from-blue-600 to-blue-700" id="bundles">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center max-w-3xl mx-auto">
-      <h2 class="text-3xl lg:text-4xl font-bold text-white">Bundles</h2>
-      <p class="text-blue-100 mt-3">Bundles will return soon in a new format.</p>
-      <div class="mt-7 flex flex-col sm:flex-row gap-3 justify-center">
-        <a href="#catalog" class="bg-white text-blue-700 font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition">Browse Catalog</a>
-        <a href="#categories" class="bg-blue-700 text-white border border-white/40 font-semibold px-6 py-3 rounded-lg hover:bg-blue-800 transition">Browse Categories</a>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+    <div class="flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <img src="logo.png" alt="RobPac Resources" class="h-14 w-14 sm:h-16 sm:w-16" />
+        <div>
+          <div class="text-xl font-extrabold text-gray-900 leading-tight">ROBPAC RESOURCES</div>
+          <div class="text-xs text-gray-500 uppercase tracking-wide">Digital Products</div>
+        </div>
+      </div>
+
+      <nav class="hidden md:flex items-center space-x-8">
+        <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium">Home</a>
+        <a href="#catalog" class="text-gray-700 hover:text-blue-600 font-medium">Browse</a>
+        <a href="#bundles" class="text-gray-700 hover:text-blue-600 font-medium">Bundles</a>
+        <a href="#faq" class="text-gray-700 hover:text-blue-600 font-medium">FAQ</a>
+        <a href="https://robpacpublishing.com" class="text-gray-700 hover:text-blue-600 font-medium">Main Site</a>
+      </nav>
+
+      <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg border border-gray-200 hover:bg-gray-50" type="button" aria-label="Open menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden hidden mt-4 border-t border-gray-100 pt-4">
+      <div class="flex flex-col gap-3">
+        <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium">Home</a>
+        <a href="#catalog" class="text-gray-700 hover:text-blue-600 font-medium">Browse</a>
+        <a href="#bundles" class="text-gray-700 hover:text-blue-600 font-medium">Bundles</a>
+        <a href="#faq" class="text-gray-700 hover:text-blue-600 font-medium">FAQ</a>
+        <a href="https://robpacpublishing.com" class="text-gray-700 hover:text-blue-600 font-medium">Main Site</a>
       </div>
     </div>
   </div>
-</section>
-<!-- Main Catalog Section -->
-<section class="py-16" id="catalog">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="text-center mb-12">
-<h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Browse Our Catalog</h2>
-<p class="text-xl text-gray-600">Choose individual resources or save with bundles</p>
-</div>
-<div class="flex flex-col lg:flex-row gap-8">
-<!-- Sidebar Filters -->
-<aside class="lg:w-64 flex-shrink-0">
-<div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 sticky top-24">
+</header>
 
-<div class="mb-6">
-<h3 class="font-bold text-gray-900 mb-3">Filter by Category</h3>
-<select class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-200" id="categorySelect">
-<option value="">All Categories</option>
-<option>Marketing</option>
-<option>Sales &amp; Conversion</option>
-<option>Business &amp; Growth</option>
-<option>Creator &amp; Media</option>
-<option>Productivity &amp; Systems</option>
-<option>Mindset &amp; Personal Growth</option>
-<option>Career &amp; Freelancing</option>
-<option>Health &amp; Wellness</option>
-<option>Technology &amp; Security</option>
-<option>Special Topics</option>
-</select>
-<div class="text-xs text-gray-500 mt-2">Subcategories will be added in the next iteration.</div>
-</div>
-<h3 class="font-bold text-gray-900 mb-4">Filter by Format</h3>
-<div class="space-y-3">
-<label class="flex items-center cursor-pointer">
-<input checked="" class="w-4 h-4 text-blue-600 rounded" type="checkbox"/>
-<span class="ml-3 text-gray-700">All Formats</span>
-</label>
-<label class="flex items-center cursor-pointer">
-<input class="w-4 h-4 text-blue-600 rounded" type="checkbox"/>
-<span class="ml-3 text-gray-700">Video Training</span>
-</label>
-<label class="flex items-center cursor-pointer">
-<input class="w-4 h-4 text-blue-600 rounded" type="checkbox"/>
-<span class="ml-3 text-gray-700">Guides &amp; Books</span>
-</label>
-<label class="flex items-center cursor-pointer">
-<input class="w-4 h-4 text-blue-600 rounded" type="checkbox"/>
-<span class="ml-3 text-gray-700">Audio Programs</span>
-</label>
-<label class="flex items-center cursor-pointer">
-<input class="w-4 h-4 text-blue-600 rounded" type="checkbox"/>
-<span class="ml-3 text-gray-700">Workbooks &amp; Templates</span>
-</label>
-<label class="flex items-center cursor-pointer">
-<input class="w-4 h-4 text-blue-600 rounded" type="checkbox"/>
-<span class="ml-3 text-gray-700">Quick Wins</span>
-</label>
-<label class="flex items-center cursor-pointer">
-<input class="w-4 h-4 text-blue-600 rounded" type="checkbox"/>
-<span class="ml-3 text-gray-700">Bundles</span>
-</label>
-</div>
-<div class="mt-8 pt-8 border-t border-gray-200">
-<h3 class="font-bold text-gray-900 mb-4">Price Range</h3>
-<div class="space-y-2">
-<label class="flex items-center cursor-pointer">
-<input checked="" class="w-4 h-4 text-blue-600" name="price" type="radio"/>
-<span class="ml-3 text-gray-700">All Prices</span>
-</label>
-<label class="flex items-center cursor-pointer">
-<input class="w-4 h-4 text-blue-600" name="price" type="radio"/>
-<span class="ml-3 text-gray-700">Under $15</span>
-</label>
-<label class="flex items-center cursor-pointer">
-<input class="w-4 h-4 text-blue-600" name="price" type="radio"/>
-<span class="ml-3 text-gray-700">$15 - $30</span>
-</label>
-<label class="flex items-center cursor-pointer">
-<input class="w-4 h-4 text-blue-600" name="price" type="radio"/>
-<span class="ml-3 text-gray-700">$30+</span>
-</label>
-</div>
-</div>
-</div>
-</aside>
-<!-- Product Grid -->
-<div class="flex-1">
-<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
-<!-- Product Card 1 -->
-<div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden" data-format="" data-maincategory="Marketing" data-price="27">
-<div class="bg-gradient-to-br from-blue-500 to-blue-600 h-32 flex items-center justify-center">
-<svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-<path d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
-</svg>
-</div>
-<div class="p-3">
-<div class="text-xs font-semibold text-blue-600 mb-2">VIDEO TRAINING</div>
-<h3 class="text-base font-bold text-gray-900 mb-1">Instagram Marketing Mastery</h3>
-<p class="text-xs text-gray-600 mb-3">Complete video course on growing your Instagram business presence</p>
-<div class="text-xs text-gray-500 mb-3">45 min • Beginner-Friendly</div>
-<div class="flex items-baseline mb-3">
-<span class="text-xl font-extrabold text-gray-900">$27</span>
-<span class="text-sm text-gray-400 line-through ml-2">$37</span>
-<span class="ml-auto discount-badge text-white text-xs font-bold px-2 py-1 rounded">SAVE $10</span>
-</div>
-<button class="w-full bg-blue-600 text-white font-semibold py-2 rounded-lg hover:bg-blue-700 transition text-sm">
-                                    Add to Cart
-                                </button>
-</div>
-</div>
-<!-- Product Card 2 -->
-<div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden" data-format="" data-maincategory="Marketing" data-price="17">
-<div class="bg-gradient-to-br from-purple-500 to-purple-600 h-32 flex items-center justify-center">
-<svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-<path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
-</svg>
-</div>
-<div class="p-3">
-<div class="text-xs font-semibold text-purple-600 mb-2">COMPLETE GUIDE</div>
-<h3 class="text-base font-bold text-gray-900 mb-1">Email Marketing Blueprint</h3>
-<p class="text-xs text-gray-600 mb-3">Build and monetize your email list from scratch</p>
-<div class="text-xs text-gray-500 mb-3">68 pages • PDF Format</div>
-<div class="flex items-baseline mb-3">
-<span class="text-xl font-extrabold text-gray-900">$17</span>
-<span class="text-sm text-gray-400 line-through ml-2">$27</span>
-<span class="ml-auto discount-badge text-white text-xs font-bold px-2 py-1 rounded">SAVE $10</span>
-</div>
-<button class="w-full bg-purple-600 text-white font-semibold py-3 rounded-lg hover:bg-purple-700 transition">
-                                    Add to Cart
-                                </button>
-</div>
-</div>
-<!-- Product Card 3 -->
-<div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden" data-format="" data-maincategory="Special Topics" data-price="27">
-<div class="bg-gradient-to-br from-green-500 to-green-600 h-32 flex items-center justify-center">
-<svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-<path d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
-</svg>
-</div>
-<div class="p-3">
-<div class="text-xs font-semibold text-green-600 mb-2">AUDIO PROGRAM</div>
-<h3 class="text-base font-bold text-gray-900 mb-1">Productivity Mastery</h3>
-<p class="text-xs text-gray-600 mb-3">Audio lessons you can listen to anywhere</p>
-<div class="text-xs text-gray-500 mb-3">2 hours • MP3 Format</div>
-<div class="flex items-baseline mb-3">
-<span class="text-xl font-extrabold text-gray-900">$27</span>
-<span class="text-sm text-gray-400 line-through ml-2">$37</span>
-<span class="ml-auto discount-badge text-white text-xs font-bold px-2 py-1 rounded">SAVE $10</span>
-</div>
-<button class="w-full bg-green-600 text-white font-semibold py-3 rounded-lg hover:bg-green-700 transition">
-                                    Add to Cart
-                                </button>
-</div>
-</div>
-<!-- Product Card 4 -->
-<div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden" data-format="" data-maincategory="Marketing" data-price="12">
-<div class="bg-gradient-to-br from-orange-500 to-orange-600 h-32 flex items-center justify-center">
-<svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-<path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
-</svg>
-</div>
-<div class="p-3">
-<div class="text-xs font-semibold text-orange-600 mb-2">WORKBOOK</div>
-<h3 class="text-base font-bold text-gray-900 mb-1">Content Calendar Templates</h3>
-<p class="text-xs text-gray-600 mb-3">12-month planning system with fillable templates</p>
-<div class="text-xs text-gray-500 mb-3">32 pages • Editable PDF</div>
-<div class="flex items-baseline mb-3">
-<span class="text-xl font-extrabold text-gray-900">$12</span>
-<span class="text-sm text-gray-400 line-through ml-2">$17</span>
-<span class="ml-auto discount-badge text-white text-xs font-bold px-2 py-1 rounded">SAVE $5</span>
-</div>
-<button class="w-full bg-orange-600 text-white font-semibold py-3 rounded-lg hover:bg-orange-700 transition">
-                                    Add to Cart
-                                </button>
-</div>
-</div>
-<!-- Product Card 5 -->
-<div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden" data-format="" data-maincategory="Marketing" data-price="37">
-<div class="bg-gradient-to-br from-blue-500 to-blue-600 h-32 flex items-center justify-center">
-<svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-<path d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
-<path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
-</svg>
-</div>
-<div class="p-3">
-<div class="text-xs font-semibold text-blue-600 mb-2">VIDEO COURSE</div>
-<h3 class="text-base font-bold text-gray-900 mb-1">Facebook Ads Fundamentals</h3>
-<p class="text-xs text-gray-600 mb-3">Master Facebook advertising from beginner to advanced</p>
-<div class="text-xs text-gray-500 mb-3">90 min • Multi-module</div>
-<div class="flex items-baseline mb-3">
-<span class="text-xl font-extrabold text-gray-900">$37</span>
-<span class="text-sm text-gray-400 line-through ml-2">$47</span>
-<span class="ml-auto discount-badge text-white text-xs font-bold px-2 py-1 rounded">SAVE $10</span>
-</div>
-<button class="w-full bg-blue-600 text-white font-semibold py-2 rounded-lg hover:bg-blue-700 transition text-sm">
-                                    Add to Cart
-                                </button>
-</div>
-</div>
-<!-- Product Card 6 -->
-<div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden" data-format="" data-maincategory="Marketing" data-price="17">
-<div class="bg-gradient-to-br from-purple-500 to-purple-600 h-32 flex items-center justify-center">
-<svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-<path d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
-</svg>
-</div>
-<div class="p-3">
-<div class="text-xs font-semibold text-purple-600 mb-2">GUIDE</div>
-<h3 class="text-base font-bold text-gray-900 mb-1">SEO Essentials for Beginners</h3>
-<p class="text-xs text-gray-600 mb-3">Rank higher on Google with proven strategies</p>
-<div class="text-xs text-gray-500 mb-3">42 pages • PDF Format</div>
-<div class="flex items-baseline mb-3">
-<span class="text-xl font-extrabold text-gray-900">$17</span>
-<span class="text-sm text-gray-400 line-through ml-2">$27</span>
-<span class="ml-auto discount-badge text-white text-xs font-bold px-2 py-1 rounded">SAVE $10</span>
-</div>
-<button class="w-full bg-purple-600 text-white font-semibold py-3 rounded-lg hover:bg-purple-700 transition">
-                                    Add to Cart
-                                </button>
-</div>
-</div>
-<!-- Product Card 7 -->
-<div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden" data-format="" data-maincategory="Marketing" data-price="15">
-<div class="product-image-wrapper">
-<img alt="Content Multiplier - Prompt Pack" class="product-image" loading="lazy" src="covers/content-multiplier.png"/>
-</div>
-<div class="p-3">
-<div class="text-xs font-semibold text-pink-600 mb-2">PROMPT PACK</div>
-<h3 class="text-base font-bold text-gray-900 mb-1">Content Multiplier - Prompt Pack</h3>
-<p class="text-xs text-gray-600 mb-3">Turn one piece of content into multiple formats with AI prompts</p>
-<div class="text-xs text-gray-500 mb-3">Ready-to-use prompts</div>
-<div class="flex items-baseline mb-3">
-<span class="text-xl font-extrabold text-gray-900">$15</span>
-<span class="text-sm text-gray-400 line-through ml-2">$25</span>
-<span class="ml-auto discount-badge text-white text-xs font-bold px-2 py-1 rounded">SAVE $10</span>
-</div>
-<a class="payhip-buy-button block w-full bg-pink-600 text-white font-semibold py-3 rounded-lg hover:bg-pink-700 transition text-center" data-product="rQWRZ" data-theme="blue" href="https://payhip.com/b/rQWRZ">
-                                    Add to Cart
-                                </a>
-</div>
-</div>
-<!-- Product Card 8 -->
-<div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden" data-format="" data-maincategory="Special Topics" data-price="7">
-<div class="bg-gradient-to-br from-green-500 to-green-600 h-32 flex items-center justify-center">
-<svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-<path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
-</svg>
-</div>
-<div class="p-3">
-<div class="text-xs font-semibold text-green-600 mb-2">CHECKLIST</div>
-<h3 class="text-base font-bold text-gray-900 mb-1">Product Launch Checklist</h3>
-<p class="text-xs text-gray-600 mb-3">Step-by-step launch plan with 100+ action items</p>
-<div class="text-xs text-gray-500 mb-3">Printable PDF</div>
-<div class="flex items-baseline mb-3">
-<span class="text-xl font-extrabold text-gray-900">$7</span>
-<span class="text-sm text-gray-400 line-through ml-2">$12</span>
-<span class="ml-auto discount-badge text-white text-xs font-bold px-2 py-1 rounded">SAVE $5</span>
-</div>
-<button class="w-full bg-green-600 text-white font-semibold py-3 rounded-lg hover:bg-green-700 transition">
-                                    Add to Cart
-                                </button>
-</div>
-</div>
-<!-- Product Card 9 -->
-<div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden" data-format="" data-maincategory="Special Topics" data-price="17">
-<div class="bg-gradient-to-br from-indigo-500 to-indigo-600 h-32 flex items-center justify-center">
-<svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-<path d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
-</svg>
-</div>
-<div class="p-3">
-<div class="text-xs font-semibold text-indigo-600 mb-2">TEMPLATE PACK</div>
-<h3 class="text-base font-bold text-gray-900 mb-1">Social Media Templates</h3>
-<p class="text-xs text-gray-600 mb-3">30 Canva templates for posts, stories, and ads</p>
-<div class="text-xs text-gray-500 mb-3">Fully customizable</div>
-<div class="flex items-baseline mb-3">
-<span class="text-xl font-extrabold text-gray-900">$17</span>
-<span class="text-sm text-gray-400 line-through ml-2">$27</span>
-<span class="ml-auto discount-badge text-white text-xs font-bold px-2 py-1 rounded">SAVE $10</span>
-</div>
-<button class="w-full bg-indigo-600 text-white font-semibold py-3 rounded-lg hover:bg-indigo-700 transition">
-                                    Add to Cart
-                                </button>
-</div>
-</div>
-<!-- Product Card 10 -->
-<div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden" data-format="" data-maincategory="Special Topics" data-price="27">
-<div class="bg-gradient-to-br from-blue-500 to-blue-600 h-32 flex items-center justify-center">
-<svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-<path d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
-</svg>
-</div>
-<div class="p-3">
-<div class="text-xs font-semibold text-blue-600 mb-2">VIDEO TRAINING</div>
-<h3 class="text-base font-bold text-gray-900 mb-1">LinkedIn Lead Generation</h3>
-<p class="text-xs text-gray-600 mb-3">Generate consistent B2B leads on LinkedIn</p>
-<div class="text-xs text-gray-500 mb-3">60 min • Advanced</div>
-<div class="flex items-baseline mb-3">
-<span class="text-xl font-extrabold text-gray-900">$27</span>
-<span class="text-sm text-gray-400 line-through ml-2">$37</span>
-<span class="ml-auto discount-badge text-white text-xs font-bold px-2 py-1 rounded">SAVE $10</span>
-</div>
-<button class="w-full bg-blue-600 text-white font-semibold py-2 rounded-lg hover:bg-blue-700 transition text-sm">
-                                    Add to Cart
-                                </button>
-</div>
-</div>
-<!-- Product Card 11 -->
-<div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden" data-format="" data-maincategory="Special Topics" data-price="27">
-<div class="bg-gradient-to-br from-purple-500 to-purple-600 h-32 flex items-center justify-center">
-<svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-<path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
-</svg>
-</div>
-<div class="p-3">
-<div class="text-xs font-semibold text-purple-600 mb-2">COMPLETE BOOK</div>
-<h3 class="text-base font-bold text-gray-900 mb-1">Sales Funnel Blueprint</h3>
-<p class="text-xs text-gray-600 mb-3">Build high-converting funnels step-by-step</p>
-<div class="text-xs text-gray-500 mb-3">120 pages • Case studies</div>
-<div class="flex items-baseline mb-3">
-<span class="text-xl font-extrabold text-gray-900">$27</span>
-<span class="text-sm text-gray-400 line-through ml-2">$37</span>
-<span class="ml-auto discount-badge text-white text-xs font-bold px-2 py-1 rounded">SAVE $10</span>
-</div>
-<button class="w-full bg-purple-600 text-white font-semibold py-3 rounded-lg hover:bg-purple-700 transition">
-                                    Add to Cart
-                                </button>
-</div>
-</div>
-<!-- Product Card 12 -->
-<div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden" data-format="" data-maincategory="Special Topics" data-price="12">
-<div class="bg-gradient-to-br from-orange-500 to-orange-600 h-32 flex items-center justify-center">
-<svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-<path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
-</svg>
-</div>
-<div class="p-3">
-<div class="text-xs font-semibold text-orange-600 mb-2">WORKBOOK</div>
-<h3 class="text-base font-bold text-gray-900 mb-1">90-Day Business Planner</h3>
-<p class="text-xs text-gray-600 mb-3">Quarterly planning system with goal tracking</p>
-<div class="text-xs text-gray-500 mb-3">50 pages • Fillable</div>
-<div class="flex items-baseline mb-3">
-<span class="text-xl font-extrabold text-gray-900">$12</span>
-<span class="text-sm text-gray-400 line-through ml-2">$17</span>
-<span class="ml-auto discount-badge text-white text-xs font-bold px-2 py-1 rounded">SAVE $5</span>
-</div>
-<button class="w-full bg-orange-600 text-white font-semibold py-3 rounded-lg hover:bg-orange-700 transition">
-                                    Add to Cart
-                                </button>
-</div>
-</div>
-</div>
-<!-- Load More -->
-<div class="text-center mt-12">
-<button class="bg-white text-blue-600 border-2 border-blue-600 font-semibold px-8 py-3 rounded-lg hover:bg-blue-50 transition">
-                            Load More Resources
-                        </button>
-</div>
-</div>
-</div>
-</div>
+<section id="home" class="bg-gradient-to-b from-white to-gray-50 py-12 sm:py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-5 leading-tight">Premium Digital Resources<br/>for Entrepreneurs</h1>
+    <p class="text-lg sm:text-xl text-gray-600 mb-8 max-w-3xl mx-auto">Courses, guides, templates, audio programs and more. Open any item to see details and checkout via Payhip.</p>
+    <div class="flex flex-col sm:flex-row gap-3 justify-center">
+      <a href="#catalog" class="bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-700 transition">Browse Catalog</a>
+      <a href="#bundles" class="bg-white text-blue-600 border border-blue-200 font-semibold px-6 py-3 rounded-lg hover:bg-blue-50 transition">View Bundles</a>
+    </div>
+  </div>
 </section>
-<!-- Testimonials -->
-<section class="py-16 bg-white">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<h2 class="text-3xl font-bold text-center text-gray-900 mb-12">What Entrepreneurs Are Saying</h2>
-<div class="grid md:grid-cols-3 gap-8">
-<div class="bg-gray-50 rounded-xl p-6">
-<div class="flex items-center mb-4">
-<svg class="w-5 h-5 text-yellow-400 fill-current" viewbox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"></path></svg>
-<svg class="w-5 h-5 text-yellow-400 fill-current" viewbox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"></path></svg>
-<svg class="w-5 h-5 text-yellow-400 fill-current" viewbox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"></path></svg>
-<svg class="w-5 h-5 text-yellow-400 fill-current" viewbox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"></path></svg>
-<svg class="w-5 h-5 text-yellow-400 fill-current" viewbox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"></path></svg>
-</div>
-<p class="text-gray-700 mb-4">"These resources 10x'd my marketing knowledge. The video courses are incredibly practical and the templates saved me hours of work."</p>
-<div class="font-semibold text-gray-900">Sarah M.</div>
-<div class="text-sm text-gray-600">Digital Marketer</div>
-</div>
-<div class="bg-gray-50 rounded-xl p-6">
-<div class="flex items-center mb-4">
-<svg class="w-5 h-5 text-yellow-400 fill-current" viewbox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"></path></svg>
-<svg class="w-5 h-5 text-yellow-400 fill-current" viewbox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"></path></svg>
-<svg class="w-5 h-5 text-yellow-400 fill-current" viewbox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"></path></svg>
-<svg class="w-5 h-5 text-yellow-400 fill-current" viewbox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"></path></svg>
-<svg class="w-5 h-5 text-yellow-400 fill-current" viewbox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"></path></svg>
-</div>
-<p class="text-gray-700 mb-4">"Better than $500 courses I've taken. The content is up-to-date, actionable, and I can learn in my preferred format."</p>
-<div class="font-semibold text-gray-900">Mike R.</div>
-<div class="text-sm text-gray-600">Entrepreneur</div>
-</div>
-<div class="bg-gray-50 rounded-xl p-6">
-<div class="flex items-center mb-4">
-<svg class="w-5 h-5 text-yellow-400 fill-current" viewbox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"></path></svg>
-<svg class="w-5 h-5 text-yellow-400 fill-current" viewbox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"></path></svg>
-<svg class="w-5 h-5 text-yellow-400 fill-current" viewbox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"></path></svg>
-<svg class="w-5 h-5 text-yellow-400 fill-current" viewbox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"></path></svg>
-<svg class="w-5 h-5 text-yellow-400 fill-current" viewbox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"></path></svg>
-</div>
-<p class="text-gray-700 mb-4">"The templates alone saved me 20+ hours. Everything is well-organized and professional. Worth every penny."</p>
-<div class="font-semibold text-gray-900">Lisa K.</div>
-<div class="text-sm text-gray-600">Content Creator</div>
-</div>
-</div>
-</div>
+
+<section class="py-10 bg-white border-t border-gray-100" id="categories">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-end justify-between gap-6 mb-6">
+      <div>
+        <h2 class="text-2xl font-bold text-gray-900">Browse by Category</h2>
+        <p class="text-gray-600 mt-1">Main categories (subcategories prepared for later).</p>
+      </div>
+      <a href="#catalog" class="text-blue-600 hover:text-blue-700 font-semibold text-sm">Go to catalog</a>
+    </div>
+    <div id="categoryCards" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4"></div>
+  </div>
 </section>
-<!-- FAQ Section -->
-<section class="py-16 bg-gray-50" id="faq">
-<div class="max-w-lg mx-auto px-4 sm:px-6 lg:px-8">
-<h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Frequently Asked Questions</h2>
-<div class="space-y-6">
-<div class="bg-white rounded-xl p-6 shadow-sm">
-<h3 class="font-bold text-gray-900 mb-2">What format are the resources?</h3>
-<p class="text-gray-700">Resources come in multiple formats: video (MP4), audio (MP3), PDF, and editable templates. All are compatible with any device.</p>
-</div>
-<div class="bg-white rounded-xl p-6 shadow-sm">
-<h3 class="font-bold text-gray-900 mb-2">Can I get a refund?</h3>
-<p class="text-gray-700">Yes! We offer a 30-day money-back guarantee. If you're not satisfied for any reason, just contact us for a full refund.</p>
-</div>
-<div class="bg-white rounded-xl p-6 shadow-sm">
-<h3 class="font-bold text-gray-900 mb-2">Do I need special software?</h3>
-<p class="text-gray-700">No special software needed. PDFs work with any PDF reader (free on every device), videos play in any media player, and templates work with standard tools.</p>
-</div>
-<div class="bg-white rounded-xl p-6 shadow-sm">
-<h3 class="font-bold text-gray-900 mb-2">Is this a subscription?</h3>
-<p class="text-gray-700">No. All products are one-time purchases. Pay once, keep forever. Download and access your files anytime.</p>
-</div>
-<div class="bg-white rounded-xl p-6 shadow-sm">
-<h3 class="font-bold text-gray-900 mb-2">Can I use these for my business?</h3>
-<p class="text-gray-700">Yes! All resources include personal and commercial use rights. Use them to grow your business, train your team, or implement strategies. Resale rights are not included unless specified.</p>
-</div>
-<div class="bg-white rounded-xl p-6 shadow-sm">
-<h3 class="font-bold text-gray-900 mb-2">How quickly can I access my purchase?</h3>
-<p class="text-gray-700">Instantly! After completing your purchase, you'll receive immediate download links via email. No waiting, no shipping.</p>
-</div>
-<div class="bg-white rounded-xl p-6 shadow-sm">
-<h3 class="font-bold text-gray-900 mb-2">Do you add new resources?</h3>
-<p class="text-gray-700">Yes! We add new resources weekly. Sign up for our newsletter to get notified about new releases and exclusive discounts.</p>
-</div>
-</div>
-</div>
+
+<section class="py-10 bg-gray-50 border-t border-gray-100" id="featured">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-end justify-between gap-6 mb-5">
+      <div>
+        <h2 class="text-2xl font-bold text-gray-900">Featured Resources</h2>
+        <p class="text-gray-600 mt-1">Compact picks across categories.</p>
+      </div>
+      <a href="#catalog" class="text-blue-600 hover:text-blue-700 font-semibold text-sm">Browse all</a>
+    </div>
+    <div id="featuredCarousel" class="flex gap-4 overflow-x-auto no-scrollbar pb-2"></div>
+  </div>
 </section>
-<!-- Final CTA -->
-<section class="py-16 bg-blue-600">
-<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-<h2 class="text-3xl lg:text-4xl font-bold text-white mb-4">Ready to Accelerate Your Business Growth?</h2>
-<p class="text-xl text-blue-100 mb-8">Join 500+ entrepreneurs who are learning faster and growing smarter</p>
-<div class="flex flex-col sm:flex-row gap-4 justify-center">
-<a class="bg-white text-blue-600 font-bold px-8 py-4 rounded-lg hover:bg-gray-100 transition text-lg" href="#catalog">
-                    Browse Catalog
-                </a>
-<a class="bg-blue-700 text-white border-2 border-white font-bold px-8 py-4 rounded-lg hover:bg-blue-800 transition text-lg" href="#bundles">
-                    View Bundles
-                </a>
-</div>
-</div>
+
+<section class="py-14 bg-gradient-to-r from-blue-600 to-indigo-700" id="bundles">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto">
+      <h2 class="text-3xl lg:text-4xl font-bold text-white mb-4">Bundles</h2>
+      <p class="text-lg text-blue-100">Bundles will be expanded later. For now, browse the catalog by category and format.</p>
+    </div>
+  </div>
 </section>
+
+<section class="py-14" id="catalog">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-10">
+      <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">Browse Our Catalog</h2>
+      <p class="text-lg text-gray-600">Designed for hundreds of products: indexed search, debounced inputs, incremental rendering.</p>
+    </div>
+
+    <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-4 sm:p-6">
+      <div class="grid gap-4 lg:grid-cols-12">
+        <div class="lg:col-span-4">
+          <label for="searchInput" class="text-sm font-semibold text-gray-900">Search</label>
+          <input id="searchInput" type="text" class="mt-2 w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-200" placeholder="Search title or description..." />
+        </div>
+
+        <div class="lg:col-span-4">
+          <label for="categorySelect" class="text-sm font-semibold text-gray-900">Filter by Category</label>
+          <select id="categorySelect" class="mt-2 w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-200">
+            <option value="">All Categories</option>
+          </select>
+          <div class="text-xs text-gray-500 mt-2">Subcategories are prepared in data and will be enabled later.</div>
+        </div>
+
+        <div class="lg:col-span-4">
+          <label for="subcategorySelect" class="text-sm font-semibold text-gray-900">Subcategory (prepared)</label>
+          <select id="subcategorySelect" class="mt-2 w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-200" disabled>
+            <option value="">All Subcategories</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="mt-4 grid gap-4 lg:grid-cols-12">
+        <div class="lg:col-span-10">
+          <div class="text-sm font-semibold text-gray-900 mb-2">Filter by Format</div>
+          <div id="formatChips" class="flex flex-wrap gap-2"></div>
+        </div>
+        <div class="lg:col-span-2 flex items-end justify-end">
+          <button id="clearFiltersBtn" class="text-sm font-semibold text-blue-600 hover:text-blue-700">Clear</button>
+        </div>
+      </div>
+
+      <div class="mt-5 flex items-center justify-between gap-4">
+        <div class="text-sm text-gray-600"><span id="resultsCount" class="font-semibold text-gray-900">0</span> results</div>
+        <button id="loadMoreBtn" class="hidden bg-white text-blue-600 border border-blue-200 font-semibold px-4 py-2 rounded-lg hover:bg-blue-50 transition text-sm" type="button">Load more</button>
+      </div>
+
+      <div id="productsGrid" class="mt-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4"></div>
+    </div>
+  </div>
+</section>
+
+<section class="py-14 bg-white" id="faq">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-10">
+      <h2 class="text-3xl font-bold text-gray-900 mb-3">FAQ</h2>
+      <p class="text-gray-600">Payhip handles checkout and provides instant delivery.</p>
+    </div>
+
+    <div class="max-w-3xl mx-auto space-y-4">
+      <details class="bg-gray-50 rounded-xl p-5 border border-gray-200">
+        <summary class="cursor-pointer font-semibold text-gray-900">How do I access my purchase?</summary>
+        <div class="mt-3 text-gray-700 text-sm leading-relaxed">After checkout, Payhip provides an instant download link and a confirmation email.</div>
+      </details>
+
+      <details class="bg-gray-50 rounded-xl p-5 border border-gray-200">
+        <summary class="cursor-pointer font-semibold text-gray-900">Do products include commercial use?</summary>
+        <div class="mt-3 text-gray-700 text-sm leading-relaxed">If included, you can use resources in your business. Always follow the licensing terms included with each item.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
 <!-- Product Detail Modal -->
-<div class="hidden fixed inset-0 z-50 bg-black/40 flex items-center justify-center p-4" id="productModal">
-<div class="bg-white rounded-2xl shadow-2xl max-w-lg w-full relative">
-<button class="absolute top-4 right-4 text-gray-400 hover:text-gray-600" onclick="closeProductModal()" type="button">
-<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-</svg>
-</button>
-<div class="p-4 max-h-[68vh] overflow-y-auto" id="productModalContent">
-<!-- Product content will be injected here -->
+<div id="productModal" class="hidden fixed inset-0 z-50 bg-black/40 popup-overlay flex items-center justify-center p-4">
+  <div class="bg-white rounded-2xl shadow-2xl max-w-lg w-full relative">
+    <button type="button" onclick="closeProductModal()" class="absolute top-3 right-3 p-2 rounded-lg text-gray-400 hover:text-gray-600 hover:bg-gray-50" aria-label="Close">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+    <div id="productModalContent" class="p-4 sm:p-5 max-h-[70vh] overflow-y-auto"></div>
+  </div>
 </div>
-</div>
-</div>
-<!-- Footer -->
-<footer class="bg-gray-900 text-gray-300 py-12">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="grid md:grid-cols-4 gap-8 mb-8">
-<div>
-<div class="flex items-center space-x-2 mb-4">
-<img alt="RobPac Resources" class="h-10 w-10" src="logo.png"/>
-<div class="text-white font-bold">ROBPAC RESOURCES</div>
-</div>
-<p class="text-sm">Premium digital resources for modern entrepreneurs</p>
-</div>
-<div>
-<h3 class="text-white font-semibold mb-4">Quick Links</h3>
-<ul class="space-y-2 text-sm">
-<li><a class="hover:text-white" href="#catalog">Browse Catalog</a></li>
-<li><a class="hover:text-white" href="#bundles">Bundles</a></li>
-<li><a class="hover:text-white" href="#faq">FAQ</a></li>
-<li><a class="hover:text-white" href="https://robpacpublishing.com">Main Site</a></li>
-</ul>
-</div>
-<div>
-<h3 class="text-white font-semibold mb-4">Categories</h3>
-<ul class="space-y-2 text-sm">
-<li><a class="hover:text-white" href="#">Video Training</a></li>
-<li><a class="hover:text-white" href="#">Guides &amp; Books</a></li>
-<li><a class="hover:text-white" href="#">Audio Programs</a></li>
-<li><a class="hover:text-white" href="#">Templates</a></li>
-</ul>
-</div>
-<div>
-<h3 class="text-white font-semibold mb-4">Support</h3>
-<ul class="space-y-2 text-sm">
-<li><a class="hover:text-white" href="#">Contact Us</a></li>
-<li><a class="hover:text-white" href="#">Refund Policy</a></li>
-<li><a class="hover:text-white" href="#">Terms of Service</a></li>
-<li><a class="hover:text-white" href="#">Privacy Policy</a></li>
-</ul>
-</div>
-</div>
-<div class="border-t border-gray-800 pt-8 text-center text-sm">
-<p>© 2025 RobPac Resources - A Division of <a class="text-blue-400 hover:text-blue-300" href="https://robpacpublishing.com">RobPac Publishing</a></p>
-</div>
-</div>
+
+<footer class="bg-gray-900 text-gray-300 py-10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="text-sm">© 2025 RobPac Resources · <a class="text-blue-400 hover:text-blue-300" href="https://robpacpublishing.com">RobPac Publishing</a></div>
+      <div class="text-sm"><a class="hover:text-white" href="mailto:robpacpublishing@gmail.com">robpacpublishing@gmail.com</a></div>
+    </div>
+  </div>
 </footer>
+
 <script>
-// Product detail modal
-        
-        function openProductModal(card) {
-            var modal = document.getElementById('productModal');
-            var content = document.getElementById('productModalContent');
-            if (!modal || !content || !card) return;
+  // ---------------------------------------
+  // DATA
+  // ---------------------------------------
+  // Categories + subcategories (prepared; subcategory filter disabled by default).
+  var CATEGORIES = [
+    { name: "Marketing", subcategories: [] },
+    { name: "Sales & Conversion", subcategories: [] },
+    { name: "Business & Growth", subcategories: [] },
+    { name: "Creator & Media", subcategories: [] },
+    { name: "Productivity & Systems", subcategories: [] },
+    { name: "Mindset & Personal Growth", subcategories: [] },
+    { name: "Career & Freelancing", subcategories: [] },
+    { name: "Health & Wellness", subcategories: [] },
+    { name: "Technology & Security", subcategories: [] },
+    { name: "Special Topics", subcategories: [] }
+  ];
 
-            var img = card.querySelector('img');
-            var coverSrc = img ? img.getAttribute('src') : '';
-            var coverAlt = img ? (img.getAttribute('alt') || '') : '';
+  // Formats (from your UI list).
+  var FORMAT_OPTIONS = [
+    "Book",
+    "Video",
+    "Listicle",
+    "Checklist",
+    "Notion Template",
+    "Mini-Course",
+    "Guide",
+    "Audio",
+    "Prompt Pack",
+    "Template",
+    "Toolstack",
+    "Workbook"
+  ];
 
-            var badge = card.querySelector('span.rounded-full');
-            var formatLabel = badge ? badge.textContent.trim() : '';
+  // Products: admin_generator.html can inject a large array by defining window.__ROBPAC_PRODUCTS__ before this script.
+  // Required fields: id, title, mainCategory, format, description, price. Optional: subCategory, compareAt, payhipId, cover, info.
+  var PRODUCTS = (window.__ROBPAC_PRODUCTS__ && Array.isArray(window.__ROBPAC_PRODUCTS__)) ? window.__ROBPAC_PRODUCTS__ : [
+    {
+      id: "p-content-multiplier",
+      title: "Content Multiplier - Prompt Pack",
+      mainCategory: "Creator & Media",
+      subCategory: "",
+      format: "Prompt Pack",
+      description: "Turn one idea into multiple outputs with ready-to-use prompts.",
+      info: "Prompt Pack",
+      price: 15,
+      compareAt: 25,
+      payhipId: "rQWRZ",
+      cover: "covers/content-multiplier.png"
+    },
+    {
+      id: "p-launch-checklist",
+      title: "Product Launch Checklist",
+      mainCategory: "Special Topics",
+      subCategory: "",
+      format: "Checklist",
+      description: "Step-by-step launch plan to avoid missed details.",
+      info: "Printable PDF",
+      price: 7,
+      compareAt: 12,
+      payhipId: "",
+      cover: "covers/product-launch-checklist.png"
+    },
+    {
+      id: "p-youtube-starter",
+      title: "YouTube Starter System",
+      mainCategory: "Creator & Media",
+      subCategory: "",
+      format: "Guide",
+      description: "A simple workflow to plan, publish, and iterate consistently.",
+      info: "PDF + templates",
+      price: 27,
+      compareAt: 37,
+      payhipId: "",
+      cover: "covers/youtube-starter-system.png"
+    }
+  ];
 
-            var titleEl = card.querySelector('h3');
-            var title = titleEl ? titleEl.textContent.trim() : '';
+  // Featured: keep small; for large catalogs you can set this list from admin.
+  var FEATURED_IDS = (window.__ROBPAC_FEATURED__ && Array.isArray(window.__ROBPAC_FEATURED__)) ? window.__ROBPAC_FEATURED__ : [
+    "p-content-multiplier",
+    "p-youtube-starter"
+  ];
 
-            var descEl = card.querySelector('p.text-gray-600');
-            var desc = descEl ? descEl.textContent.trim() : '';
+  // ---------------------------------------
+  // PERF: precomputed search index
+  // ---------------------------------------
+  function normalize(str) { return String(str || "").toLowerCase().trim(); }
 
-            var infoEl = card.querySelector('p.text-sm.text-gray-500');
-            var info = infoEl ? infoEl.textContent.trim() : '';
+  function buildSearchIndex() {
+    for (var i = 0; i < PRODUCTS.length; i++) {
+      var p = PRODUCTS[i] || {};
+      p.__search = normalize([p.title, p.description, p.mainCategory, p.subCategory, p.format, p.info].join(" "));
+    }
+  }
 
-            var priceEl = card.querySelector('.text-2xl.font-bold');
-            var price = priceEl ? priceEl.textContent.trim() : '';
+  // ---------------------------------------
+  // Utilities
+  // ---------------------------------------
+  function escapeHtml(str) {
+    return String(str || "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+  }
 
-            var oldPriceEl = card.querySelector('.line-through');
-            var oldPrice = oldPriceEl ? oldPriceEl.textContent.trim() : '';
+  function formatMoney(n) {
+    var v = Number(n);
+    if (!isFinite(v)) return "";
+    return "$" + v.toFixed(0);
+  }
 
-            var cat = card.getAttribute('data-maincategory') || '';
+  function initPayhipButtons() {
+    try {
+      if (window.Payhip && window.Payhip.Button && typeof window.Payhip.Button.init === "function") {
+        window.Payhip.Button.init();
+      }
+    } catch (e) {}
+  }
 
-            var buyBtn = card.querySelector('.payhip-buy-button');
-            var buyHtml = '';
-            if (buyBtn) {
-                // clone to keep Payhip integration
-                buyHtml = buyBtn.outerHTML;
-            }
+  function buildPayhipButton(payhipId, label, extraClasses) {
+    if (!payhipId) return "";
+    var cls = "payhip-buy-button inline-flex items-center justify-center w-full bg-blue-600 text-white font-semibold py-2.5 rounded-lg hover:bg-blue-700 transition text-sm " + (extraClasses || "");
+    return '<a class="' + cls + '" data-product="' + escapeHtml(payhipId) + '" data-theme="blue" href="https://payhip.com/b/' + escapeHtml(payhipId) + '">' + escapeHtml(label || "Buy Now") + '</a>';
+  }
 
-            content.innerHTML =
-                '<div class="grid sm:grid-cols-[140px,1fr] gap-4 md:gap-5 items-start">' +
-                    '<div class="bg-gray-50 border border-gray-200 rounded-xl p-2 flex items-center justify-center aspect-[4/5]">' +
-                        (coverSrc ? ('<img src="' + coverSrc + '" alt="' + coverAlt.replace(/"/g, '&quot;') + '" class="w-full h-full object-contain" />') : '') +
-                    '</div>' +
-                    '<div>' +
-                        (formatLabel ? ('<div class="text-xs font-semibold text-blue-700 mb-2">' + escapeHtml(formatLabel) + '</div>') : '') +
-                        (title ? ('<div class="text-lg font-bold text-gray-900 leading-snug">' + escapeHtml(title) + '</div>') : '') +
-                        (cat ? ('<div class="text-sm text-gray-500 mt-1">Category: <span class="font-semibold text-gray-700">' + escapeHtml(cat) + '</span></div>') : '') +
-                        (desc ? ('<div class="text-sm text-gray-700 mt-2 leading-relaxed">' + escapeHtml(desc) + '</div>') : '') +
-                        (info ? ('<div class="text-sm text-gray-500 mt-2">' + escapeHtml(info) + '</div>') : '') +
-                        '<div class="mt-4 flex items-baseline gap-2">' +
-                            (price ? ('<div class="text-xl font-extrabold text-gray-900">' + escapeHtml(price) + '</div>') : '') +
-                            (oldPrice ? ('<div class="text-sm text-gray-500 line-through">' + escapeHtml(oldPrice) + '</div>') : '') +
-                        '</div>' +
-                        '<div class="mt-4">' +
-                            (buyHtml ? buyHtml.replace('Add to Cart', 'Buy Now') : '<div class="text-sm text-gray-500">This item is not yet available for purchase.</div>') +
-                        '</div>' +
-                    '</div>' +
-                '</div>';
+  // ---------------------------------------
+  // Modal
+  // ---------------------------------------
+  function openProductModalById(productId) {
+    for (var i = 0; i < PRODUCTS.length; i++) {
+      if (PRODUCTS[i] && PRODUCTS[i].id === productId) {
+        openProductModal(PRODUCTS[i]);
+        return;
+      }
+    }
+  }
 
-            modal.classList.remove('hidden');
+  function openProductModal(product) {
+    var modal = document.getElementById("productModal");
+    var content = document.getElementById("productModalContent");
+    if (!modal || !content || !product) return;
+
+    var catLine = product.mainCategory ? (product.mainCategory + (product.subCategory ? " • " + product.subCategory : "")) : "";
+    var buyHtml = product.payhipId ? buildPayhipButton(product.payhipId, "Buy Now", "") : '<div class="text-sm text-gray-500">This item is not yet available for purchase.</div>';
+
+    content.innerHTML =
+      '<div class="grid sm:grid-cols-[140px,1fr] gap-4 items-start">' +
+        '<div class="bg-gray-50 border border-gray-200 rounded-xl p-3 flex items-center justify-center aspect-[4/5]">' +
+          (product.cover ? '<img src="' + escapeHtml(product.cover) + '" alt="' + escapeHtml(product.title) + '" class="w-full h-full object-contain" loading="lazy" />' : '') +
+        '</div>' +
+        '<div>' +
+          (product.format ? '<div class="text-xs font-semibold text-blue-700 mb-2">' + escapeHtml(product.format) + '</div>' : '') +
+          '<div class="text-lg font-bold text-gray-900 leading-snug">' + escapeHtml(product.title) + '</div>' +
+          (catLine ? '<div class="text-sm text-gray-500 mt-1">' + escapeHtml(catLine) + '</div>' : '') +
+          (product.description ? '<div class="text-sm text-gray-700 mt-3 leading-relaxed">' + escapeHtml(product.description) + '</div>' : '') +
+          (product.info ? '<div class="text-xs text-gray-500 mt-2">' + escapeHtml(product.info) + '</div>' : '') +
+          '<div class="mt-4 flex items-baseline gap-2">' +
+            '<div class="text-2xl font-extrabold text-gray-900">' + escapeHtml(formatMoney(product.price)) + '</div>' +
+            (product.compareAt ? '<div class="text-sm text-gray-500 line-through">' + escapeHtml(formatMoney(product.compareAt)) + '</div>' : '') +
+          '</div>' +
+          '<div class="mt-4">' + buyHtml + '</div>' +
+        '</div>' +
+      '</div>';
+
+    modal.classList.remove("hidden");
+    initPayhipButtons();
+  }
+
+  function closeProductModal() {
+    var modal = document.getElementById("productModal");
+    if (!modal) return;
+    modal.classList.add("hidden");
+  }
+
+  // ---------------------------------------
+  // Rendering (home + filters + catalog)
+  // ---------------------------------------
+  function renderCategoryCards() {
+    var el = document.getElementById("categoryCards");
+    if (!el) return;
+    el.innerHTML = "";
+
+    for (var i = 0; i < CATEGORIES.length; i++) {
+      var c = CATEGORIES[i];
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "text-left bg-white border border-gray-200 rounded-xl px-4 py-3 hover:border-blue-200 hover:shadow-sm transition";
+      btn.setAttribute("data-category", c.name);
+      btn.innerHTML =
+        '<div class="text-xs font-semibold text-gray-500">CATEGORY</div>' +
+        '<div class="mt-1 font-bold text-gray-900">' + escapeHtml(c.name) + '</div>';
+      btn.addEventListener("click", (function(name) {
+        return function() { setCategoryFilter(name); };
+      })(c.name));
+      el.appendChild(btn);
+    }
+  }
+
+  function renderCategorySelect() {
+    var sel = document.getElementById("categorySelect");
+    if (!sel) return;
+
+    var current = sel.value || "";
+    var html = '<option value="">All Categories</option>';
+    for (var i = 0; i < CATEGORIES.length; i++) {
+      html += '<option value="' + escapeHtml(CATEGORIES[i].name) + '">' + escapeHtml(CATEGORIES[i].name) + '</option>';
+    }
+    sel.innerHTML = html;
+    sel.value = current;
+  }
+
+  function renderSubcategorySelect() {
+    var sel = document.getElementById("subcategorySelect");
+    if (!sel) return;
+
+    // prepared only: enabled later when subcategories are populated
+    if (!STATE.category) {
+      sel.disabled = true;
+      sel.innerHTML = '<option value="">All Subcategories</option>';
+      return;
+    }
+
+    var c = null;
+    for (var i = 0; i < CATEGORIES.length; i++) {
+      if (CATEGORIES[i].name === STATE.category) { c = CATEGORIES[i]; break; }
+    }
+
+    var subs = (c && Array.isArray(c.subcategories)) ? c.subcategories : [];
+    if (!subs.length) {
+      sel.disabled = true;
+      sel.innerHTML = '<option value="">All Subcategories</option>';
+      return;
+    }
+
+    sel.disabled = false;
+    var current = sel.value || "";
+    var opt = '<option value="">All Subcategories</option>';
+    for (var j = 0; j < subs.length; j++) {
+      opt += '<option value="' + escapeHtml(subs[j]) + '">' + escapeHtml(subs[j]) + '</option>';
+    }
+    sel.innerHTML = opt;
+    sel.value = current;
+  }
+
+  function renderFormatChips() {
+    var el = document.getElementById("formatChips");
+    if (!el) return;
+
+    var html = '';
+    html += makeChip("all", "All");
+    for (var i = 0; i < FORMAT_OPTIONS.length; i++) {
+      html += makeChip(FORMAT_OPTIONS[i], FORMAT_OPTIONS[i]);
+    }
+    el.innerHTML = html;
+
+    var btns = el.querySelectorAll("[data-format]");
+    for (var k = 0; k < btns.length; k++) {
+      btns[k].addEventListener("click", function() {
+        var f = this.getAttribute("data-format");
+        if (!f) return;
+
+        if (f === "all") {
+          STATE.formats = new Set(["all"]);
+        } else {
+          if (STATE.formats.has("all")) STATE.formats.delete("all");
+          if (STATE.formats.has(f)) STATE.formats.delete(f);
+          else STATE.formats.add(f);
+          if (STATE.formats.size === 0) STATE.formats.add("all");
         }
 
-        function escapeHtml(str) {
-            return String(str || '')
-                .replace(/&/g, '&amp;')
-                .replace(/</g, '&lt;')
-                .replace(/>/g, '&gt;')
-                .replace(/"/g, '&quot;')
-                .replace(/'/g, '&#39;');
+        updateChipUI();
+        STATE.limit = 24;
+        renderCatalog();
+      });
+    }
+
+    updateChipUI();
+  }
+
+  function makeChip(value, label) {
+    return '<button type="button" data-format="' + escapeHtml(value) + '" class="px-3 py-1.5 rounded-full border text-xs font-semibold transition"></button>';
+  }
+
+  function updateChipUI() {
+    var el = document.getElementById("formatChips");
+    if (!el) return;
+
+    var btns = el.querySelectorAll("[data-format]");
+    for (var i = 0; i < btns.length; i++) {
+      var f = btns[i].getAttribute("data-format");
+      var active = STATE.formats.has(f);
+
+      btns[i].textContent = (f === "all") ? "All" : f;
+      btns[i].className = "px-3 py-1.5 rounded-full border text-xs font-semibold transition " +
+        (active ? "bg-blue-600 text-white border-blue-600" : "bg-white text-gray-700 border-gray-200 hover:bg-gray-50");
+    }
+  }
+
+  function renderFeaturedCarousel() {
+    var el = document.getElementById("featuredCarousel");
+    if (!el) return;
+    el.innerHTML = "";
+
+    for (var i = 0; i < FEATURED_IDS.length; i++) {
+      var id = FEATURED_IDS[i];
+      var p = null;
+      for (var j = 0; j < PRODUCTS.length; j++) {
+        if (PRODUCTS[j] && PRODUCTS[j].id === id) { p = PRODUCTS[j]; break; }
+      }
+      if (!p) continue;
+
+      var card = document.createElement("div");
+      card.className = "product-card min-w-[210px] max-w-[210px] bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden";
+      card.innerHTML =
+        '<div class="product-image-wrapper">' +
+          (p.cover ? '<img src="' + escapeHtml(p.cover) + '" alt="' + escapeHtml(p.title) + '" class="product-image" loading="lazy" />' : '') +
+        '</div>' +
+        '<div class="p-3">' +
+          (p.format ? '<div class="text-xs font-semibold text-gray-500 mb-1">' + escapeHtml(p.format) + '</div>' : '') +
+          '<div class="text-sm font-bold text-gray-900 line-clamp-2">' + escapeHtml(p.title) + '</div>' +
+          '<div class="mt-2 flex items-baseline gap-2">' +
+            '<div class="text-base font-extrabold text-gray-900">' + escapeHtml(formatMoney(p.price)) + '</div>' +
+            (p.compareAt ? '<div class="text-xs text-gray-500 line-through">' + escapeHtml(formatMoney(p.compareAt)) + '</div>' : '') +
+          '</div>' +
+          '<div class="mt-2 text-xs text-gray-500 line-clamp-1">' + escapeHtml(p.mainCategory || "") + '</div>' +
+        '</div>';
+
+      card.addEventListener("click", (function(prod) {
+        return function(e) {
+          if (e.target.closest("a") || e.target.closest("button")) return;
+          openProductModal(prod);
+        };
+      })(p));
+
+      el.appendChild(card);
+    }
+  }
+
+  // ---------------------------------------
+  // Catalog state + filtering (fast)
+  // ---------------------------------------
+  var STATE = {
+    q: "",
+    category: "",
+    subcategory: "",
+    formats: new Set(["all"]),
+    limit: 24
+  };
+
+  function getActiveFormats() {
+    if (STATE.formats.has("all")) return null;
+    return Array.from(STATE.formats);
+  }
+
+  function filterProducts() {
+    var q = normalize(STATE.q);
+    var formats = getActiveFormats();
+    var cat = STATE.category;
+    var sub = STATE.subcategory;
+
+    var out = [];
+    for (var i = 0; i < PRODUCTS.length; i++) {
+      var p = PRODUCTS[i];
+      if (!p) continue;
+
+      if (cat && p.mainCategory !== cat) continue;
+      if (sub && p.subCategory !== sub) continue;
+
+      if (formats && formats.length) {
+        var ok = false;
+        for (var j = 0; j < formats.length; j++) {
+          if (p.format === formats[j]) { ok = true; break; }
         }
-function closeProductModal() {
-            var modal = document.getElementById('productModal');
-            if (!modal) return;
-            modal.classList.add('hidden');
-        }
+        if (!ok) continue;
+      }
 
-        // Make product cards open the modal when clicked (but not when clicking links/buttons)
-        document.addEventListener('DOMContentLoaded', function () {
-            document.querySelectorAll('.product-card').forEach(function(card) {
-                card.addEventListener('click', function (event) {
-                    if (event.target.closest('a') || event.target.closest('button')) {
-                        return;
-                    }
-                    openProductModal(card);
-                });
-            });
-        });
+      if (q && (!p.__search || p.__search.indexOf(q) === -1)) continue;
 
+      out.push(p);
+    }
+    return out;
+  }
 
-        // Smooth Scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        });
-    
+  function renderCatalog() {
+    var grid = document.getElementById("productsGrid");
+    var countEl = document.getElementById("resultsCount");
+    var loadMoreBtn = document.getElementById("loadMoreBtn");
+    if (!grid || !countEl || !loadMoreBtn) return;
 
-        // Close modal on overlay click / ESC
-        document.addEventListener('click', function(e) {
-            var modal = document.getElementById('productModal');
-            if (!modal || modal.classList.contains('hidden')) return;
-            if (e.target === modal) closeProductModal();
-        });
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') closeProductModal();
-        });
+    var filtered = filterProducts();
+    countEl.textContent = String(filtered.length);
 
-        // Filtering
-        function applyFilters() {
-            var category = (document.getElementById('categorySelect') || {}).value || '';
-            var checkedFormats = Array.from(document.querySelectorAll('input[type="checkbox"][data-format-filter]:checked')).map(function(i){ return i.getAttribute('data-format-filter'); });
-            var allFormatsChecked = checkedFormats.indexOf('all') !== -1;
+    grid.innerHTML = "";
+    var frag = document.createDocumentFragment();
 
-            var priceRadio = document.querySelector('input[name="price"]:checked');
-            var priceRange = priceRadio ? priceRadio.getAttribute('data-price-range') : 'all';
+    var shown = filtered.slice(0, STATE.limit);
+    for (var i = 0; i < shown.length; i++) {
+      var p = shown[i];
 
-            document.querySelectorAll('.product-card').forEach(function(card) {
-                var ok = true;
+      var card = document.createElement("div");
+      card.className = "product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden";
+      card.innerHTML =
+        '<div class="product-image-wrapper">' +
+          (p.cover ? '<img src="' + escapeHtml(p.cover) + '" alt="' + escapeHtml(p.title) + '" class="product-image" loading="lazy" />' : '') +
+        '</div>' +
+        '<div class="p-3">' +
+          (p.format ? '<div class="text-xs font-semibold text-gray-500 mb-1">' + escapeHtml(p.format) + '</div>' : '') +
+          '<div class="text-sm font-bold text-gray-900 line-clamp-2">' + escapeHtml(p.title) + '</div>' +
+          (p.description ? '<div class="mt-1 text-xs text-gray-600 line-clamp-2">' + escapeHtml(p.description) + '</div>' : '') +
+          '<div class="mt-3 flex items-baseline gap-2">' +
+            '<div class="text-lg font-extrabold text-gray-900">' + escapeHtml(formatMoney(p.price)) + '</div>' +
+            (p.compareAt ? '<div class="text-xs text-gray-500 line-through">' + escapeHtml(formatMoney(p.compareAt)) + '</div>' : '') +
+          '</div>' +
+          '<div class="mt-1 text-xs text-gray-500 line-clamp-1">' + escapeHtml(p.mainCategory || "") + (p.subCategory ? ' • ' + escapeHtml(p.subCategory) : '') + '</div>' +
+        '</div>';
 
-                if (category) {
-                    ok = ok && (card.getAttribute('data-maincategory') === category);
-                }
+      card.addEventListener("click", (function(prod) {
+        return function(e) {
+          if (e.target.closest("a") || e.target.closest("button")) return;
+          openProductModal(prod);
+        };
+      })(p));
 
-                var fmt = (card.getAttribute('data-format') || '').toLowerCase();
+      frag.appendChild(card);
+    }
 
-                if (!allFormatsChecked) {
-                    // if any specific formats checked, require match
-                    if (checkedFormats.length > 0) {
-                        ok = ok && (checkedFormats.indexOf(fmt) !== -1);
-                    }
-                }
+    grid.appendChild(frag);
+    loadMoreBtn.classList.toggle("hidden", filtered.length <= STATE.limit);
+  }
 
-                var p = parseFloat(card.getAttribute('data-price') || '0') || 0;
-                if (priceRange === 'under15') ok = ok && (p > 0 && p < 15);
-                if (priceRange === '15to30') ok = ok && (p >= 15 && p <= 30);
-                if (priceRange === '30plus') ok = ok && (p >= 30);
+  function setCategoryFilter(catName) {
+    STATE.category = catName || "";
+    STATE.subcategory = "";
+    STATE.limit = 24;
 
-                card.classList.toggle('hidden', !ok);
-            });
-        }
+    var sel = document.getElementById("categorySelect");
+    if (sel) sel.value = STATE.category;
 
-        function setCategoryFilter(cat) {
-            var sel = document.getElementById('categorySelect');
-            if (sel) sel.value = cat || '';
-            applyFilters();
-            var catalog = document.getElementById('catalog');
-            if (catalog) catalog.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
+    renderSubcategorySelect();
+    renderCatalog();
 
-        document.addEventListener('DOMContentLoaded', function () {
-            // Mark format checkboxes with data-format-filter and make them behave correctly
-            var formatLabels = document.querySelectorAll('aside input[type="checkbox"]');
-            if (formatLabels && formatLabels.length) {
-                // First checkbox is All Formats
-                formatLabels[0].setAttribute('data-format-filter', 'all');
-                // Remaining in order: video, guide, audio, templates, workbooks, prompt packs, bundles (if present)
-                var mapping = ['video','guide','audio','template','workbook','prompt','bundle'];
-                for (var i=1; i<formatLabels.length && i<=mapping.length; i++) {
-                    formatLabels[i].setAttribute('data-format-filter', mapping[i-1]);
-                }
+    var target = document.getElementById("catalog");
+    if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
 
-                // All Formats toggles others off
-                formatLabels[0].addEventListener('change', function() {
-                    if (formatLabels[0].checked) {
-                        for (var j=1; j<formatLabels.length; j++) formatLabels[j].checked = false;
-                    }
-                    applyFilters();
-                });
+  function clearFilters() {
+    STATE.q = "";
+    STATE.category = "";
+    STATE.subcategory = "";
+    STATE.formats = new Set(["all"]);
+    STATE.limit = 24;
 
-                for (var k=1; k<formatLabels.length; k++) {
-                    formatLabels[k].addEventListener('change', function() {
-                        if (this.checked) formatLabels[0].checked = false;
-                        applyFilters();
-                    });
-                }
-            }
+    var search = document.getElementById("searchInput");
+    if (search) search.value = "";
 
-            // Add data attrs to price radios
-            var priceRadios = document.querySelectorAll('input[name="price"]');
-            if (priceRadios.length) {
-                // Assume order: all, under15, 15to30, 30plus
-                var pr = ['all','under15','15to30','30plus'];
-                for (var i2=0; i2<priceRadios.length && i2<pr.length; i2++) {
-                    priceRadios[i2].setAttribute('data-price-range', pr[i2]);
-                    priceRadios[i2].addEventListener('change', applyFilters);
-                }
-            }
+    var cat = document.getElementById("categorySelect");
+    if (cat) cat.value = "";
 
-            var catSel = document.getElementById('categorySelect');
-            if (catSel) catSel.addEventListener('change', applyFilters);
+    var sub = document.getElementById("subcategorySelect");
+    if (sub) {
+      sub.value = "";
+      sub.disabled = true;
+      sub.innerHTML = '<option value="">All Subcategories</option>';
+    }
 
-            // Category cards
-            document.querySelectorAll('.category-card').forEach(function(btn){
-                btn.addEventListener('click', function() {
-                    setCategoryFilter(btn.getAttribute('data-category') || '');
-                });
-            });
+    updateChipUI();
+    renderCatalog();
+  }
 
-            // initial apply
-            applyFilters();
-        });
+  function debounce(fn, delay) {
+    var t = null;
+    return function() {
+      var args = arguments;
+      clearTimeout(t);
+      t = setTimeout(function() { fn.apply(null, args); }, delay);
+    };
+  }
 
+  // ---------------------------------------
+  // Init
+  // ---------------------------------------
+  document.addEventListener("DOMContentLoaded", function() {
+    var mb = document.getElementById("mobileMenuBtn");
+    var mm = document.getElementById("mobileMenu");
+    if (mb && mm) {
+      mb.addEventListener("click", function() { mm.classList.toggle("hidden"); });
+    }
+
+    document.addEventListener("click", function(e) {
+      var modal = document.getElementById("productModal");
+      if (!modal || modal.classList.contains("hidden")) return;
+      if (e.target === modal) closeProductModal();
+    });
+    document.addEventListener("keydown", function(e) {
+      if (e.key === "Escape") closeProductModal();
+    });
+
+    buildSearchIndex();
+    renderCategoryCards();
+    renderCategorySelect();
+    renderSubcategorySelect();
+    renderFormatChips();
+    renderFeaturedCarousel();
+    renderCatalog();
+
+    var search = document.getElementById("searchInput");
+    if (search) {
+      search.addEventListener("input", debounce(function() {
+        STATE.q = search.value || "";
+        STATE.limit = 24;
+        renderCatalog();
+      }, 120));
+    }
+
+    var cat = document.getElementById("categorySelect");
+    if (cat) {
+      cat.addEventListener("change", function() {
+        STATE.category = cat.value || "";
+        STATE.subcategory = "";
+        STATE.limit = 24;
+        renderSubcategorySelect();
+        renderCatalog();
+      });
+    }
+
+    var sub = document.getElementById("subcategorySelect");
+    if (sub) {
+      sub.addEventListener("change", function() {
+        STATE.subcategory = sub.value || "";
+        STATE.limit = 24;
+        renderCatalog();
+      });
+    }
+
+    var clearBtn = document.getElementById("clearFiltersBtn");
+    if (clearBtn) clearBtn.addEventListener("click", function() { clearFilters(); });
+
+    var loadMoreBtn = document.getElementById("loadMoreBtn");
+    if (loadMoreBtn) {
+      loadMoreBtn.addEventListener("click", function() {
+        STATE.limit += 24;
+        renderCatalog();
+      });
+    }
+
+    initPayhipButtons();
+  });
 </script>
 </body>
 </html>
