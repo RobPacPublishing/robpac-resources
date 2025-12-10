@@ -41,3 +41,4 @@ logs/
 .env.local
 .env*.local
 admin_generator.html
+admin_generator.html
