@@ -45,9 +45,14 @@
         .popup-overlay {
             backdrop-filter: blur(4px);
         }
+    
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
 </head>
 <body class="bg-gray-50">
+<!-- ROBPAC_RESOURCES_BUILD: HOME_STRATEGY_V1 -->
+
 <!-- Header -->
 <header class="bg-white border-b border-gray-200 sticky top-0 z-40">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
@@ -179,6 +184,22 @@
 </div>
 </div>
 </section>
+
+<!-- Home Featured Carousel (auto: 1 featured resource per main category) -->
+<section class="py-10 bg-gray-50 border-t border-gray-100" id="home-featured">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-end justify-between gap-6 mb-5">
+      <div>
+        <h2 class="text-2xl font-bold text-gray-900">Featured Resources</h2>
+        <p class="text-gray-600 mt-1">A quick selection across categories (one per category when available).</p>
+      </div>
+      <a href="#catalog" class="text-blue-600 hover:text-blue-700 font-semibold text-sm">Browse all</a>
+    </div>
+
+    <div id="homeFeaturedCarousel" class="flex gap-4 overflow-x-auto no-scrollbar pb-2"></div>
+  </div>
+</section>
+
 <!-- Featured Bundle Hero -->
 <section class="py-8 bg-gradient-to-r from-blue-600 to-blue-700" id="bundles">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1014,6 +1035,51 @@ function closeProductModal() {
 
             // initial apply
             applyFilters();
+        });
+
+
+        function renderHomeFeaturedCarousel() {
+            var mount = document.getElementById('homeFeaturedCarousel');
+            if (!mount) return;
+
+            mount.innerHTML = '';
+
+            var categories = Array.from(document.querySelectorAll('#categories .category-card'))
+                .map(function (b) { return b.getAttribute('data-category'); })
+                .filter(Boolean);
+
+            var allCards = Array.from(document.querySelectorAll('#catalog .product-card'));
+            var picked = [];
+
+            categories.forEach(function (cat) {
+                var card = allCards.find(function (c) { return c.getAttribute('data-maincategory') === cat; });
+                if (card) picked.push(card);
+            });
+
+            if (picked.length === 0) {
+                picked = allCards.slice(0, 10);
+            }
+
+            picked.forEach(function (card) {
+                var clone = card.cloneNode(true);
+
+                clone.classList.add('min-w-[230px]', 'max-w-[230px]', 'flex-shrink-0');
+
+                var buyBtn = clone.querySelector('.payhip-buy-button');
+                if (buyBtn) buyBtn.remove();
+
+                clone.addEventListener('click', function (event) {
+                    if (event.target.closest('a') || event.target.closest('button')) return;
+                    openProductModal(card);
+                });
+
+                mount.appendChild(clone);
+            });
+        }
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+            try { renderHomeFeaturedCarousel(); } catch (e) {}
         });
 
 </script>
