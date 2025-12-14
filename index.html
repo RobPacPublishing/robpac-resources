@@ -261,7 +261,7 @@
   // - bundlePayhipId: string (bundle product on Payhip, optional)
   // - bundleLabel: string (optional label for bundle CTA)
   // - bundleNote: string (optional short note under bundle CTA)
-  var PRODUCTS = [
+  var FALLBACK_PRODUCTS = [
     {"id":"p-content-multiplier","title":"Content Multiplier - Prompt Pack","mainCategory":"Creator & Media","subCategory":"Social","format":"prompt","description":"Turn one piece of content into multiple formats with ready-to-use prompts.","info":"Prompt Pack","price":15,"compareAt":25,"payhipId":"rQWRZ","bundlePayhipId":"","bundleLabel":"","bundleNote":"","cover":"content-multiplier.png"},
     {"id":"p-90day-planner","title":"90-Day Business Planner","mainCategory":"Business & Growth","subCategory":"Operations","format":"workbook","description":"Quarterly planning system with goal tracking and weekly reviews.","info":"Fillable • 50 pages","price":12,"compareAt":17,"payhipId":"","bundlePayhipId":"","bundleLabel":"","bundleNote":"","cover":"90-day-business-planner.png"},
     {"id":"p-email-blueprint","title":"Email Marketing Blueprint","mainCategory":"Marketing","subCategory":"Email","format":"guide","description":"Build and monetize your email list with a structured plan.","info":"PDF • 68 pages","price":17,"compareAt":27,"payhipId":"","bundlePayhipId":"","bundleLabel":"","bundleNote":"","cover":"email-marketing-blueprint.png"},
@@ -269,6 +269,72 @@
     {"id":"p-productivity-audio","title":"Productivity Mastery","mainCategory":"Productivity & Systems","subCategory":"Focus","format":"audio","description":"Audio lessons to build a calmer, stronger routine.","info":"MP3 • 2 hours","price":27,"compareAt":37,"payhipId":"","bundlePayhipId":"","bundleLabel":"","bundleNote":"","cover":"productivity-mastery.png"},
     {"id":"p-instagram-kit","title":"Instagram Content Kit","mainCategory":"Creator & Media","subCategory":"Social","format":"template","description":"Templates to speed up posting and keep style consistent.","info":"Canva + PDF","price":12,"compareAt":17,"payhipId":"","bundlePayhipId":"","bundleLabel":"","bundleNote":"","cover":"instagram-marketing-mastery.png"}
   ];
+  var PRODUCTS = [];
+
+  function inferFormatFromLabel(label) {
+    var v = String(label || "").toLowerCase();
+    if (!v) return "book";
+    if (v.indexOf("video") !== -1) return "video";
+    if (v.indexOf("audio") !== -1) return "audio";
+    if (v.indexOf("workbook") !== -1) return "workbook";
+    if (v.indexOf("template") !== -1) return "template";
+    if (v.indexOf("prompt") !== -1) return "prompt";
+    if (v.indexOf("checklist") !== -1) return "checklist";
+    if (v.indexOf("guide") !== -1) return "guide";
+    if (v.indexOf("book") !== -1) return "book";
+    return "book";
+  }
+
+  function adaptProductFromJson(rec, idx) {
+    if (!rec || !rec.title) return null;
+
+    function toNumber(val) {
+      var n = parseFloat(String(val).replace(",", "."));
+      return isNaN(n) ? null : n;
+    }
+
+    var price = toNumber(rec.price);
+    var compare = toNumber(rec.oldPrice);
+
+    var format = rec.format || rec.label || "";
+    format = inferFormatFromLabel(format);
+
+    return {
+      id: rec.id || rec.slug || ("p-" + (idx + 1)),
+      title: rec.title,
+      mainCategory: rec.category || "Marketing",
+      subCategory: rec.subcategory || "",
+      format: format,
+      description: rec.description || rec.shortDescription || "",
+      info: rec.formatInfo || "",
+      price: price != null ? price : 0,
+      compareAt: compare,
+      payhipId: rec.payhipId || "",
+      bundlePayhipId: rec.bundlePayhipId || "",
+      bundleLabel: rec.bundleLabel || "",
+      bundleNote: rec.bundleNote || "",
+      cover: rec.cover || ""
+    };
+  }
+
+  function loadProductsFromJson() {
+    return fetch("products.json", { cache: "no-store" })
+      .then(function(resp) {
+        if (!resp.ok) return [];
+        return resp.json();
+      })
+      .then(function(list) {
+        if (!Array.isArray(list) || !list.length) {
+          PRODUCTS = FALLBACK_PRODUCTS.slice();
+          return;
+        }
+        PRODUCTS = list.map(adaptProductFromJson).filter(function(p) { return !!p; });
+      })
+      .catch(function() {
+        PRODUCTS = FALLBACK_PRODUCTS.slice();
+      });
+  }
+
 
   function escapeHtml(str) {
     return String(str || "")
@@ -781,13 +847,17 @@
       if (e.key === "Escape") closeProductModal();
     });
 
-    buildSearchIndex();
-    renderCategoryCards();
-    renderFooterCategories();
-    renderCategorySelect();
-    renderSubcategorySelect();
-    renderFormatChips();
-    renderCatalog();
+    function initProductsAndUI() {
+      buildSearchIndex();
+      renderCategoryCards();
+      renderFooterCategories();
+      renderCategorySelect();
+      renderSubcategorySelect();
+      renderFormatChips();
+      renderCatalog();
+    }
+
+    loadProductsFromJson().then(initProductsAndUI);
 
     var search = document.getElementById("searchInput");
     if (search) {
