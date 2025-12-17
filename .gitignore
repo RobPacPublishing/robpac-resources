@@ -42,3 +42,5 @@ logs/
 .env*.local
 admin_generator.html
 admin_generator.html
+
+covers.zip
