@@ -317,17 +317,50 @@
     };
   }
 
+  function fetchJsonAny(urls) {
+    var i = 0;
+    function tryNext() {
+      if (i >= urls.length) return Promise.resolve(null);
+      var url = urls[i++];
+      return fetch(url, { cache: "no-store" })
+        .then(function(resp) {
+          if (!resp || !resp.ok) return null;
+          return resp.json();
+        })
+        .catch(function() { return null; })
+        .then(function(data) {
+          if (data) return data;
+          return tryNext();
+        });
+    }
+    return tryNext();
+  }
+
   function loadProductsFromJson() {
-    return fetch("products.json", { cache: "no-store" })
-      .then(function(resp) {
-        if (!resp.ok) return [];
-        return resp.json();
-      })
-      .then(function(list) {
+    var urls = ["products.json", "/products.json", "./products.json"];
+    return fetchJsonAny(urls)
+      .then(function(payload) {
+        var list = null;
+
+        if (Array.isArray(payload)) list = payload;
+        else if (payload && Array.isArray(payload.products)) list = payload.products;
+        else if (payload && Array.isArray(payload.items)) list = payload.items;
+
         if (!Array.isArray(list) || !list.length) {
           PRODUCTS = FALLBACK_PRODUCTS.slice();
           return;
         }
+
+        PRODUCTS = list.map(adaptProductFromJson).filter(function(p) { return !!p; });
+
+        if (!PRODUCTS.length) {
+          PRODUCTS = FALLBACK_PRODUCTS.slice();
+        }
+      })
+      .catch(function() {
+        PRODUCTS = FALLBACK_PRODUCTS.slice();
+      });
+  }
         PRODUCTS = list.map(adaptProductFromJson).filter(function(p) { return !!p; });
       })
       .catch(function() {
