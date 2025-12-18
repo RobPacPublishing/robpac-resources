@@ -410,41 +410,89 @@
     var src = normalizeCoverPath(originalSrc);
     if (!src) return;
 
+    // Build base variants to tolerate different filename conventions on Vercel (case-sensitive)
+    function slugifyFileName(name, sep) {
+      return String(name || "")
+        .trim()
+        .toLowerCase()
+        .replace(/['"]/g, "")
+        .replace(/[^a-z0-9]+/g, sep)
+        .replace(new RegExp(sep + "+", "g"), sep)
+        .replace(new RegExp("^" + sep + "|" + sep + "$", "g"), "");
+    }
+
+    function splitPath(p) {
+      var q = String(p || "");
+      var hash = q.indexOf("#");
+      if (hash >= 0) q = q.slice(0, hash);
+      var qm = q.indexOf("?");
+      if (qm >= 0) q = q.slice(0, qm);
+      var lastSlash = q.lastIndexOf("/");
+      var dir = lastSlash >= 0 ? q.slice(0, lastSlash + 1) : "";
+      var file = lastSlash >= 0 ? q.slice(lastSlash + 1) : q;
+      return { dir: dir, file: file };
+    }
+
     var tried = new Set();
-    var base = src;
-    var extMatch = base.match(/\.(png|jpg|jpeg|webp)$/i);
-    var exts = ["png","jpg","jpeg","webp"];
+
+    var parts = splitPath(src);
+    var file = parts.file;
+    var extMatch = file.match(/\.(png|jpg|jpeg|webp)$/i);
+    var nameNoExt = extMatch ? file.replace(/\.(png|jpg|jpeg|webp)$/i, "") : file;
+
+    // Try both lowercase + uppercase extensions (repo can contain .JPG on Windows)
+    var exts = ["png","PNG","jpg","JPG","jpeg","JPEG","webp","WEBP"];
+
+    // Base name variants: original, slugified with -, slugified with _
+    var nameVariants = [];
+    function addName(v){ if (v && !nameVariants.includes(v)) nameVariants.push(v); }
+    addName(nameNoExt);
+    addName(slugifyFileName(nameNoExt, "-"));
+    addName(slugifyFileName(nameNoExt, "_"));
+
+    // If src had no directory (shouldn't after normalize), keep it safe
+    var dir = parts.dir || "";
+
+    // Candidate queue generator
+    var queue = [];
+    function pushCandidate(baseName, ext) {
+      if (!baseName) return;
+      var cand = dir + baseName + (ext ? ("." + ext) : "");
+      if (!queue.includes(cand)) queue.push(cand);
+    }
+
+    if (extMatch) {
+      // Keep original ext first (preserve original casing in the URL, then variants)
+      var originalExt = extMatch[1];
+      for (var nv=0; nv<nameVariants.length; nv++) pushCandidate(nameVariants[nv], originalExt);
+      for (var i=0; i<exts.length; i++) {
+        for (var nv2=0; nv2<nameVariants.length; nv2++) pushCandidate(nameVariants[nv2], exts[i]);
+      }
+    } else {
+      // No extension: try all common extensions
+      for (var j=0; j<exts.length; j++) {
+        for (var nv3=0; nv3<nameVariants.length; nv3++) pushCandidate(nameVariants[nv3], exts[j]);
+      }
+    }
 
     function nextSrc() {
-      if (!extMatch) {
-        // no extension: try common ones
-        for (var i=0;i<exts.length;i++) {
-          var candidate = base.replace(/\/$/, "") + "." + exts[i];
-          if (!tried.has(candidate)) return candidate;
-        }
-        return "";
-      }
-      var currentExt = extMatch[1].toLowerCase();
-      for (var j=0;j<exts.length;j++) {
-        if (exts[j] === currentExt) continue;
-        var cand = base.replace(new RegExp("\\." + currentExt + "$","i"), "." + exts[j]);
-        if (!tried.has(cand)) return cand;
+      while (queue.length) {
+        var c = queue.shift();
+        if (!tried.has(c)) return c;
       }
       return "";
     }
 
     imgEl.onerror = function() {
-      tried.add(imgEl.src);
+      tried.add(imgEl.getAttribute("src") || "");
       var n = nextSrc();
-      if (n) {
-        imgEl.src = n;
-        return;
-      }
+      if (n) { imgEl.src = n; return; }
       imgEl.onerror = null;
-      imgEl.outerHTML = '<div class="w-full h-full flex items-center justify-center text-[11px] text-gray-400 bg-gray-50 border border-gray-200 rounded-lg">Cover missing</div>';
+      imgEl.outerHTML = '<div class="w-full h-full flex items-center justify-center text-[11px] text-gray-400 bg-gray-50 border border-gray-200">No cover</div>';
     };
 
-    imgEl.src = src;
+    var first = nextSrc();
+    if (first) imgEl.src = first;
   }
 
   var STATE = {
