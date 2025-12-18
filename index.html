@@ -361,12 +361,6 @@
         PRODUCTS = FALLBACK_PRODUCTS.slice();
       });
   }
-        PRODUCTS = list.map(adaptProductFromJson).filter(function(p) { return !!p; });
-      })
-      .catch(function() {
-        PRODUCTS = FALLBACK_PRODUCTS.slice();
-      });
-  }
 
 
   function escapeHtml(str) {
