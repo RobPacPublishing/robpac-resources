@@ -105,19 +105,13 @@ https://app.entrepedia.co/library/product/e4607f66-c1c8-4f8c-b481-bcdba0c56e81
 https://app.entrepedia.co/library/product/e7facce2-1ba4-446b-8074-a44e853cdc35
 https://app.entrepedia.co/library/product/f499f07f-c1fd-4ab0-89d0-519e0ac60405
 
-#ebook_funnelsandconversion
-
 #ebook_sales
 https://app.entrepedia.co/library/product/34beb885-a362-4db3-96c3-58d856226f58
-
-#ebook_leadgeneration
 
 #ebook_startups
 https://app.entrepedia.co/library/product/40414281-1a07-4798-b629-4d59bc11b937
 https://app.entrepedia.co/library/product/950aabda-c767-440b-8df0-d397380d5d4f
 https://app.entrepedia.co/library/product/a07ba0f6-e976-4d71-9797-85e365ccc3ce
-
-#ebook_mindset
 
 #ebook_productivity
 https://app.entrepedia.co/library/product/2ec63780-a905-452a-927c-4bd5c1cf1a3c
@@ -127,10 +121,6 @@ https://app.entrepedia.co/library/product/a3fb457d-a753-4270-abd5-762fbae6b629
 https://app.entrepedia.co/library/product/e1e47818-5a87-462d-a764-eb84bfd1f3c0
 https://app.entrepedia.co/library/product/f3eeed61-2afc-45b5-b4d4-b59f50bd56ba
 
-#ebook_paidads
-
-#ebook_copywriting
-
 #ebook_banding
 https://app.entrepedia.co/library/product/c152d4cd-8bb2-4586-b005-09ed36aab775
 https://app.entrepedia.co/library/product/e545e093-2ebb-43d3-8b74-c5c8508dccde
@@ -138,8 +128,6 @@ https://app.entrepedia.co/library/product/ecdf79a6-935d-416b-b47d-1eb7593c2b9d
 
 #ebook_productdevelopment
 https://app.entrepedia.co/library/product/344730bc-7323-48be-93f1-7b89314613c0
-
-#ebook_contentcreation
 
 #ebook_ecommerce
 https://app.entrepedia.co/library/product/282b2b86-f0c1-4f4c-b020-88fe3de6f169
@@ -149,8 +137,6 @@ https://app.entrepedia.co/library/product/db327c69-878f-4346-a81e-6d3c5336744e
 #ebook_habits
 https://app.entrepedia.co/library/product/b28e43c3-85f3-4225-95d4-ac00da8e1f76
 
-#ebook_solopreneur
-
 #ebook_systemsandproductivity
 https://app.entrepedia.co/library/product/98e75658-e62b-4ead-92a4-3af7faac646e
 https://app.entrepedia.co/library/product/9fb6f0dc-90ce-4cbc-b6c2-e5374841f4c4
@@ -158,14 +144,6 @@ https://app.entrepedia.co/library/product/9fb6f0dc-90ce-4cbc-b6c2-e5374841f4c4
 #ebook_personalgrowth
 https://app.entrepedia.co/library/product/0b711329-c2d3-4697-8297-c707e207e2ea
 https://app.entrepedia.co/library/product/2ac20821-781d-4194-a4ec-1ffb20e0d234
-
-#ebook_onlinebusiness
-
-#ebook_techtools
-
-#ebook_finance
-
-#ebook_socialmedia
 
 #ebook_specialtopics
 https://app.entrepedia.co/library/product/40e97a4f-763b-4901-9596-affb74e3418c
@@ -175,43 +153,8 @@ https://app.entrepedia.co/library/product/a2350d73-9f65-4533-8358-fe59be48fe5d
 https://app.entrepedia.co/library/product/d79c08c0-7aea-4c4e-bbfa-946c1f24af7b
 https://app.entrepedia.co/library/product/f6389870-4c01-4797-822b-1ffc99ef7b14
 
-#ebook_emailmarketing
-
-#ebook_nichetactics
-
-#ebook_automation
-
-#ebook_emotionalintelligence
-
-#ebook_marketingautomation
-
-#ebook_AI
-
-#ebook_SEO
-
-#ebook_google
-COLLECT + 4 TOTAL 4
-
 #ebook_healthandfitness
 https://app.entrepedia.co/library/product/35d2e2a5-b70a-4379-bf16-a78b18f504bb
 https://app.entrepedia.co/library/product/5542db28-6b18-44aa-babe-2b05e147bb37
 https://app.entrepedia.co/library/product/81ebae39-2542-4894-9303-0559f80ef9b9
 https://app.entrepedia.co/library/product/e0253b38-57c9-4080-b80f-6c8fd40b7b04
-
-#ebook_wellness
-
-#ebook_lifestyle
-
-#ebook_energy
-
-#ebook_leadership
-
-#ebook_videoandpodcast
-
-#ebook_cybersecurity
-
-#ebook_freelancing
-
-#ebook_trends
-
-#ebook_careerdevelopment
