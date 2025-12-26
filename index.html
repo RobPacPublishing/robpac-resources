@@ -396,8 +396,9 @@
 
   function buildPayhipButton(payhipId, label, extraClasses) {
     if (!payhipId) return "";
-    var cls = "payhip-buy-button inline-flex items-center justify-center w-full font-semibold py-2.5 rounded-lg transition text-sm " + (extraClasses || "bg-blue-600 text-white hover:bg-blue-700");
-    return '<a class="' + cls + '" data-product="' + escapeHtml(payhipId) + '" data-theme="blue" href="https://payhip.com/b/' + escapeHtml(payhipId) + '">' + escapeHtml(label || "Buy Now") + '</a>';
+    var cls = "inline-flex items-center justify-center w-full font-semibold px-4 py-2.5 rounded-lg transition text-sm " + (extraClasses || "bg-blue-600 text-white hover:bg-blue-700");
+    var url = "https://payhip.com/buy?link=" + encodeURIComponent(String(payhipId).trim());
+    return '<a class="' + cls + '" href="' + url + '" target="_blank" rel="noopener">' + escapeHtml(label || "Buy Now") + "</a>";
   }
 
   function normalizeCoverPath(src) {
