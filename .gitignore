@@ -87,3 +87,23 @@ payload_files_found.txt
 # Link Payhip “di lavoro” (se non vuole versionarli)
 payhip_links.json
 payhip_links_merged.json
+
+# Playwright profiles (non dot-prefixed)
+pw-*/
+pw-*/**
+entrepedia-scraper/pw-*/
+entrepedia-scraper/pw-*/**
+
+# Entrepedia-scraper outputs (keep only JS + package manifests)
+entrepedia-scraper/*.json
+entrepedia-scraper/*.txt
+entrepedia-scraper/*.csv
+entrepedia-scraper/*.png
+entrepedia-scraper/*.html
+!entrepedia-scraper/package.json
+!entrepedia-scraper/package-lock.json
+
+# Root debug/backups
+index.before_*.html
+payhip_products_page_debug.*
+
