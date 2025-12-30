@@ -1,0 +1,23 @@
+{
+  "name": "robpac-resources",
+  "version": "1.0.0",
+  "description": "Premium digital resources landing page for entrepreneurs.",
+  "main": "build_site_products.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RobPacPublishing/robpac-resources.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RobPacPublishing/robpac-resources/issues"
+  },
+  "homepage": "https://github.com/RobPacPublishing/robpac-resources#readme",
+  "devDependencies": {
+    "playwright": "^1.57.0"
+  }
+}

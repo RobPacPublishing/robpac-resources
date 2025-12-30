@@ -1,0 +1,17 @@
+{
+  "name": "entrepedia-scraper",
+  "version": "1.0.1",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "payhip:payload": "node build_payhip_payload.js --price 10 --currency USD",
+    "payhip:bulk": "node payhip_bulk_upload_playwright.js --in ../payhip_payload/payhip_products.json --price 10 --currency USD"
+  },
+  "devDependencies": {
+    "playwright": "^1.57.0"
+  },
+  "dependencies": {
+    "cheerio": "^1.1.2",
+    "node-fetch": "^2.7.0"
+  }
+}
