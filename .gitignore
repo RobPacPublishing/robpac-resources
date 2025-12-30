@@ -44,3 +44,46 @@ admin_generator.html
 admin_generator.html
 
 covers.zip
+
+# Playwright / sessioni / profili
+.pw-*/
+.pw-*/**
+.pw-user-data/
+.pw-user-data/**
+.payhip_user_data/
+.payhip_user_data/**
+.storage_state.json
+.pw-payhip-session/
+.pw-payhip-session/**
+.payhip_user_data/
+.payhip_user_data/**
+
+# Artefatti scraper (generati)
+entrepedia-scraper/downloads/
+entrepedia-scraper/downloads/**
+entrepedia-scraper/covers/
+entrepedia-scraper/covers/**
+entrepedia-scraper/payhip_failures/
+entrepedia-scraper/payhip_failures/**
+entrepedia-scraper/payhip_upload_debug/
+entrepedia-scraper/payhip_upload_debug/**
+entrepedia-scraper/payhip_upload_results*.json
+entrepedia-scraper/debug_*.png
+entrepedia-scraper/debug_*.html
+entrepedia-scraper/debug_*.txt
+entrepedia-scraper/*.crdownload
+
+# Payload e report locali
+payhip_payload/
+payhip_payload/**
+payhip_payload_prompt/
+payhip_payload_prompt/**
+*.bak-*
+*.bak
+*.zip
+covers_missing.txt
+payload_files_found.txt
+
+# Link Payhip “di lavoro” (se non vuole versionarli)
+payhip_links.json
+payhip_links_merged.json
