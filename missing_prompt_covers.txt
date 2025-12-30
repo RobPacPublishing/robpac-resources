@@ -1,0 +1,20 @@
+PROMPT PRODUCTS FOUND: 24
+COVER FIELD UPDATED: 24
+COPIED IMAGES: 0
+OK FILES: 24
+MISSING: 0
+
+SAMPLE (first 10):
+Content Marketing Accelerator | /covers/Content-Marketing-Accelerator---Prompts1.jpg
+Rapid Skill Acquisition | /covers/Rapid-Skill-Acquisition---Prompts.jpg
+AI Content Advantage | /covers/AI-Content-Advantage---Podcast1.jpg
+AI-Powered Content Marketing | /covers/AI-Powered-Content-Marketing---Prompts1.jpg
+The Goldilocks Prompt Formula | /covers/The-Goldilocks-Prompt-Formula---Guide1.jpg
+Prompt Engineering for Content Marketers | /covers/Prompt-Engineering-for-Content-Marketers---Checklist1.jpg
+Strategic Time Management | /covers/Strategic-Time-Management---Prompts1.jpg
+Micro-Audience Monetization | /covers/Micro-Audience-Monetization---Prompts1.jpg
+Local Business Content Marketing | /covers/Local-Business-Content-Marketing---Prompts1.jpg
+AI-Powered Small Business Success | /covers/AI-Powered-Small-Business-Success---Prompts1.jpg
+
+MISSING DETAILS:
+(none)
